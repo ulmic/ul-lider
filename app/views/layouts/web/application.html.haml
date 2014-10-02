@@ -1,0 +1,13 @@
+!!! 5
+%html(lang="en")
+  %head
+    = render 'layouts/web/shared/head'
+  %body
+    = render 'layouts/web/shared/navbar'
+    .container
+      = bootstrap_flash
+      #content
+        %h2= yield :header
+        = yield
+
+      = render 'layouts/web/shared/footer'
