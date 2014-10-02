@@ -2,9 +2,21 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
-class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+require 'wrong/adapters/minitest'
+Wrong.config.color
 
+FactoryGirl.reload
+
+class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods
+  include Concerns::AuthManagment
+  include Wrong
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  # fixtures :all
+
+  def load_fixture(filename)
+    template = ERB.new(File.read(File.dirname(__FILE__) + "/fixtures/#{filename}"), nil, "%")
+    template.result
+  end
   # Add more helper methods to be used by all tests here...
 end
