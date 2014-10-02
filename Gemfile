@@ -43,7 +43,6 @@ gem 'virtus'
 gem "mini_magick"
 gem 'rails-observers'
 #gem 'sir_trevor_rails', github: 'madebymany/sir-trevor-rails', branch: 'redesign-gem'
-gem 'airbrake'
 gem 'active_form', github: 'rails/activeform'
 gem 'rest_in_place'
 
