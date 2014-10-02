@@ -37,3 +37,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+ActionDispatch::Reloader.to_prepare do
+  load Rails.root.join('lib/configus.rb')
+end
