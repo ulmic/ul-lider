@@ -1,0 +1,96 @@
+---
+-
+  hosts: default
+
+  vars:
+    postgresql:
+      version: 9.1
+
+  sudo: yes
+  tasks:
+
+    -
+      name: set locale
+      lineinfile:
+        dest=/etc/environment
+        line='LC_ALL="en_US.UTF-8"'
+        state=present
+        backup=yes
+
+    -
+      name: Set timezone variables
+      copy: content='Etc/UTC'
+            dest=/etc/timezone
+            backup=yes
+      notify:
+        - update timezone
+
+    -
+      name: install packages
+      apt: pkg="{{ item }}" state=latest
+      with_items:
+        - python-apt
+        - python-pycurl
+        - gcc
+        - g++
+        - make
+        - curl
+        - monit
+        - git
+        - runit
+        - vim
+        - libncurses5-dev
+        - nginx
+        - postfix
+        - libxml2-dev
+        - libpq-dev
+        - python-psycopg2
+        - redis-server
+
+    # FIXME иногда может выбрасывать ошибку "unable to connect to database: could not connect to server: No such file or directory
+    # Is the server running locally and accepting". Возможно потому, что постгрес не успевает запуститься, а следующая команда уже выполняется,
+    # решается повторным запуском плейбука.
+    -
+      name: create postgres user
+      sudo: true
+      sudo_user: postgres
+      postgresql_user: name="{{ deploy_user }}"
+        role_attr_flags=CREATEDB
+      notify:
+        - restart postgresql
+      tags: [postgres]
+
+    -
+      name: create  db
+      sudo: true
+      sudo_user: postgres
+      postgresql_db: name="{{ database_name }}" owner="{{ deploy_user }}"
+      notify:
+        - restart postgresql
+      tags: [postgres]
+
+    -
+      name: create project directory
+      file: dest="{{ project_root }}" state=directory owner="{{ deploy_user }}"
+      tags: [files]
+
+    -
+      name: create shared directory
+      file: dest="{{ project_root }}"/shared state=directory owner="{{ deploy_user }}"
+      tags: [files]
+
+    -
+      name: create shared directories
+      file: dest="{{ project_root }}"/shared/config state=directory owner="{{ deploy_user }}" recurse=yes
+      tags: [files]
+
+
+
+  handlers:
+    -
+      name: restart postgresql
+      service: name=postgresql state=restarted
+
+
+    - name: update timezone
+      command: dpkg-reconfigure --frontend noninteractive tzdata

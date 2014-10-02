@@ -1,0 +1,8 @@
+[default]
+ul-lider.ru ansible_ssh_user=lider
+
+[default:vars]
+deploy_user=lider
+database_name=lider_production
+server_name="st.ul-lider.ru"
+rails_env=production
