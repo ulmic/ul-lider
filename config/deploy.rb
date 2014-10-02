@@ -1,14 +1,13 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :rbenv_type, :system
-set :rbenv_ruby, '2.1.2'
+set :application, 'lider_v2'
+set :repo_url, 'git@github.com:ulmic/ul-lider.git'
 
-set :application, 'yvision'
-set :repo_url, 'git@codebasehq.com:200ok/yvision/yvision.git'
-
-set :sidekiq_service_name, "sidekiq"
-set :sidekiq_default_hooks, false
+set :rvm_type, :system
+set :use_sudo, false
+#set :sidekiq_service_name, "sidekiq"
+#set :sidekiq_default_hooks, false
 
 # set :whenever_environment, defer { stage }
 # set :whenever_roles, [:web]
@@ -17,7 +16,7 @@ set :sidekiq_default_hooks, false
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+set :deploy_to, '/srv/lider_v2'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -47,51 +46,51 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-namespace :unicorn do
-  namespace :monit do
-    desc "start unicorn"
-    task :start do
-      on roles(:app) do
-        sudo "/usr/bin/monit start unicorn"
-      end
-    end
+#namespace :unicorn do
+#  namespace :monit do
+#    desc "start unicorn"
+#    task :start do
+#      on roles(:app) do
+#        sudo "/usr/bin/monit start unicorn"
+#      end
+#    end
+#
+#    desc "stop unicorn"
+#    task :stop do
+#      on roles(:app) do
+#        sudo "/usr/bin/monit stop unicorn"
+#      end
+#    end
+#
+#    desc "restart unicorn"
+#    task :restart do
+#      on roles(:app) do
+#        sudo "/usr/bin/monit restart unicorn"
+#      end
+#    end
+#  end
+#end
 
-    desc "stop unicorn"
-    task :stop do
-      on roles(:app) do
-        sudo "/usr/bin/monit stop unicorn"
-      end
-    end
-
-    desc "restart unicorn"
-    task :restart do
-      on roles(:app) do
-        sudo "/usr/bin/monit restart unicorn"
-      end
-    end
-  end
-end
-
-namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # invoke 'unicorn:reload'
-      invoke 'unicorn:monit:restart'
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
-
-  after :publishing, "deploy:restart" #:restart
-  after :published, "sidekiq:monit:restart"
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
+#namespace :deploy do
+#  desc 'Restart application'
+#  task :restart do
+#    on roles(:app), in: :sequence, wait: 5 do
+#      # invoke 'unicorn:reload'
+#      invoke 'unicorn:monit:restart'
+#      # Your restart mechanism here, for example:
+#      # execute :touch, release_path.join('tmp/restart.txt')
+#    end
+#  end
+#
+#  after :publishing, "deploy:restart" #:restart
+#  after :published, "sidekiq:monit:restart"
+#
+#  after :restart, :clear_cache do
+#    on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-    end
-  end
+#    end
+#  end
 end

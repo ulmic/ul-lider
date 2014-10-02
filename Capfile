@@ -14,15 +14,15 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
 #
-# require 'capistrano/rvm'
+require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-require 'capistrano/rbenv'
+#require 'capistrano/rbenv'
 require 'capistrano/bundler'
 require 'capistrano/rails'
 require 'capistrano3/unicorn'
-require 'capistrano/sidekiq'
-require 'capistrano/sidekiq/monit'
+#require 'capistrano/sidekiq'
+#require 'capistrano/sidekiq/monit'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 # require "whenever/capistrano"
