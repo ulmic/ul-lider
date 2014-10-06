@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  #include Concerns::AuthManagment
+  include Concerns::AuthManagment
 
-  #helper_method :signed_in?, :current_user
+  helper_method :signed_in?, :current_user
 end

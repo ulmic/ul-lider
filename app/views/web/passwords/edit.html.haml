@@ -1,0 +1,5 @@
+.row
+  .col-md-6
+    = simple_form_for @user, url: password_path(params.extract(:reset_password_token).to_hash) do |f|
+      = f.input :password
+      = f.button :submit
