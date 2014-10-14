@@ -11,8 +11,6 @@ timeout 15
 stderr_path "#{app_path}/current/log/unicorn.stderr.log"
 stdout_path "#{app_path}/current/log/unicorn.stdout.log"
 
-listen "127.0.0.1:8080"
-
 # FIXME
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 
