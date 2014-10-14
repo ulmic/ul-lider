@@ -21,7 +21,8 @@ class User < ActiveRecord::Base
                            phone: true,
                            allow_blank: true
   validates :locality, presence: true
-  validates :postcode, presence: true
+  validates :postcode, presence: true,
+                       length: { is: 6 }
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation
