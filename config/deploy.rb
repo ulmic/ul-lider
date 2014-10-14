@@ -4,7 +4,8 @@ lock '3.2.1'
 set :application, 'lider_v2'
 set :repo_url, 'git@github.com:ulmic/ul-lider.git'
 
-set :rvm_type, :system
+set :rvm_type, :user
+set :rvm_ruby_version, 'ruby-2.1.1'
 set :use_sudo, false
 #set :sidekiq_service_name, "sidekiq"
 #set :sidekiq_default_hooks, false
@@ -93,4 +94,4 @@ set :keep_releases, 5
       # end
 #    end
 #  end
-end
+#end
