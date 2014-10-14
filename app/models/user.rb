@@ -37,6 +37,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  extend Enumerize
+  include Municipalities
+  enumerize :municipality, in: Municipalities.list, default: Municipalities.list.first
+
   include UserRepository
 
   def guest?

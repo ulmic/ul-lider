@@ -5,7 +5,6 @@ FactoryGirl.define do
     first_name { generate :string }
     last_name { generate :string }
     patronymic { generate :string }
-    municipality { generate :string }
     school { generate :string }
     group { generate :string }
     locality { generate :string }
