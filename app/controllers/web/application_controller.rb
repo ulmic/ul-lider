@@ -1,6 +1,7 @@
 class Web::ApplicationController < ApplicationController
   include Concerns::FlashHelper
   include Concerns::TitleHelper
+  include Concerns::RedirectHelper
 
   helper_method :title
 
