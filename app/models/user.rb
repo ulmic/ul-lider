@@ -10,10 +10,14 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :patronymic, presence: true
+  validates :birth_date, presence: true,
+                         date: { on_or_after: Date.parse('31 May 1993') }
   validates :municipality, presence: true
   validates :school, presence: true
   validates :group, presence: true
   validates :mobile_phone, presence: true,
+                           phone: true
+  validates :home_phone, presence: true,
                            phone: true,
                            allow_blank: true
   validates :locality, presence: true

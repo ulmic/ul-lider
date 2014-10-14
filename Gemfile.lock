@@ -1,9 +1,24 @@
 GIT
+  remote: git://github.com/derekprior/momentjs-rails.git
+  revision: 51eab321e6b483218de714e5c504ce61b6860a3e
+  specs:
+    momentjs-rails (2.8.3)
+      railties (>= 3.1)
+
+GIT
   remote: git://github.com/rails/activeform.git
   revision: 097f3ef1578309c520ece59f35d7cc736ae24e3e
   specs:
     active_form (0.0.1)
       rails (~> 4.1.1)
+
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 21c2aebb917eba0c5d686749ee6754c769533402
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (3.1.1)
 
 GIT
   remote: https://github.com/seuros/state_machine.git
@@ -292,6 +307,7 @@ DEPENDENCIES
   capistrano3-unicorn
   carrierwave
   configus
+  datetimepicker-rails!
   draper
   enumerize
   factory_girl_rails
@@ -301,6 +317,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mini_magick
+  momentjs-rails (>= 2.8.1)!
   monadic
   pg
   pry-byebug
