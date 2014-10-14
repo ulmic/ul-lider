@@ -32,5 +32,5 @@ staging:
 
 production:
   <<: *default
-  username: ul_lider_production
+  username: lider
   database: ul_lider_production

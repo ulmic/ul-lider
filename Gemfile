@@ -60,7 +60,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'capistrano-sidekiq'
-  gem 'rvm-capistrano'
+  gem 'capistrano-rvm'
   gem 'quiet_assets'
 end
 
