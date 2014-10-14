@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
   extend Enumerize
   include Municipalities
-  enumerize :municipality, in: Municipalities.list
+  enumerize :municipality, in: Municipalities.list, default: Municipalities.list.first
 
   include UserRepository
 

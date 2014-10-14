@@ -60,11 +60,15 @@ FactoryGirl.define do
   end
 
   sequence :phone do |n|
-    "+7#{n % 10}"
+    "+7123456789"
   end
 
   sequence :url do |n|
     "http://site#{n}.ru"
+  end
+
+  sequence :postcode do |n|
+    "434343"
   end
 
   sequence :ip, aliases: [:public_ip, :private_ip] do |n|

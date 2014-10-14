@@ -6,6 +6,8 @@ enable_submit = ->
   return
 
 $(document).ready ->
+  if $('#user_municipality').val().substring(0, 2) == 'г.'
+    $('#user_locality').val($('#user_municipality').val())
   $('#user_municipality').on 'change', ->
     if $(this).val().substring(0, 2) == 'г.'
       $('#user_locality').val($(this).val())

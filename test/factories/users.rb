@@ -8,7 +8,8 @@ FactoryGirl.define do
     school { generate :string }
     group { generate :string }
     locality { generate :string }
-    postcode { generate :string }
+    postcode { generate :postcode }
+    mobile_phone { generate :phone }
     birth_date { generate :date }
     email
     password { generate :string }
