@@ -1,0 +1,8 @@
+ru:
+  web:
+    users:
+      new:
+        registration: Подать заявку
+        send_request: Подать заявку
+        sign_in: авторизоваться
+        or: или

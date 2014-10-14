@@ -1,0 +1,19 @@
+ru:
+  activerecord:
+    models:
+      user: Пользователь
+    attributes:
+      user:
+        first_name: Имя
+        patronymic: Отчество
+        last_name: Фамилия
+        password: Пароль
+        birth_date: Дата рождения
+        municipality: Муниципальное образование
+        locality: Населённый пункт
+        postcode: Почтовый индекс
+        school: Учебное заведение
+        group: Группа/Класс
+        home_phone: Домашний телефон
+        mobile_phone: Мобильный телефон
+        avatar: Аватарка

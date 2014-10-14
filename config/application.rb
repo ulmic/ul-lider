@@ -23,6 +23,7 @@ module UlLider
     config.assets.enabled = true
     config.assets.initialize_on_precompile = true
     config.assets.version = '1.0'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.assets.precompile += [/.*\.js/,/.*\.css/]
 
     config.generators do |g|

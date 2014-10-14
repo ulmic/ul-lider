@@ -21,6 +21,6 @@
       = f.input :avatar
       /= f.input :accept_agreement, as: :boolean
 
-      = f.button :submit
+      = f.button :submit, t('.send_request')
     %p= t('.or')
-    = link_to t('.sign_in'), new_session_path
+    = link_to t('.sign_in'), new_session_path, class: 'btn'
