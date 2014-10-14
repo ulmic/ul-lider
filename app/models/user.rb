@@ -4,9 +4,20 @@ class User < ActiveRecord::Base
 
   has_secure_password validations: false
 
-  validates :email, presence: true, uniqueness: {case_sensitive: false}, email: true
+  validates :email, presence: true,
+                    uniqueness: { case_sensitive: false },
+                    email: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :patronymic, presence: true
+  validates :municipality, presence: true
+  validates :school, presence: true
+  validates :group, presence: true
+  validates :mobile_phone, presence: true,
+                           phone: true,
+                           allow_blank: true
+  validates :locality, presence: true
+  validates :postcode, presence: true
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation

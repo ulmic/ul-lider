@@ -10,8 +10,7 @@ class Web::UsersController < Web::ApplicationController
   end
 
   def create
-    @user = UserRegistrationType.new(params[:user])
-
+    @user = UserRegistrationType.new params[:user]
     @user.generate_confirmation_token
     if @user.save
       UserMailer.delay.confirmation_instructions(@user)

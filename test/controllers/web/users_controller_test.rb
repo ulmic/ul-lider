@@ -19,11 +19,10 @@ class Web::UsersControllerTest < ActionController::TestCase
   end
 
   test "create" do
-    @attrs = @attrs.merge({password_confirmation: @attrs[:password]})
-    post :create, user: @attrs
-
+    attrs = attributes_for :user
+    post :create, user: attrs
     assert_response :redirect
-    user = User.find_by(@attrs.extract(:email))
+    user = User.find_by(attrs.extract(:email))
     assert { user }
   end
 
