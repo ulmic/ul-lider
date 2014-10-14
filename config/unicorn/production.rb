@@ -2,6 +2,9 @@ app_path = "/srv/lider_v2"
 working_directory "#{app_path}/current"
 
 worker_processes 1
+
+listen "#{app_path}/shared/.sock", backlog: 64
+
 timeout 15
 # preload_app true
 
