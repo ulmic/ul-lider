@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :creative_work, CreativeWorkUploader
 
   has_secure_password validations: false
 
@@ -23,6 +24,9 @@ class User < ActiveRecord::Base
   validates :locality, presence: true
   validates :postcode, presence: true,
                        length: { is: 6 }
+  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
+  validates :creative_work_url, url: true,
+                                allow_blank: true
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation

@@ -8,8 +8,8 @@
       = f.input :email
       = f.input :password
       = f.input :first_name
-      = f.input :last_name
       = f.input :patronymic, as: :string
+      = f.input :last_name
       = f.input :birth_date, as: :date_picker
       = f.input :municipality
       = f.input :locality, as: :string
@@ -19,8 +19,10 @@
       = f.input :home_phone, as: :string
       = f.input :mobile_phone, as: :string
       = f.input :avatar
+      = f.input :creative_work, as: :file
+      = f.input :creative_work_url, as: :string
       /= f.input :accept_agreement, as: :boolean
 
-      = f.button :submit, t('.send_request')
+      = f.button :submit, t('.send_request'), id: 'send_request'
     %p= t('.or')
     = link_to t('.sign_in'), new_session_path, class: 'btn'
