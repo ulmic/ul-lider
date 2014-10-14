@@ -10,3 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickers
+//
+$(document).on('ready page:change', function() {
+  $('.datepicker').datetimepicker({
+    pickTime: false
+  });
+});
