@@ -13,6 +13,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require pickers
+//= require glyphicons
 //
 $(document).on('ready page:change', function() {
   $('.datepicker').datetimepicker({
