@@ -47,6 +47,8 @@ gem 'rest_in_place'
 gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
 gem 'unicorn-rails'
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 
 group :assets do
   gem 'coffee-rails'
