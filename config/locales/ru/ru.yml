@@ -1,4 +1,12 @@
 ru:
+  application:
+    name: '"Я-лидер!"'
+  layouts:
+    web:
+      shared:
+        navbar:
+          send_request: Подать заявку
+          sign_in: Войти
   web:
     users:
       new:
