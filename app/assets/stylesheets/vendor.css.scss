@@ -3,3 +3,11 @@
  *= require bootswatch/paper/bootstrap
  *= require jasny-bootstrap/dist/css/jasny-bootstrap
  */
+
+@import "bootswatch/paper/variables";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "bootswatch/paper/bootswatch";
+
