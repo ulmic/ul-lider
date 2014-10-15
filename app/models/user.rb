@@ -18,15 +18,14 @@ class User < ActiveRecord::Base
   validates :group, presence: true
   validates :mobile_phone, presence: true,
                            phone: true
-  validates :home_phone, presence: true,
-                           phone: true,
-                           allow_blank: true
+  validates :home_phone, phone: true,
+                         allow_blank: true
   validates :locality, presence: true
-  validates :postcode, presence: true,
-                       length: { is: 6 }
   validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
   validates :creative_work_url, url: true,
                                 allow_blank: true
+  validates :avatar, presence: true,
+                     file_size: { maximum: 3.megabytes.to_i }
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation
