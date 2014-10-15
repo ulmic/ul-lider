@@ -26,7 +26,6 @@ gem 'configus'
 gem 'simple_form', '>= 3.1.0.rc2'
 #gem 'authority'
 gem 'enumerize'
-gem 'unicorn-rails'
 gem 'sidekiq'
 gem 'foreman'
 gem 'validates'
@@ -70,6 +69,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-byebug'
+end
+
+group :production do
+  gem 'unicorn-rails'
 end
 
 group :test do
