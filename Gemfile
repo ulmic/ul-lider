@@ -46,6 +46,7 @@ gem 'active_form', github: 'rails/activeform'
 gem 'rest_in_place'
 gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
+gem 'unicorn-rails'
 
 group :assets do
   gem 'coffee-rails'
@@ -69,10 +70,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-byebug'
-end
-
-group :production do
-  gem 'unicorn-rails'
 end
 
 group :test do
