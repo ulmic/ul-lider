@@ -1,5 +1,8 @@
 = stylesheet_link_tag 'web/welcome'
 = javascript_include_tag 'web/welcome'
 .winners_images
-  - (0..11).each do |i|
-    .winner_avatar{ style: "background-image: url('/assets/winners/10.png'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
+  - (0..12).each do |i|
+    .winner_avatar{ style: "background-image: url('/assets/winners/#{i}.png'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
+.title
+  %h1
+    = t('contest.full_name')
