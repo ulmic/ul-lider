@@ -26,7 +26,6 @@ gem 'configus'
 gem 'simple_form', '>= 3.1.0.rc2'
 #gem 'authority'
 gem 'enumerize'
-gem 'unicorn-rails'
 gem 'sidekiq'
 gem 'foreman'
 gem 'validates'
@@ -45,6 +44,12 @@ gem 'rails-observers'
 #gem 'sir_trevor_rails', github: 'madebymany/sir-trevor-rails', branch: 'redesign-gem'
 gem 'active_form', github: 'rails/activeform'
 gem 'rest_in_place'
+gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
+gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
+
+group :assets do
+  gem 'coffee-rails'
+end
 
 group :development do
   gem 'web-console', '2.0.0.beta2'
@@ -64,6 +69,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-byebug'
+end
+
+group :production do
+  gem 'unicorn-rails'
 end
 
 group :test do

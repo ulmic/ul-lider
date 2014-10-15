@@ -24,7 +24,7 @@ class Web::PasswordsControllerTest < ActionController::TestCase
   end
 
   test "#update correct data for password resetting" do
-    post :update, reset_password_token: @user.reset_password_token, user: {password: "1"}
+    post :update, reset_password_token: @user.reset_password_token, user: { password: "1" }
     assert_response :redirect
 
     user_updated = User.find_by!(email: @user.email)

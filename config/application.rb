@@ -20,6 +20,11 @@ module UlLider
 
     config.i18n.available_locales = [:en, :ru]
     config.i18n.default_locale = :ru
+    config.assets.enabled = true
+    config.assets.initialize_on_precompile = true
+    config.assets.version = '1.0'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.assets.precompile += [/.*\.js/,/.*\.css/]
 
     config.generators do |g|
       g.template_engine :haml

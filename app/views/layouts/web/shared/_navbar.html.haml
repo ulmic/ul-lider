@@ -5,9 +5,14 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    -#%a.navbar-brand{:href => account_root_path}= t('application.name')
-  -#.navbar-collapse.collapse
+    %a.navbar-brand{ href: root_path }
+      = t('application.name')
+  .navbar-collapse.collapse
     %ul.nav.navbar-nav
-      = menu_item t('.bloggers'), users_path
+      = menu_item new_user_path do
+        = t('.send_request')
+        %span.glyphicon.useradd
     %ul.nav.navbar-nav.pull-right
-      = menu_item t('.sign_in'), new_session_path
+      -#= menu_item new_session_path do
+        = t('.sign_in')
+        %span.glyphicon.log_in
