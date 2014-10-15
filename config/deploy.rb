@@ -18,7 +18,7 @@ set :use_sudo, false
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/srv/lider_v2'
-set :unicorn_pid, "#{current_path}/shared/tmp/pids/unicorn.pid"
+set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
 
 # Default value for :scm is :git
 # set :scm, :git
