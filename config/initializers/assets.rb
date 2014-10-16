@@ -10,3 +10,4 @@ Rails.application.config.assets.version = '1.0'
 unless Rails.env.development?
   Rails.application.config.assets.precompile += %w( vendor.js vendor.css )
 end
+Rails.application.config.assets.precompile += %w( web/* )

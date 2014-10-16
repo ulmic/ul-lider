@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :patronymic, presence: true
   validates :birth_date, presence: true,
-                         date: { on_or_after: Date.parse('31 May 1993') }
+                         timeliness: { on_or_after: lambda { Date.parse('31 May 1993') } }
   validates :municipality, presence: true
   validates :school, presence: true
   validates :group, presence: true
