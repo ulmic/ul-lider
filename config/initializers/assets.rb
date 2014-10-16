@@ -8,6 +8,6 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 unless Rails.env.development?
-  Rails.application.config.assets.precompile += %w( vendor.js vendor.css winners/* glyphicons/* )
+  Rails.application.config.assets.precompile += %w( vendor.js vendor.css *.jpg *.png )
 end
 Rails.application.config.assets.precompile += %w( web/* )
