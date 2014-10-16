@@ -25,6 +25,7 @@ module UlLider
     config.assets.version = '1.0'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 
+
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets false
