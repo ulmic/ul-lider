@@ -1,0 +1,14 @@
+= simple_form_for @news, url: { action: action, controller: 'web/admin/news' } do |f|
+  = f.error_notification
+  - f.with_options input_html: { class: :span6 } do |f|
+    = f.input :title, placeholder: t('.no_more_than_140_characters'), as: :string
+    = f.label :body
+    = f.cktext_area :body
+    = f.label :published_at
+    = f.date_select :published_at
+    %br
+    = t('.this_is_main_photo')
+    = f.label :photo
+    = f.file_field :photo
+    .actions
+      = f.button :submit, class: :btn

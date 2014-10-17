@@ -1,0 +1,3 @@
+%h1= t('.add_news')
+= render partial: 'form', locals: { action: :create }
+= link_to t('.back'), admin_news_index_path, class: "btn"

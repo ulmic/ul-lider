@@ -15,5 +15,10 @@ Rails.application.routes.draw do
     namespace :account do
       root 'welcome#index'
     end
+
+    namespace :admin do
+      root 'web/admin/welcome#index'
+      resources :news, except: :show
+    end
   end
 end
