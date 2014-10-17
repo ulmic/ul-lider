@@ -14,8 +14,7 @@ module Concerns
     end
 
     def signed_as_admin?
-      # FIXME только для демо, потом переправить на роли
-      signed_in? && current_user.email == "admin@yvi"
+      signed_in? && current_user.role.admin?
     end
 
     def authenticate_admin!

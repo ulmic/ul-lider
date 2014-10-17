@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141014203323) do
     t.text     "postcode"
     t.text     "creative_work"
     t.text     "creative_work_url"
+    t.text     "role"
   end
 
 end
