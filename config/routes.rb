@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
     root "welcome#index"
 
@@ -14,6 +15,11 @@ Rails.application.routes.draw do
 
     namespace :account do
       root 'welcome#index'
+    end
+
+    namespace :admin do
+      root 'welcome#index'
+      resources :news, except: :show
     end
   end
 end

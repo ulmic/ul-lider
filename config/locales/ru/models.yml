@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       user: Пользователь
+      news: Новость
     attributes:
       user:
         first_name: Имя
@@ -19,6 +20,11 @@ ru:
         avatar: Аватарка
         creative_work: Творческая работа
         creative_work_url: Ссылка на творческую работу
+      news:
+        title: Название
+        body: Текст
+        published_at: Дата публикации
+        photo: Фото
     errors:
       models:
         user:

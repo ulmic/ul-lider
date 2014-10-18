@@ -100,6 +100,9 @@ GEM
       mime-types (>= 1.16)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    ckeditor (4.0.11)
+      mime-types
+      orm_adapter (~> 0.5.0)
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -173,6 +176,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
@@ -324,6 +328,7 @@ DEPENDENCIES
   capistrano-sidekiq
   capistrano3-unicorn
   carrierwave
+  ckeditor
   coffee-rails
   configus
   datetimepicker-rails!

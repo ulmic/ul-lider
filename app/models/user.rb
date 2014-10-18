@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
                                 allow_blank: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
+  validates :role, presence: true
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation
@@ -48,6 +49,7 @@ class User < ActiveRecord::Base
   extend Enumerize
   include Municipalities
   enumerize :municipality, in: Municipalities.list, default: Municipalities.list.first
+  enumerize :role, in: [ :participant, :admin ], default: :participant
 
   include UserRepository
 

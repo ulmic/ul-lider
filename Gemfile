@@ -50,6 +50,7 @@ gem 'unicorn-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'validates_timeliness', '~> 3.0'
+gem 'ckeditor'
 
 group :assets do
   gem 'coffee-rails'
