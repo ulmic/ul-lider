@@ -6,9 +6,14 @@ ru:
           title: Добавить новость
         form:
           this_is_main_photo: Это главное фото новости
+      users:
+        index:
+          title: Участники конкурса
   layouts:
     web:
       shared:
         admin_navbar:
           news: Новости
+          users: Пользователи
+          participants: Участники
           admin_panel: Админка

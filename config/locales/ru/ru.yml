@@ -23,6 +23,7 @@ ru:
         navbar:
           send_request: Подать заявку
           sign_in: Войти
+          admin_panel: Админка
   web:
     users:
       new:

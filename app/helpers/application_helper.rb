@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
+  include Concerns::AuthManagment
 
   def default_search_form_options(options = {})
     {method: 'get', html: {class: 'form-inline'}, defaults: {label: false, required: false, :wrapper_html => {:class => 'form-group'}, :input_html => { :class => 'form-control' }}}.merge(options)

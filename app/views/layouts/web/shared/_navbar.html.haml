@@ -15,6 +15,9 @@
     %ul.nav.navbar-nav.pull-right
       = menu_item 'http://2014.ul-lider.ru' do
         2014
+      - if signed_as_admin?
+        = menu_item admin_root_path do
+          = t('.admin_panel')
       -#= menu_item new_session_path do
         = t('.sign_in')
         %span.glyphicon.log_in

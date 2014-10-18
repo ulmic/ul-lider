@@ -20,6 +20,11 @@ ru:
         avatar: Аватарка
         creative_work: Творческая работа
         creative_work_url: Ссылка на творческую работу
+        full_name: Полное имя
+        place: Место проживания
+        school_group: Место учёбы
+        contacts: Контакты
+        created_at: Дата регистрации
       news:
         title: Название
         body: Текст
