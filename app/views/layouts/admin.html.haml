@@ -1,0 +1,13 @@
+%html(lang="en")
+  %head
+    = render 'layouts/web/shared/head'
+    = stylesheet_link_tag 'web/admin/application'
+  %body
+    = render 'layouts/web/shared/admin_navbar'
+    .container
+      = bootstrap_flash
+      #content
+        %h2= yield :header
+        = yield
+
+      = render 'layouts/web/shared/footer'
