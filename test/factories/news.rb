@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :news do
-    title "MyText"
-    body "MyText"
-    published_at "2014-10-17 23:08:43"
+    title { generate :string }
+    body { generate :string }
+    published_at { generate :date }
+    photo { generate :file }
   end
 end
