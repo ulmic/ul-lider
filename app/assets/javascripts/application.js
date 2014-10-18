@@ -14,6 +14,7 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 //= require glyphicons
+//= require ckeditor/init
 //
 $(document).on('ready page:change', function() {
   $('.datepicker').datetimepicker({
