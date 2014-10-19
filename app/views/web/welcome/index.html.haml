@@ -6,6 +6,14 @@
 .title
   %h1
     = t('contest.full_name')
+%section.for_news
+  - @last_news.each do |news|
+    .news
+      .title
+        = news.title
+      .body
+        = image_tag news.photo
+        != strip_tags news.lead
 %section.first
   .text.left
     Текст по теме: Что это такое? До 100 символов.

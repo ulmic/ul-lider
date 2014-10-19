@@ -4,4 +4,5 @@ class News < ActiveRecord::Base
   validates :body, presence: true
   validates :published_at, presence: true
   validates :photo, presence: true
+  include NewsRepository
 end
