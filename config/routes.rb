@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:new, :create, :destroy]
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
+    resources :news, only: [ :index, :show ]
 
     resources :users, only: [:new, :index, :create] do
       member do

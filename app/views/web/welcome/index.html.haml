@@ -8,7 +8,7 @@
     = t('contest.full_name')
 %section.for_news
   - @last_news.each do |news|
-    .news
+    .news.link{ data: { href: news_path(news) } }
       .title
         = news.title
       .body
