@@ -4,7 +4,7 @@ class UserEditByAdminType < User
   validates :email, presence: true
 #   validates :accept_agreement, acceptance: true
 
-  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode
+  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :creative_work, :creative_work_url
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)

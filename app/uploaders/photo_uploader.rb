@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class PhotoUploader < CarrierWave::Uploader::Base
+class PhotoUploader < ApplicationUploader
   include ImageDefaults
 
   def default_url

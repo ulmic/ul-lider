@@ -14,7 +14,9 @@
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
       = f.input :avatar, as: :image_preview, input_html: { preview_version: :medium }
-      = f.input :creative_work, as: :file_preview
+      = f.input :creative_work
+      - if @user.creative_work.present?
+        = link_to t('.download_creative_work'), @user.creative_work, class: :btn
       = f.input :creative_work_url, as: :string, placeholder: t('placeholders.user.creative_work_url')
       /= f.input :accept_agreement, as: :boolean
 

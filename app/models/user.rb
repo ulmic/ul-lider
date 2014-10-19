@@ -70,6 +70,6 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    "#{id} | #{nickname} | #{first_name} #{last_name} | #{email}"
+    "#{id} | #{first_name} #{last_name} | #{email}"
   end
 end
