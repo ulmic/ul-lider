@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
     root "welcome#index"
 
     resource :session, only: [:new, :create, :destroy]
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
+    resources :news, only: [ :index, :show ]
+    resource :errors, only: [] do
+      collection do
+        get :not_found
+        get :forbidden
+      end
+    end
 
     resources :users, only: [:new, :index, :create] do
       member do
@@ -14,6 +22,11 @@ Rails.application.routes.draw do
 
     namespace :account do
       root 'welcome#index'
+    end
+
+    namespace :admin do
+      root 'welcome#index'
+      resources :news, except: :show
     end
   end
 end

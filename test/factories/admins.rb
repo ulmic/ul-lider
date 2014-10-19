@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :user do
+  factory :admin, class: "User" do
     first_name { generate :string }
     last_name { generate :string }
     patronymic { generate :string }
@@ -12,5 +12,6 @@ FactoryGirl.define do
     email
     password { generate :string }
     avatar { generate :file }
+    role :admin
   end
 end

@@ -1,0 +1,14 @@
+ru:
+  web:
+    admin:
+      news:
+        new:
+          title: Добавить новость
+        form:
+          this_is_main_photo: Это главное фото новости
+  layouts:
+    web:
+      shared:
+        admin_navbar:
+          news: Новости
+          admin_panel: Админка

@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
 
   sequence :facebook_auth_hash do
@@ -81,5 +83,9 @@ FactoryGirl.define do
 
   sequence :date, aliases: [:start_date, :end_date] do |n|
     Date.today + n.day
+  end
+
+  sequence :file do |n|
+    fixture_file_upload('app/assets/images/winners/0.png', 'image/png')
   end
 end

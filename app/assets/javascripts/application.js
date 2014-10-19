@@ -14,9 +14,13 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 //= require glyphicons
+//= require ckeditor/init
 //
 $(document).on('ready page:change', function() {
   $('.datepicker').datetimepicker({
     pickTime: false
+  });
+  $('.link').click(function() {
+    location.href = $(this).attr('data-href');
   });
 });
