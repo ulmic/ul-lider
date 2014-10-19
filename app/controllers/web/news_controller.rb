@@ -6,7 +6,7 @@ class Web::NewsController < Web::ApplicationController
   def show
     @news = News.find params[:id]
     if !@news.is_published?
-      redirect_to not_found_error_path
+      redirect_to not_found_errors_path
     end
   end
 end
