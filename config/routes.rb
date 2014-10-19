@@ -7,6 +7,12 @@ Rails.application.routes.draw do
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
     resources :news, only: [ :index, :show ]
+    resource :error, only: [] do
+      collection do
+        get :not_found
+        get :forbidden
+      end
+    end
 
     resources :users, only: [:new, :index, :create] do
       member do
