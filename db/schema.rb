@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019093024) do
+ActiveRecord::Schema.define(version: 20141020173256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,9 +61,15 @@ ActiveRecord::Schema.define(version: 20141019093024) do
     t.text     "mobile_phone"
     t.text     "locality"
     t.text     "postcode"
+<<<<<<< Updated upstream
     t.text     "creative_work_url"
     t.text     "role"
     t.string   "creative_work"
+=======
+    t.text     "creative_work"
+    t.text     "role"
+    t.text     "url_creative_work"
+>>>>>>> Stashed changes
   end
 
 end

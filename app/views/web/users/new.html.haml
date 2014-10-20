@@ -21,7 +21,7 @@
       = f.input :avatar
       = f.input :creative_work, as: :file
       = f.hint t('hints.users.new.creative_work_size')
-      = f.input :creative_work_url, as: :string, placeholder: t('placeholders.user.creative_work_url')
+      = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')
       /= f.input :accept_agreement, as: :boolean
 
       = f.button :submit, t('.send_request'), id: 'send_request'

@@ -22,9 +22,8 @@ class User < ActiveRecord::Base
                          allow_blank: true
   validates :locality, presence: true
   validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
-  #validates :creative_work_url, url: true,
-  #                              1;2Q
-  #                              allow_blank: true
+  validates :url_creative_work, url: true,
+                                allow_blank: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
   validates :role, presence: true
