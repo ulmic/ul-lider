@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
                     email: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :patronymic, presence: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
   validates :role, presence: true

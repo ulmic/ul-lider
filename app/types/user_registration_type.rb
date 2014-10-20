@@ -3,9 +3,6 @@ class UserRegistrationType < User
 
   validates :email, presence: true
   validates :password, presence: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :patronymic, presence: true
   validates :birth_date, presence: true,
                          timeliness: { on_or_after: lambda { Date.parse('31 May 1993') } }
   validates :municipality, presence: true
