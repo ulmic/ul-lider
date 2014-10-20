@@ -24,6 +24,7 @@ module UlLider
     config.assets.version = '1.0'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets false
