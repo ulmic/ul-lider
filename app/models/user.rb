@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :patronymic, presence: true
+  validates :mobile_phone, presence: true,
+                           phone: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
   validates :role, presence: true
