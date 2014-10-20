@@ -21,3 +21,4 @@ $(document).ready ->
   $('#user_creative_work_url').on 'change', ->
     enable_submit()
     return
+  return

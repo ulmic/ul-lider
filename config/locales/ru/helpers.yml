@@ -1,5 +1,6 @@
 ru:
   helpers:
+    actions: Действия
     links:
       edit: Изменить
       destroy: Удалить
