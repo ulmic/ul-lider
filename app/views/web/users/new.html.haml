@@ -24,6 +24,6 @@
       = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')
       /= f.input :accept_agreement, as: :boolean
 
-      = f.button :submit, t('.send_request'), id: 'send_request'
+      = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }
     %p= t('.or')
     = link_to t('.sign_in'), new_session_path, class: 'btn'
