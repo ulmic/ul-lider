@@ -6,9 +6,16 @@ ru:
           title: Добавить новость
         form:
           this_is_main_photo: Это главное фото новости
+      users:
+        index:
+          title: Участники конкурса
+          creative_work: Творческая работа
+          url_creative_work: Ссылка на творческую работу
   layouts:
     web:
       shared:
         admin_navbar:
           news: Новости
+          users: Пользователи
+          participants: Участники
           admin_panel: Админка
