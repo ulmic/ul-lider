@@ -9,6 +9,8 @@ ru:
       users:
         index:
           title: Участники конкурса
+          creative_work: Творческая работа
+          url_creative_work: Ссылка на творческую работу
   layouts:
     web:
       shared:

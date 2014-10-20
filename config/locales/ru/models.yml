@@ -19,7 +19,7 @@ ru:
         mobile_phone: Мобильный телефон
         avatar: Аватарка
         creative_work: Творческая работа
-        creative_work_url: Ссылка на творческую работу
+        url_creative_work: Ссылка на творческую работу
         full_name: Полное имя
         place: Место проживания
         school_group: Место учёбы
@@ -47,6 +47,6 @@ ru:
               size_too_big: 'не может быть больше 3 мегабайт'
             creative_work:
               size_too_big: 'не может быть больше 25 мегабайт'
-            creative_work_url:
+            url_creative_work:
               url: 'Должно быть URL-адресом'
 
