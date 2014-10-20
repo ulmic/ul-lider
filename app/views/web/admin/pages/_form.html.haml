@@ -1,0 +1,9 @@
+.row
+  .col-md-10
+    = simple_form_for @page, url: { controller: 'web/admin/pages', action: action }, html: { class: 'form-horizontal' } do |f|
+      = f.input :title, placeholder: t('placeholders.page.title')
+      = f.label :body
+      = f.cktext_area :body
+      = f.input :slug, placeholder: t('placeholders.page.slug')
+
+      = f.button :submit
