@@ -11,6 +11,11 @@ ru:
           title: Участники конкурса
           creative_work: Творческая работа
           url_creative_work: Ссылка на творческую работу
+      pages:
+        index:
+          title: Страницы
+        new:
+          title: Добавить страницу
   layouts:
     web:
       shared:
@@ -19,3 +24,4 @@ ru:
           users: Пользователи
           participants: Участники
           admin_panel: Админка
+          pages: Страницы

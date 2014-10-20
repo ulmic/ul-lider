@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
     resources :news, only: [ :index, :show ]
+    resources :pages, only: [] do
+      collection do
+        get "/:slug" => "pages#show"
+      end
+    end
     resource :errors, only: [] do
       collection do
         get :not_found
@@ -28,6 +33,7 @@ Rails.application.routes.draw do
       root 'welcome#index'
       resources :news, except: :show
       resources :users, except: :show
+      resources :pages, except: :show
     end
   end
 end
