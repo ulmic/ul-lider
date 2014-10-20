@@ -2,8 +2,10 @@ ru:
   application:
     attributes:
       name: '"Я-лидер!"'
+    developers: 'Разработчики ИТ-проектов МИЦ'
   contest:
     full_name: "XIII областной конкурс актива учащейся молодёжи 'Я-лидер!'"
+    organization: Молодёжный инициативный центр
   placeholders:
     user:
       email: на этот адрес будет приходить рассылка с новостями о конкурсе
@@ -28,6 +30,12 @@ ru:
           sign_in: Войти
           news: Новости
           admin_panel: Админка
+        footer:
+          send_request: Подать заявку
+          news: Новости
+          definition: Положение о конкурсе
+          stages: Этапы
+
   web:
     users:
       new:
