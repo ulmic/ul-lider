@@ -1,5 +1,5 @@
 class ImagePreviewInput < SimpleForm::Inputs::FileInput
-  def input
+  def input(wrapper_options)
     version = input_html_options.delete(:preview_version)
     out = ActiveSupport::SafeBuffer.new # the output buffer we're going to build
     if object.send("#{attribute_name}?")

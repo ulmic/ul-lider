@@ -61,15 +61,12 @@ ActiveRecord::Schema.define(version: 20141020173256) do
     t.text     "mobile_phone"
     t.text     "locality"
     t.text     "postcode"
-<<<<<<< Updated upstream
     t.text     "creative_work_url"
     t.text     "role"
     t.string   "creative_work"
-=======
     t.text     "creative_work"
     t.text     "role"
     t.text     "url_creative_work"
->>>>>>> Stashed changes
   end
 
 end
