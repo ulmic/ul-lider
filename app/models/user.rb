@@ -8,22 +8,6 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
                     email: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :patronymic, presence: true
-  validates :birth_date, presence: true,
-                         timeliness: { on_or_after: lambda { Date.parse('31 May 1993') } }
-  validates :municipality, presence: true
-  validates :school, presence: true
-  validates :group, presence: true
-  validates :mobile_phone, presence: true,
-                           phone: true
-  validates :home_phone, phone: true,
-                         allow_blank: true
-  validates :locality, presence: true
-  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
-  validates :url_creative_work, url: true,
-                                allow_blank: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
   validates :role, presence: true
