@@ -1,6 +1,7 @@
 ru:
   application:
-    name: '"Я-лидер!"'
+    attributes:
+      name: '"Я-лидер!"'
   contest:
     full_name: "XIII областной конкурс актива учащейся молодёжи 'Я-лидер!'"
   placeholders:
@@ -30,7 +31,10 @@ ru:
   web:
     users:
       new:
-        registration: Подать заявку
+        title: Подать заявку
         send_request: Подать заявку
         sign_in: авторизоваться
         or: или
+    news:
+      index:
+        title: Новости
