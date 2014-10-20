@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
     resources :news, only: [ :index, :show ]
-    resources :pages, only: :show
+    resources :pages, only: [] do
+      collection do
+        get "/:slug" => "pages#show"
+      end
+    end
     resource :errors, only: [] do
       collection do
         get :not_found

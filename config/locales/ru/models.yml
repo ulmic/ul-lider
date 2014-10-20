@@ -3,6 +3,7 @@ ru:
     models:
       user: Пользователь
       news: Новость
+      page: Страница
     attributes:
       user:
         first_name: Имя
@@ -30,6 +31,11 @@ ru:
         body: Текст
         published_at: Дата публикации
         photo: Фото
+      page:
+        title: Название
+        body: Текст
+        slug: Slug
+        created_at: Дата создания
     errors:
       models:
         user:

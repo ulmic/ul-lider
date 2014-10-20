@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :page do
-    title "MyText"
-    body "MyText"
-    slug "MyText"
+    title { generate :string }
+    body { generate :string }
+    slug { generate :string }
   end
 end

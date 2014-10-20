@@ -6,7 +6,7 @@ class Web::PagesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, id: @page
+    get :show, slug: @page.slug
     assert_response :success, @response.body
   end
 end
