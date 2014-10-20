@@ -1,7 +1,12 @@
 ru:
   web:
     admin:
+      welcome:
+        index:
+          title: Админка
       news:
+        index:
+          title: Управление новостями
         new:
           title: Добавить новость
         form:

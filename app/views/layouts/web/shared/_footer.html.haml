@@ -1,2 +1,22 @@
 %footer
   %br
+    .row
+      .col-md-1.logo
+        = image_tag 'main/logo-mic.png'
+      .col-md-4
+        &copy
+        = copyright_notice_year_range 2013
+        = t('contest.organization')
+        %br
+        = link_to 'http://ulmic.ru', 'http://ulmic.ru'
+        %br
+        = link_to t('application.developers'), 'https://github.com/ulmic'
+      .col-md-4.col-md-offset-2
+        = link_to t('.send_request'), new_user_path
+        %br
+        = link_to t('.news'), news_index_path
+        %br
+        = t('.definition')
+        %br
+        = t('.stages')
+
