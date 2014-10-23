@@ -18,7 +18,7 @@ $(document).ready ->
   $('#user_creative_work').on 'change', ->
     enable_submit()
     return
-  $('#user_creative_work_url').on 'change', ->
+  $('#user_url_creative_work').on 'change', ->
     enable_submit()
     return
   return
