@@ -37,4 +37,11 @@ Rails.application.routes.draw do
       resources :pages, except: :show
     end
   end
+  namespace :api do
+    resources :news, only: [] do
+      collection do
+        get :last_news
+      end
+    end
+  end
 end
