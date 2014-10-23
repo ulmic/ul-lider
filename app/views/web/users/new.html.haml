@@ -10,6 +10,7 @@
       = f.hint t('hints.users.new.require_fields')
       = f.input :email, placeholder: t('placeholders.user.email')
       = f.input :password, placeholder: t('placeholders.user.password')
+      = link_to t('.password_reveal'), '#', class: 'btn btn-xs password_reveal'
       = f.input :first_name
       = f.input :patronymic, as: :string
       = f.input :last_name
