@@ -1,5 +1,5 @@
 enable_submit = ->
-  if $('#user_creative_work').val() != '' || $('#user_creative_work_url').val() != ''
+  if $('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != ''
     $('#send_request').prop('disabled', false)
   else
     $('#send_request').prop('disabled', true)
@@ -14,7 +14,10 @@ $(document).ready ->
     else
       $('#user_locality').val('')
     return
-  $('#send_request').prop('disabled', true)
+  if $('#user_url_creative_work').val() != null
+    $('#send_request').prop('disabled', false)
+  else
+    $('#send_request').prop('disabled', true)
   $('#user_creative_work').on 'change', ->
     enable_submit()
     return
