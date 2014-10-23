@@ -16,4 +16,10 @@ class UserDecorator < ApplicationDecorator
   def contacts
     "#{email}, #{mobile_phone}, #{home_phone}"
   end
+
+  def formated_birth_date
+    if birth_date
+      birth_date.strftime("%d/%m/%Y")
+    end
+  end
 end
