@@ -28,6 +28,7 @@ ru:
         navbar:
           send_request: Подать заявку
           sign_in: Войти
+          sign_out: Выйти
           news: Новости
           admin_panel: Админка
         footer:
