@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
                            phone: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
+  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
   validates :role, presence: true
 
   state_machine initial: :waiting_confirmation do

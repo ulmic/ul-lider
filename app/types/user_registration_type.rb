@@ -11,7 +11,6 @@ class UserRegistrationType < User
   validates :home_phone, phone: true,
                          allow_blank: true
   validates :locality, presence: true
-  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
   validates :url_creative_work, url: true,
                                 allow_blank: true
   validates :postcode, presence: true
