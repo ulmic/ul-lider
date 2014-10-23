@@ -25,6 +25,7 @@ ru:
         place: Место проживания
         school_group: Место учёбы
         contacts: Контакты
+        role: Роль на сайте
         created_at: Дата регистрации
       news:
         title: Название

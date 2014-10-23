@@ -16,6 +16,10 @@ ru:
           title: Участники конкурса
           creative_work: Творческая работа
           url_creative_work: Ссылка на творческую работу
+        edit:
+          title: Изменить параметры пользователя
+        new:
+          title: Добавить пользователя
       pages:
         index:
           title: Страницы
