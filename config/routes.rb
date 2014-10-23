@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       root 'welcome#index'
       resources :news, except: :show
       resources :users, except: :show
+      resources :admins, only: :index
       resources :pages, except: :show
     end
   end

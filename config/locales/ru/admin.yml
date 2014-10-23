@@ -25,6 +25,9 @@ ru:
           title: Страницы
         new:
           title: Добавить страницу
+      admins:
+        index:
+          title: Список администраторов
   layouts:
     web:
       shared:
@@ -34,4 +37,5 @@ ru:
           participants: Участники
           admin_panel: Админка
           pages: Страницы
+          admins: Администраторы
           sign_out: Выйти
