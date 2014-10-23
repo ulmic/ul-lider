@@ -1,0 +1,6 @@
+ru:
+  enumerize:
+    user:
+      role:
+        participant: Участник конкурса
+        admin: Администратор сайта

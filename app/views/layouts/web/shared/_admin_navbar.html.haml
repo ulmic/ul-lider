@@ -18,3 +18,5 @@
     %ul.nav.navbar-nav.pull-right
       = menu_item admin_root_path do
         = t('.admin_panel')
+      = menu_item session_path, method: :delete do
+        = t('.sign_out')
