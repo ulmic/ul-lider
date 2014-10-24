@@ -21,6 +21,13 @@ GIT
     datetimepicker-rails (3.1.1)
 
 GIT
+  remote: https://github.com/fnando/i18n-js
+  revision: f1fd0b4828bda61f9f2566226d4fb9ceeec2906d
+  specs:
+    i18n-js (3.0.0.rc7)
+      i18n (~> 0.6)
+
+GIT
   remote: https://github.com/seuros/state_machine.git
   revision: 1a373b2d23a21037d95cc369a4c5b0a9c551d326
   specs:
@@ -155,8 +162,6 @@ GEM
       railties (>= 4.0.1)
     hike (1.2.3)
     i18n (0.6.11)
-    i18n-js (2.1.2)
-      i18n
     ice_nine (0.11.0)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -346,7 +351,7 @@ DEPENDENCIES
   faker
   foreman
   haml-rails
-  i18n-js
+  i18n-js!
   jquery-rails
   kaminari
   less-rails
