@@ -22,6 +22,8 @@
       font-family: bold_mic_font
       span
         display: none
+  .winner_info
+    display: none
   .winner_avatar:hover
     .winner_year
       span
@@ -108,13 +110,22 @@
     .winner_avatar:hover
       width: 75px
       height: 66px
-      &:last-child,
-      &:last-child:hover
-        margin-left: 75px
-        margin-right: 75px
       .winner_year
         span
           display: block
+    .winner_info
+      display: none
+      float: left
+      width: 100%
+      height: 235px
+      border: 1px solid lightgray
+      text-align: left
+      .winner_avatar
+        float: left
+        margin-right: 5px
+      .winner_info_text
+        font-size: 13px
+        line-height: 1.4em
   .winners_images_button
     display: block
     width: 50%
