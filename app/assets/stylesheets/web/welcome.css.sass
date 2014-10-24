@@ -1,3 +1,5 @@
+.winners_images_button
+  display: none
 .winners_images
   width: 100%
   padding-left: 0.6%
@@ -88,3 +90,41 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
   .news:first-child
     border-left: none
+
+@media (max-width: 1024px)
+  .winners_row
+    height: auto
+    text-align: center
+  .winners_images
+    display: none
+    text-align: center
+    min-width: 235px
+    width: 50%
+    margin-left: 25%
+    margin-right: 25%
+    height: auto
+    float: left
+    .winner_avatar,
+    .winner_avatar:hover
+      width: 75px
+      height: 66px
+      &:last-child,
+      &:last-child:hover
+        margin-left: 75px
+        margin-right: 75px
+      .winner_year
+        span
+          display: block
+  .winners_images_button
+    display: block
+    width: 50%
+    min-width: 235px
+    height: 25%
+    margin-left: 25%
+    margin-right: 25%
+    text-align: center
+    margin-bottom: 10px
+    font-size: 30px
+    font-family: bold_mic_font
+    border: 1px solid lightgray
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)

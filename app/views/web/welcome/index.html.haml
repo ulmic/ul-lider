@@ -1,15 +1,21 @@
 = title_is_hard t('contest.full_name')
 = stylesheet_link_tag 'web/welcome'
 = javascript_include_tag 'web/welcome'
-.winners_images
-  - (0..12).each do |i|
-    .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
-      .winner_year
-        %span
-          = "#{2003 + i}"
-.title
-  %h1
-    = t('contest.full_name')
+.row.winners_row
+  .col-md-12
+    .winners_images_button.link{ data: { href: '#' } }
+      = '2002 - 2014'
+    .winners_images
+      - (0..12).each do |i|
+        .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
+          .winner_year
+            %span
+              = "#{2003 + i}"
+.row
+  .col-md-12
+    .title
+      %h1
+        = t('contest.full_name')
 .row.for_news
   - @last_news.each do |news|
     .col-md-4.news.link{ data: { href: news_path(news) } }
