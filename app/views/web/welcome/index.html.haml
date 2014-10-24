@@ -4,6 +4,9 @@
 .winners_images
   - (0..12).each do |i|
     .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
+      .winner_year
+        %span
+          = "#{2003 + i}"
 .title
   %h1
     = t('contest.full_name')
