@@ -3,7 +3,6 @@ class Api::NewsController < Api::ApplicationController
     @news = News.published.last
     if @news
       render json: @news.id
-      head :ok
     else
       render json: 0
     end
