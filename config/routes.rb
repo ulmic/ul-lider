@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     resources :news, only: [] do
       collection do
         get :last_news
+        get :last_news_id
       end
     end
   end

@@ -7,4 +7,9 @@ class Api::NewsController < Api::ApplicationController
     end
     render json: news_ids
   end
+
+  def last_news_id
+    @news_id = News.published.last.id
+    render json: @news_id
+  end
 end
