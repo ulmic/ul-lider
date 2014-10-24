@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 gem 'state_machine', git: "https://github.com/seuros/state_machine.git"
-gem 'i18n-js'
+gem 'i18n-js', git: 'https://github.com/fnando/i18n-js'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 2.0'
