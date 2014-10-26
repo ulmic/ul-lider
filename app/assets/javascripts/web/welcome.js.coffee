@@ -11,11 +11,19 @@ close_info = ->
   return
 
 $(document).ready ->
-  if $(document).width() >= '767'
+  if $(document).width() >= '991'
     $('.winner_avatar').tooltip({
       html: true,
       content: ->
         return $(this).attr('data-original-title')
+    })
+    $('.second').width(screen.width - 67)
+    width_of_parent = $('.second').parents('div').first().width()
+    margin_left = (width_of_parent - screen.width + 67) / 2
+    $('.second').css({
+      paddingLeft: -margin_left,
+      paddingRight: -margin_left,
+      marginLeft: margin_left
     })
   else
     $('.winner_cell.main_avatar').click ->
@@ -36,12 +44,4 @@ $(document).ready ->
       $('.winners_images').show()
       $('.winner_cell').slideDown("slow")
     return
-  $('.second').width(screen.width - 67)
-  width_of_parent = $('.second').parents('div').first().width()
-  margin_left = (width_of_parent - screen.width + 67) / 2
-  $('.second').css({
-    paddingLeft: -margin_left,
-    paddingRight: -margin_left,
-    marginLeft: margin_left
-  })
   return
