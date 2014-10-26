@@ -36,4 +36,12 @@ $(document).ready ->
       $('.winners_images').show()
       $('.winner_cell').slideDown("slow")
     return
+  $('.second').width(screen.width - 67)
+  width_of_parent = $('.second').parents('div').first().width()
+  margin_left = (width_of_parent - screen.width + 67) / 2
+  $('.second').css({
+    paddingLeft: -margin_left,
+    paddingRight: -margin_left,
+    marginLeft: margin_left
+  })
   return
