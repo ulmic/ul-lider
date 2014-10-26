@@ -7,14 +7,15 @@
       = '2002 - 2014'
     .winners_images
       - (0..12).each do |i|
-        .winner_avatar.main_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i)}, winner: { id: i } }, id: "winner_avatar_#{i}" }
+        .winner_cell
           .winner_year
             %span
               = "#{2003 + i}"
-        .winner_info{ id: "winner_info_#{i}" }
-          .winner_avatar.in_info{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { winner: { id: i } } }
-          .winner_info_text
-            != winner_info(i)
+          .winner_avatar.main_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i)}, winner: { id: i } }, id: "winner_avatar_#{i}" }
+          .winner_info{ id: "winner_info_#{i}" }
+            .winner_avatar.in_info{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { winner: { id: i } } }
+            .winner_info_text
+              != winner_info(i)
 .row
   .col-md-12
     .title
