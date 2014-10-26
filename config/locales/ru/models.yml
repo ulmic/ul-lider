@@ -27,6 +27,7 @@ ru:
         contacts: Контакты
         role: Роль на сайте
         created_at: Дата регистрации
+        accept_agreement: Принимаю условия Пользовательского соглашения
       news:
         title: Название
         body: Текст
