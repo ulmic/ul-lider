@@ -14,7 +14,7 @@ class UserRegistrationType < User
   validates :url_creative_work, url: true,
                                 allow_blank: true
   validates :postcode, presence: true
-#   validates :accept_agreement, acceptance: true
+  validates :accept_agreement, acceptance: true
 
   permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :creative_work, :url_creative_work
 
