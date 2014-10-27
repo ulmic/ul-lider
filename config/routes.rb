@@ -45,5 +45,5 @@ Rails.application.routes.draw do
       end
     end
   end
-  match '*unmatched_route', to: "web/errors#not_found" if Rails.env.production?
+  get '*unmatched_route', to: "web/errors#not_found" if Rails.env.production?
 end
