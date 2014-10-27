@@ -14,4 +14,11 @@ class Web::ApplicationController < ApplicationController
   before_action do
     title("Ul-lider")
   end
+
+  if Rails.env.production?
+    rescue_from ActionController::RoutingError, ActionView::MissingTemplate, ActiveRecord::RecordNotFound, NoMethodError do |exception|
+      Rails.logger.warn "ERROR MESSAGE: #{exception.message}"
+      redirect_to not_found_errors_path
+    end
+  end
 end
