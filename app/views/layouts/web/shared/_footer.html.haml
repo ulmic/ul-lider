@@ -9,9 +9,11 @@
         = copyright_notice_year_range 2013
         = t('contest.organization')
         %br
-        = link_to 'http://ulmic.ru', 'http://ulmic.ru'
+        = link_to 'http://ulmic.ru', 'http://ulmic.ru', target: '_blank'
         %br
-        = link_to t('application.developers'), 'https://github.com/ulmic'
+        = link_to t('application.developers'), 'https://github.com/ulmic', target: '_blank'
+        %br
+        = link_to t('application.github_link'), 'https://github.com/ulmic/ul-lider', target: '_blank'
       .col-md-3
         = link_to t('.send_request'), new_user_path
         %br

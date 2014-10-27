@@ -3,6 +3,7 @@ ru:
     attributes:
       name: '"Я-лидер!"'
     developers: 'Разработчики ИТ-проектов МИЦ'
+    github_link: Ссылка на Github
   contest:
     full_name: "XIII областной конкурс актива учащейся молодёжи 'Я-лидер!'"
     organization: Молодёжный инициативный центр
