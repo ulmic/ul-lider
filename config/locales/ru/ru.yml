@@ -44,6 +44,7 @@ ru:
   web:
     users:
       new:
+        hello_participant_text: "Привет, участник конкурса актива учащейся молодежи \"Я-лидер!\""
         title: Подать заявку
         send_request: Подать заявку
         sign_in: авторизоваться
