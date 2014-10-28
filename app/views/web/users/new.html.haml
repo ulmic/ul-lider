@@ -1,8 +1,13 @@
-= title_is t('.title')
+= title_is
 = stylesheet_link_tag 'web/users'
 = javascript_include_tag 'web/users'
 - content_for :header do
-  = t('.title')
+  %h3
+    = t('.hello_participant_text')
+
+.row
+  .col-md-11
+    = render 'hat'
 
 .row
   .col-md-4.col-md-offset-2
