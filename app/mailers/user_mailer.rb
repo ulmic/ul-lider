@@ -9,4 +9,10 @@ class UserMailer < ApplicationMailer
     mail(to: user.email)
   end
 
+  def just_message(user, message)
+    @user = user
+    @message = message
+    mail(to: user.email)
+  end
+
 end
