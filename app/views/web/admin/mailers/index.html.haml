@@ -3,6 +3,7 @@
 = t('.send_by_email')
 = simple_form_for :broadcast , default_form_options(url: broadcast_admin_mailers_path) do |f|
   = f.input :email, as: :string
+  = f.input :subject, as: :string
   = f.input :message, as: :text
   = f.button :submit, t(".send")
 
@@ -10,5 +11,6 @@
 
 = t('.send_for_all')
 = simple_form_for :broadcast, default_form_options(url: broadcast_all_admin_mailers_path) do |f|
+  = f.input :subject, as: :string
   = f.input :message, as: :text
   = f.button :submit, t(".send_all")
