@@ -1,4 +1,8 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq', constraints: SidekiqConstraint.new
+
   mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
     root "welcome#index"
