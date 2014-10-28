@@ -1,0 +1,4 @@
+= title_is
+%h1= t('.edit_news')
+= render partial: 'form', locals: { action: :update }
+= link_to t('.back'), admin_news_index_path, class: "btn"

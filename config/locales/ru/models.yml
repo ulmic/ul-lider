@@ -2,6 +2,8 @@ ru:
   activerecord:
     models:
       user: Пользователь
+      news: Новость
+      page: Страница
     attributes:
       user:
         first_name: Имя
@@ -18,7 +20,24 @@ ru:
         mobile_phone: Мобильный телефон
         avatar: Аватарка
         creative_work: Творческая работа
-        creative_work_url: Ссылка на творческую работу
+        url_creative_work: Ссылка на творческую работу
+        full_name: Полное имя
+        place: Место проживания
+        school_group: Место учёбы
+        contacts: Контакты
+        role: Роль на сайте
+        created_at: Дата регистрации
+        accept_agreement: Принимаю условия Пользовательского соглашения
+      news:
+        title: Название
+        body: Текст
+        published_at: Дата публикации
+        photo: Фото
+      page:
+        title: Название
+        body: Текст
+        slug: Slug
+        created_at: Дата создания
     errors:
       models:
         user:
@@ -31,11 +50,11 @@ ru:
             home_phone:
               phone: "введён неправильно(должен начинаться с +7)"
             birth_date:
-              on_or_after: "ваш возраст должен быть от 14 лет"
+              on_or_after: "ваш возраст должен быть от 14 до 21 года"
             avatar:
               size_too_big: 'не может быть больше 3 мегабайт'
             creative_work:
               size_too_big: 'не может быть больше 25 мегабайт'
-            creative_work_url:
+            url_creative_work:
               url: 'Должно быть URL-адресом'
 

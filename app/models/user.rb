@@ -11,21 +11,12 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :patronymic, presence: true
-  validates :birth_date, presence: true,
-                         timeliness: { on_or_after: lambda { Date.parse('31 May 1993') } }
-  validates :municipality, presence: true
-  validates :school, presence: true
-  validates :group, presence: true
   validates :mobile_phone, presence: true,
                            phone: true
-  validates :home_phone, phone: true,
-                         allow_blank: true
-  validates :locality, presence: true
-  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
-  validates :creative_work_url, url: true,
-                                allow_blank: true
   validates :avatar, presence: true,
                      file_size: { maximum: 3.megabytes.to_i }
+  validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
+  validates :role, presence: true
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation
@@ -48,6 +39,7 @@ class User < ActiveRecord::Base
   extend Enumerize
   include Municipalities
   enumerize :municipality, in: Municipalities.list, default: Municipalities.list.first
+  enumerize :role, in: [ :participant, :admin ], default: :participant
 
   include UserRepository
 
@@ -68,6 +60,6 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    "#{id} | #{nickname} | #{first_name} #{last_name} | #{email}"
+    "#{id} | #{first_name} #{last_name} | #{email}"
   end
 end

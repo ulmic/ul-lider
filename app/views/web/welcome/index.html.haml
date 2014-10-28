@@ -1,39 +1,52 @@
+= title_is_hard t('contest.full_name')
 = stylesheet_link_tag 'web/welcome'
 = javascript_include_tag 'web/welcome'
-.winners_images
-  - (0..12).each do |i|
-    .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i) } } }
-.title
-  %h1
-    = t('contest.full_name')
-%section.first
-  .text.left
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-    Текст по теме: Что это такое? До 100 символов.
-  .image.right
+.row.winners_row
+  .col-md-12
+    .winners_images_button.link{ data: { href: '#' } }
+      = '2002 - 2014'
+    .winners_images
+      - (0..12).each do |i|
+        .winner_cell.main_avatar{ data: { winner: { id: i } }, id: "winner_cell_#{i}" }
+          .winner_year
+            %span
+              = "#{2003 + i}"
+          .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i)} } }
+        .winner_info{ id: "winner_info_#{i}" }
+          .winner_avatar.in_info{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { winner: { id: i } } }
+          .winner_info_text
+            != winner_info(i)
+.row
+  .col-md-12
+    .title
+      %h1
+        = t('contest.full_name')
+.row.for_news
+  - @last_news.each do |news|
+    .col-md-4.news.link{ data: { href: news_path(news) } }
+      .title
+        = news.title
+      .body
+        = image_tag news.photo
+        != strip_tags news.lead
+.row.first
+  .col-md-6.text.left
+    .title
+      Конкурс актива учащейся молодежи "Я - лидер!"
+    Это уникальная образовательная площадка Ульяновской области, которая способна подготовить из любого человека лидера общественного сектора.
+  .col-md-6.image.left
     = image_tag 'main/1.jpg'
-%section.second
-  .image.left
-    = image_tag 'main/1.jpg'
-  .text.right
-    Текст по теме: Что за это будет? До 100 символов.
-    Текст по теме: Что за это будет? До 100 символов.
-    Текст по теме: Что за это будет? До 100 символов.
-    Текст по теме: Что за это будет? До 100 символов.
-    Текст по теме: Что за это будет? До 100 символов.
-    Текст по теме: Что за это будет? До 100 символов.
-%section.third
-  .text.left
-    Текст по теме: Кто может стать участником? До 100 символов.
-    Текст по теме: Кто может стать участником? До 100 символов.
-    Текст по теме: Кто может стать участником? До 100 символов.
-    Текст по теме: Кто может стать участником? До 100 символов.
-    Текст по теме: Кто может стать участником? До 100 символов.
-    Текст по теме: Кто может стать участником? До 100 символов.
-  .image.right
-    = image_tag 'main/1.jpg'
+.row.second
+  .col-md-6.image.left
+    = image_tag 'main/2.jpg'
+  .col-md-6.text.right
+    .title
+      Кто может стать участником конкурса?
+    Учащиеся средних общеобразовательных учреждений, учреждений начального и среднего профессионального образования Приволжского федерального округа в возрасте от 14 лет до 21 года.
+.row.third
+  .col-md-6.text.left
+    .title
+      Главный приз
+    Победитель финального этапа становится кандидатом на получение президентской стипендии по поддержке талантливой молодёжи в рамках нацпроекта "Образование" в размере 30 000 рублей.
+  .col-md-6.image.right
+    = image_tag 'main/3.jpg'

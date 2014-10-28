@@ -1,6 +1,8 @@
+= title_is t('.title')
+= stylesheet_link_tag 'web/users'
 = javascript_include_tag 'web/users'
 - content_for :header do
-  = t('.registration')
+  = t('.title')
 
 .row
   .col-md-4.col-md-offset-2
@@ -8,12 +10,14 @@
       = f.hint t('hints.users.new.require_fields')
       = f.input :email, placeholder: t('placeholders.user.email')
       = f.input :password, placeholder: t('placeholders.user.password')
+      = link_to t('.password_reveal'), '#', class: 'btn btn-xs password_reveal'
       = f.input :first_name
-      = f.input :patronymic
+      = f.input :patronymic, as: :string
       = f.input :last_name
       = f.input :birth_date, as: :date_picker
       = f.input :municipality
       = f.input :locality, as: :string, placeholder: t('placeholders.user.locality')
+      = f.input :postcode, as: :string
       = f.input :school, as: :string, placeholder: t('placeholders.user.school')
       = f.input :group, as: :string
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
@@ -21,9 +25,9 @@
       = f.input :avatar
       = f.input :creative_work, as: :file
       = f.hint t('hints.users.new.creative_work_size')
-      = f.input :creative_work_url, as: :string, placeholder: t('placeholders.user.creative_work_url')
-      /= f.input :accept_agreement, as: :boolean
-
-      = f.button :submit, t('.send_request'), id: 'send_request'
+      = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')
+      != t('hints.users.new.accept_agreement')
+      = f.input :accept_agreement, as: :boolean
+      = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }
     %p= t('.or')
     = link_to t('.sign_in'), new_session_path, class: 'btn'

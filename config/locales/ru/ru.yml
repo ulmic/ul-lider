@@ -1,8 +1,14 @@
 ru:
   application:
-    name: '"Я-лидер!"'
+    attributes:
+      name: '"Я-лидер!"'
+    developers: 'Разработчики ИТ-проектов МИЦ'
+    github_link: Ссылка на Github
   contest:
     full_name: "XIII областной конкурс актива учащейся молодёжи 'Я-лидер!'"
+    organization: Молодёжный инициативный центр
+    2014_year:
+      name: 'XII конкурс "Я-лидер!"'
   placeholders:
     user:
       email: на этот адрес будет приходить рассылка с новостями о конкурсе
@@ -11,22 +17,42 @@ ru:
       school: "школа, СУЗ, ВУЗ..."
       home_phone: "орг. комитет будет связываться с вами"
       mobile_phone: "орг. комитет будет связываться с вами"
-      creative_work_url: "ссылка на файл с творческой работой в облаке"
+      url_creative_work: "ссылка на файл с творческой работой в облаке"
+    page:
+      slug: ссылка на страницу
   hints:
     users:
       new:
         creative_work_size: "творческая работа должна быть не более 25 мб. Если творческая работа имеет размер больше 25 мб, тогда следует загрузить на любой из облачных сервисов: Dropbox, Яндекс.Диск, GoogleDrive и т.д. И добавить общедоступную (!) ссылку на работу в следующем поле."
         require_fields: "* - поля, отмеченные галочкой, обазятельны для заполнения"
+        accept_agreement: "Вы принимаете условия <a href = 'http://ul-lider.ru/pages/privacy'>Пользовательского соглашения</a>."
   layouts:
     web:
       shared:
         navbar:
           send_request: Подать заявку
           sign_in: Войти
+          sign_out: Выйти
+          news: Новости
+          admin_panel: Админка
+        footer:
+          send_request: Подать заявку
+          news: Новости
+          definition: Положение о конкурсе
+          stages: Этапы
+
   web:
     users:
       new:
-        registration: Подать заявку
+        title: Подать заявку
         send_request: Подать заявку
         sign_in: авторизоваться
         or: или
+        password_reveal: Показать пароль
+    news:
+      index:
+        title: Новости
+  javascript:
+    helpers:
+      password_reveal: Показать пароль
+      password_hide: Скрыть пароль

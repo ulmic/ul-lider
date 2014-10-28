@@ -1,0 +1,10 @@
+= title_is @news.title
+= stylesheet_link_tag 'web/news'
+.show
+  .title
+    = @news.title
+  .date
+    =l @news.published_at
+  .body
+    = image_tag @news.photo, class: 'main_photo'
+    != @news.body

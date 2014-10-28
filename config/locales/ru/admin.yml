@@ -1,0 +1,41 @@
+ru:
+  web:
+    admin:
+      welcome:
+        index:
+          title: Админка
+      news:
+        index:
+          title: Управление новостями
+        new:
+          title: Добавить новость
+        form:
+          this_is_main_photo: Это главное фото новости
+      users:
+        index:
+          title: Участники конкурса
+          creative_work: Творческая работа
+          url_creative_work: Ссылка на творческую работу
+        edit:
+          title: Изменить параметры пользователя
+        new:
+          title: Добавить пользователя
+      pages:
+        index:
+          title: Страницы
+        new:
+          title: Добавить страницу
+      admins:
+        index:
+          title: Список администраторов
+  layouts:
+    web:
+      shared:
+        admin_navbar:
+          news: Новости
+          users: Пользователи
+          participants: Участники
+          admin_panel: Админка
+          pages: Страницы
+          admins: Администраторы
+          sign_out: Выйти

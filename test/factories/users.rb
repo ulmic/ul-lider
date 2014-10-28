@@ -1,5 +1,3 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :user do
     first_name { generate :string }
@@ -13,5 +11,6 @@ FactoryGirl.define do
     birth_date { generate :date }
     email
     password { generate :string }
+    avatar { generate :file }
   end
 end

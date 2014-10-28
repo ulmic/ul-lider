@@ -1,0 +1,63 @@
+.index
+  .news
+    width: 100%
+    height: auto
+    float: left
+    border-bottom: 1px solid lightgray
+    margin-bottom: 10px
+    .title,
+    .body
+      float: left
+      margin-bottom: 15px
+    .title
+      font-size: 20px
+      font-family: bold_mic_font
+    .body
+      text-align: justify
+      img
+        width: 20%
+        float: left
+        margin-right: 15px
+  .news:last-child
+    border: none
+.show
+  .title
+    font-size: 25px
+    font-family: bold_mic_font
+  .title,
+  .body,
+  .date
+    float: left
+    width: 100%
+    height: auto
+  .date
+    font-size: 12px
+    margin-bottom: 25px
+    float: left
+  .title
+    line-height: 30px
+  .body
+    img
+      &.main_photo
+        float: left
+        width: 50%
+        margin-right: 15px
+    border-bottom: 1px solid lightgray
+    margin-bottom: 15px
+    text-align: justify
+footer
+  border: none
+
+@media (max-width: 992px)
+  .show
+    .body
+      img
+        width: 100%
+  .index
+    .news
+      height: auto
+      width: 100%
+      float: left
+      .body
+        img
+          width: 100%

@@ -9,10 +9,13 @@ class Web::SessionsController < Web::ApplicationController
 
     if @session.valid?
       user = @session.user
-
-      sign_in(user)
+      sign_in user
       f(:success)
-      try_redirect_to_from_or account_root_path
+      if user.role.admin?
+        try_redirect_to_from_or admin_path
+      else
+        try_redirect_to_from_or account_root_path
+      end
     else
       render :new
     end

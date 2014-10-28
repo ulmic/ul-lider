@@ -1,0 +1,24 @@
+%header.navbar.navbar-default
+  .navbar-header
+    %button.navbar-toggle{"type" => "button", "data-toggle" => "collapse",
+      "data-target" => ".navbar-collapse"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{ href: root_path }
+      = t('application.attributes.name')
+  .navbar-collapse.collapse
+    %ul.nav.navbar-nav
+      = menu_item admin_users_path do
+        = t('.participants')
+      = menu_item admin_news_index_path do
+        = t('.news')
+      = menu_item admin_pages_path do
+        = t('.pages')
+      = menu_item admin_admins_path do
+        = t('.admins')
+    %ul.nav.navbar-nav.pull-right
+      = menu_item admin_root_path do
+        = t('.admin_panel')
+      = menu_item session_path, method: :delete do
+        = t('.sign_out')
