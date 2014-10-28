@@ -28,6 +28,13 @@ ru:
       admins:
         index:
           title: Список администраторов
+      mailers:
+        index:
+          title: Рассылки
+          send: Отослать
+          send_all: Отправить всем
+          send_by_email: Отправить одному пользователю по емейлу
+          send_for_all: Сделать массовую рассылку для всех
   layouts:
     web:
       shared:
@@ -38,4 +45,5 @@ ru:
           admin_panel: Админка
           pages: Страницы
           admins: Администраторы
+          mailers: Рассылки
           sign_out: Выйти

@@ -35,6 +35,12 @@ Rails.application.routes.draw do
       resources :users, except: :show
       resources :admins, only: :index
       resources :pages, except: :show
+      resources :mailers, only: :index do
+        collection do
+          post :broadcast
+          post :broadcast_all
+        end
+      end
     end
   end
   namespace :api do
