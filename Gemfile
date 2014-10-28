@@ -6,6 +6,8 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
 
+gem 'sinatra', '>= 1.3.0', require: nil
+
 gem "bower-rails"
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
