@@ -8,6 +8,7 @@ set :rvm_type, :user
 set :rvm_ruby_version, 'ruby-2.1.1'
 set :use_sudo, false
 #set :sidekiq_service_name, "sidekiq"
+
 #set :sidekiq_default_hooks, false
 
 # set :whenever_environment, defer { stage }
@@ -53,6 +54,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:stop'
     invoke 'unicorn:start'
+    invoke 'sidekiq:restart'
   end
 
   after :publishing, :restart

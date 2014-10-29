@@ -69,9 +69,8 @@ ActiveRecord::Schema.define(version: 20141020213628) do
     t.text     "mobile_phone"
     t.text     "locality"
     t.text     "postcode"
-    t.text     "creative_work_url"
     t.text     "role"
-    t.text     "creative_work"
+    t.string   "creative_work"
     t.text     "url_creative_work"
   end
 

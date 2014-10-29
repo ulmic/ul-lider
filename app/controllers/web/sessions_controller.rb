@@ -12,7 +12,7 @@ class Web::SessionsController < Web::ApplicationController
       sign_in user
       f(:success)
       if user.role.admin?
-        try_redirect_to_from_or admin_path
+        try_redirect_to_from_or admin_root_path
       else
         try_redirect_to_from_or account_root_path
       end
