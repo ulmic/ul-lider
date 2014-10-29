@@ -17,12 +17,12 @@ $(document).ready ->
       content: ->
         return $(this).attr('data-original-title')
     })
-    $('.second').width(screen.width - 67)
-    width_of_parent = $('.second').parents('div').first().width()
+    $('.full_width').width(screen.width - 75)
+    width_of_parent = $('.full_width').parents('div').first().width()
     margin_left = (width_of_parent - screen.width + 67) / 2
-    $('.second').css({
+    $('.full_width').css({
       paddingLeft: -margin_left,
-      paddingRight: -margin_left,
+      paddingRight: -margin_left - 10,
       marginLeft: margin_left
     })
   else
@@ -44,9 +44,9 @@ $(document).ready ->
       $('.winners_images').show()
       $('.winner_cell').slideDown("slow")
     return
-  $('.second').width(document.width)
+  $('.full_width').width(document.width)
   margin_left = (1170 - document.width) / 2
-  $('.second').css({
+  $('.full_width').css({
     paddingLeft: -margin_left,
     paddingRight: -margin_left,
     marginLeft: margin_left

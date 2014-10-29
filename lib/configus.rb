@@ -7,6 +7,8 @@ Configus.build Rails.env do
       year_2014 'http://2014.ul-lider.ru'
       ulmic 'http://ulmic.ru'
       this 'http://ul-lider.ru'
+      ulnc 'http://ulnc.ru'
+      ministry_of_edu 'http://mo73.ru/'
     end
     mailer do
       from "info@ul-lider.ru"

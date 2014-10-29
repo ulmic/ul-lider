@@ -36,7 +36,7 @@
     Это уникальная образовательная площадка Ульяновской области, которая способна подготовить из любого человека лидера общественного сектора.
   .col-md-6.image.left
     = image_tag 'main/1.jpg'
-.row.second
+.row.second.full_width
   .col-md-6.image.left
     = image_tag 'main/2.jpg'
   .col-md-6.text.right
@@ -50,3 +50,16 @@
     Победитель финального этапа становится кандидатом на получение президентской стипендии по поддержке талантливой молодёжи в рамках нацпроекта "Образование" в размере 30 000 рублей.
   .col-md-6.image.right
     = image_tag 'main/3.jpg'
+.row.fourth.full_width
+  .col-md-6.image.logos
+    = image_tag 'main/4.jpg'
+  .col-md-6.text.right
+    .title
+      Организаторы конкурса
+    Организаторами XIII конкурса "Я-лидер" выступают
+    %br
+    = link_to t('contest.organization_short_title'), configus.sites.ulmic, target: '_blank'
+    %br
+    = link_to t('contest.partners.new_civilization_short_title'), configus.sites.ulnc, target: '_blank'
+    %br
+    = link_to t('contest.partners.ministry_of_education'), configus.sites.ministry_of_edu, target: '_blank'
