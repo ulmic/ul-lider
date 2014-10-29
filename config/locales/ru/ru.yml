@@ -7,6 +7,7 @@ ru:
   contest:
     full_name: "XIII областной конкурс актива учащейся молодёжи 'Я-лидер!'"
     organization: Молодёжный инициативный центр
+    definition: Положение о конкурсе
     organization_short_title: "УОМОО \"Молодёжный инициативный центр\""
     partners:
       new_civilization_short_title: "УРМОО \"Новая цивилизация\""
@@ -42,7 +43,6 @@ ru:
         footer:
           send_request: Подать заявку
           news: Новости
-          definition: Положение о конкурсе
           stages: Этапы
 
   web:
