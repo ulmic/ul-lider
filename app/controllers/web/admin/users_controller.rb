@@ -23,6 +23,7 @@ class Web::Admin::UsersController < Web::Admin::ApplicationController
   def update
     @user = UserEditByAdminType.find params[:id]
     if @user.update_attributes params[:user]
+      UserMailer.delay.activation_info @user if @user.admin_confirmed?
       redirect_to admin_users_path
     else
       render action: :edit

@@ -15,4 +15,8 @@ class UserMailer < ApplicationMailer
     mail(to: user.email, subject: subject)
   end
 
+  def activation_info(user)
+    @user = user
+    mail to: user.email
+  end
 end
