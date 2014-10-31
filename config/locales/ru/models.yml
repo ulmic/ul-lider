@@ -28,6 +28,8 @@ ru:
         role: Роль на сайте
         created_at: Дата регистрации
         accept_agreement: Принимаю условия Пользовательского соглашения
+        state: Статус пользователя
+        state_event: Статус пользователя
       news:
         title: Название
         body: Текст
@@ -57,4 +59,15 @@ ru:
               size_too_big: 'не может быть больше 25 мегабайт'
             url_creative_work:
               url: 'Должно быть URL-адресом'
-
+    state_machines:
+      user:
+        state:
+          states:
+            waiting_confirmation: Ожидание подтверждения почты
+            inactive: Забанен
+            active: Активный
+            admin_confirm: Подтверждён администратором
+          events:
+            confirm: Подтвердить почту
+            admin_confirm: "Подтверждение анкеты-заявки"
+            deactivate: Забанить

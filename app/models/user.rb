@@ -22,13 +22,14 @@ class User < ActiveRecord::Base
     state :waiting_confirmation
     state :inactive
     state :active
-
-    event :activate do
-      transition all => :active
-    end
+    state :confirmed_by_admin
 
     event :confirm do
       transition [:waiting_confirmation, :inactive, :active] => :active
+    end
+
+    event :admin_confirm do
+      transition all => :confirmed_by_admin
     end
 
     event :deactivate do
