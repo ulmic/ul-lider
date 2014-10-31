@@ -28,7 +28,7 @@ test:
 
 staging:
   <<: *default
-  username: ul_lider_staging
+  username: lider
   database: ul_lider_staging
 
 production:

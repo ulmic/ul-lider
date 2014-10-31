@@ -1,14 +1,15 @@
-app_path = "/srv/lider_v2"
+app_path = "/srv/lider_v2_stg"
 working_directory "#{app_path}/current"
 
 worker_processes 1
+
+listen "127.0.0.1:8081"
+
 timeout 15
 # preload_app true
 
 stderr_path "#{app_path}/current/log/unicorn.stderr.log"
 stdout_path "#{app_path}/current/log/unicorn.stdout.log"
-
-listen "127.0.0.1:8080"
 
 # FIXME
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
