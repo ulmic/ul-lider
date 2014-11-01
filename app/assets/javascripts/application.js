@@ -24,6 +24,7 @@ $(document).ready(function() {
   $('.link').click(function() {
     location.href = $(this).attr('data-href');
   });
+  $('.target_blank').attr('target', '_blank');
   $('.password_reveal').click(function(e) {
     e.preventDefault();
     password_input_class = 'password';
