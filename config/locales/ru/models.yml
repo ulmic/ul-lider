@@ -59,6 +59,12 @@ ru:
               size_too_big: 'не может быть больше 25 мегабайт'
             url_creative_work:
               url: 'Должно быть URL-адресом'
+            first_name:
+              human_name: 'имеет неверный формат'
+            last_name:
+              human_name: 'имеет неверный формат'
+            patronymic:
+              human_name: 'имеет неверный формат'
     state_machines:
       user:
         state:

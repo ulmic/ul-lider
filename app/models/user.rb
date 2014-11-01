@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
                     email: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :patronymic, presence: true
+  validates :first_name, presence: true, human_name: true
+  validates :last_name, presence: true, human_name: true
+  validates :patronymic, presence: true, human_name: true
   validates :mobile_phone, presence: true,
                            phone: true
   validates :avatar, presence: true,

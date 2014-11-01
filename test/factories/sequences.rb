@@ -88,4 +88,8 @@ FactoryGirl.define do
   sequence :file do |n|
     fixture_file_upload('app/assets/images/winners/0.png', 'image/png')
   end
+
+  sequence :human_name do
+    "Leopold"
+  end
 end
