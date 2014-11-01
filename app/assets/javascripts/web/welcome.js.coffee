@@ -36,6 +36,8 @@ $(document).ready ->
       id = winner_id this
       $("#winner_cell_#{id}").slideDown("show")
       $("#winner_info_#{id}").slideUp("hide")
+    count = $('.news').length
+    $('.for_news').height(240 * count)
   $('.winners_images_button').click ->
     if $('.winners_images').is(':visible')
       $('.winner_cell').slideUp()
