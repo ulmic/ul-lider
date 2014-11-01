@@ -9,7 +9,11 @@ class Api::NewsController < Api::ApplicationController
   end
 
   def last_news_id
-    @news_id = News.published.last.id
-    render json: @news_id
+    if News.any?
+      @news_id = News.published.last.id
+      render json: @news_id
+    else
+      render json: 0
+    end
   end
 end
