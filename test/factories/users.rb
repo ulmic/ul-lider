@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    first_name { generate :string }
-    last_name { generate :string }
-    patronymic { generate :string }
+    first_name { generate :human_name }
+    last_name { generate :human_name }
+    patronymic { generate :human_name }
     school { generate :string }
     group { generate :string }
     locality { generate :string }
