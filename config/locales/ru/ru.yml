@@ -57,6 +57,9 @@ ru:
     news:
       index:
         title: Новости
+    welcome:
+      index:
+        send_request: ПОДАТЬ ЗАЯВКУ
   javascript:
     helpers:
       password_reveal: Показать пароль
