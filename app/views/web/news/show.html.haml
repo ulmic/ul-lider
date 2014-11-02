@@ -1,9 +1,9 @@
 = title_is @news.title
 = stylesheet_link_tag 'web/news'
 - content_for :meta do
-  %meta{ property: 'og:description', content: @news.lead }
+  %meta{ property: 'og:description', content: "#{@news.lead} #ЯЛидер" }
   %meta{ property:'og:image', content: @news.photo }
-  %meta{ name:'description', content: @news.lead }
+  %meta{ name:'description', content: "#{@news.lead} #ЯЛидер" }
   %link{ rel: 'image_src', href: @news.photo  }
 .show
   .title
