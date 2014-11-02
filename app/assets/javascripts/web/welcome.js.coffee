@@ -53,4 +53,11 @@ $(document).ready ->
     paddingRight: -margin_left,
     marginLeft: margin_left
   })
+  $('#winner_cell_12').unbind('click')
+  $('#winner_cell_12').click ->
+    close_info()
+    id = winner_id this
+    $("#winner_info_#{id}").slideDown("show")
+    $(this).hide()
+    return
   return
