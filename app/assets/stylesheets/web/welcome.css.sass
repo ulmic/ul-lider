@@ -51,10 +51,7 @@ $contest_color: #ffc33c
 .send_request_button_row
   text-align: center
 .row
-  &.first,
-  &.second,
-  &.third,
-  &.fourth
+  &.plaha
     padding-top: 35px
     height: 450px
     .text
@@ -63,20 +60,17 @@ $contest_color: #ffc33c
         line-height: 44px
         font-family: bold_mic_font
         margin-bottom: 26px
-  &.first,
-  &.second,
-  &.third,
-  &.fourth
+  &.plaha
     .text
       padding-top: 55px
-  &.first,
-  &.second,
-  &.third,,
-  &.fourth
+    &.last-plaha
+      border-bottom: none
+      .web-store-logo
+        margin-top: 50px
+  &.plaha,
   &.for_news
     border-bottom: 1px solid lightgray
-  &.second,
-  &.fourth
+  &.full_width
     background-color: $contest_color
   .text,
   .image
@@ -125,6 +119,9 @@ $contest_color: #ffc33c
   .social_buttons
     text-align: center
     margin-top: 30px
+    margin-bottom: 30px
+    span
+      font-size: 20pt
 
 @media (max-width: 992px)
   .winners_row
@@ -184,10 +181,7 @@ $contest_color: #ffc33c
           line-height: 20px
       .news:hover
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5)
-    &.first,
-    &.second,
-    &.third,
-    &.fourth
+    &.plaha
       text-align: center
       .text
         font-size: 12px

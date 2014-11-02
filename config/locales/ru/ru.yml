@@ -60,6 +60,7 @@ ru:
     welcome:
       index:
         send_request: ПОДАТЬ ЗАЯВКУ
+        share_us: Расскажите о нас
   javascript:
     helpers:
       password_reveal: Показать пароль
