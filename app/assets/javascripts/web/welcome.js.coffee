@@ -46,13 +46,6 @@ $(document).ready ->
       $('.winners_images').show()
       $('.winner_cell').slideDown("slow")
     return
-  $('.full_width').width(document.width)
-  margin_left = (1170 - document.width) / 2
-  $('.full_width').css({
-    paddingLeft: -margin_left,
-    paddingRight: -margin_left,
-    marginLeft: margin_left
-  })
   $('#winner_cell_12').unbind('click')
   $('#winner_cell_12').click ->
     close_info()
