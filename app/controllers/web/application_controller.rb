@@ -19,7 +19,7 @@ class Web::ApplicationController < ApplicationController
     rescue_from ActionController::RoutingError, ActionView::MissingTemplate, ActiveRecord::RecordNotFound, NoMethodError do |exception|
       Rails.logger.warn "ERROR MESSAGE: #{exception.message}"
       anchor = "view_#{rand(3) + 1}"
-      redirect_to not_found_errors_path(anchor: anchor)
+      redirect_to "#{not_found_errors_path}##{anchor}"
     end
   end
 end
