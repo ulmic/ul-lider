@@ -1,1 +1,10 @@
-404 not found
+= javascript_include_tag 'web/errors'
+= stylesheet_link_tag 'web/errors'
+= title_is t('.not_found_page')
+.row
+  .col-md-12
+    %h3
+      = t('.this_is_404_error_page')
+= render "mr_and_mrs", i: 1
+= render "mr_and_mrs", i: 2
+= render "mr_and_mrs", i: 3
