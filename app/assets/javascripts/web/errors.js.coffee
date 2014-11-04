@@ -3,21 +3,27 @@ set_background_color = (color) ->
   $('#content').css('background-color', color)
   $('.container').css('background-color', color)
 
-
-$(document).ready ->
-  $('.mr_mrs').hide()
+get_view = (hash) ->
   colors = {
     '#view_1': '#f0eff4',
     '#view_2': '#232323',
     '#view_3': '#edcfdb'
   }
+  $(hash).show()
+  set_background_color colors[hash]
+  if hash == '#view_2'
+    $('h3').css('color', '#f0eff4')
+    $('footer').css('color', '#f0eff4')
+    $('footer img').css('background-color', '#f0eff4')
+  return
+
+$(document).ready ->
+  $('.mr_mrs').hide()
   if window.location.hash != ''
-    $(window.location.hash).show()
-    set_background_color colors[window.location.hash]
-    if window.location.hash == '#view_2'
-      $('h3').css('color', '#f0eff4')
-      $('footer').css('color', '#f0eff4')
-      $('footer img').css('background-color', '#f0eff4')
+    get_view(window.location.hash)
+    return
   else
-    $('#view_1').show()
-    set_background_color colors['#view_1']
+    i = Math.floor(Math.random() * 3) + 1
+    hash = "#view_#{i}"
+    get_view(hash)
+    return
