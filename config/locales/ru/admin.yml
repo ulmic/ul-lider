@@ -4,6 +4,9 @@ ru:
       welcome:
         index:
           title: Админка
+          new_users: Новые заявки
+          waiting_approve: Ожидающие подтверждения администратора
+          confirmed_by_admin_users_count: Подтверждённые администратором
       news:
         index:
           title: Управление новостями
