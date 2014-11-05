@@ -1,6 +1,10 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
-    @users = UserDecorator.decorate_collection User.participants
+    if params[:state]
+      @users = UserDecorator.decorate_collection User.participants.where(state: params[:state])
+    else
+      @users = UserDecorator.decorate_collection User.participants
+    end
   end
 
   def new

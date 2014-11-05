@@ -1,1 +1,17 @@
 = title_is
+%table.table.table-bordered
+  %tr
+    %td
+      = link_to t('.new_users'), 'admin/users/waiting_confirmation'
+    %td
+      = @new_users_count
+  %tr
+    %td
+      = link_to t('.waiting_approve'), 'admin/users/active'
+    %td
+      = @waiting_approve_count
+  %tr
+    %td
+      = link_to t('.confirmed_by_admin_users_count'), 'admin/users/confirmed_by_admin'
+    %td
+      = @confirmed_by_admin_users_count
