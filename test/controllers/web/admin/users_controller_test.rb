@@ -8,7 +8,15 @@ class Web::Admin::UsersControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
+    get :index, state: :all
+    assert_response :success
+    get :index, state: :active
+    assert_response :success
+    get :index, state: :confirmed_by_admin
+    assert_response :success
+    get :index, state: :waiting_confirmation
+    assert_response :success
+    get :index, state: :inactive
     assert_response :success
   end
 
