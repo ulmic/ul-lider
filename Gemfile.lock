@@ -15,7 +15,7 @@ GIT
 GIT
   remote: git://github.com/ulmic/tconsole.git
   revision: eb3217c6f27a246f94cccf7bb871e837ef5cb120
-  branch: develop
+  branch: rails4
   specs:
     tconsole (1.3.0.pre2)
       chattyproc (~> 1.0.0)
