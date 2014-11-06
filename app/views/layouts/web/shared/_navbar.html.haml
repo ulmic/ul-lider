@@ -6,7 +6,8 @@
       %span.icon-bar
     %a.navbar-brand{ href: root_path }
       = image_tag 'main/logo-yal.png', class: 'navbar-header-image'
-      = t('application.attributes.name')
+      %span
+        = t('application.attributes.name')
   .navbar-collapse.collapse
     %ul.nav.navbar-nav
       = menu_item new_user_path do
