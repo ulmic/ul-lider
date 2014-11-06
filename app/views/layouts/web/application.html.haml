@@ -4,6 +4,7 @@
     = render 'layouts/web/shared/head'
   %body
     = render 'layouts/web/shared/navbar'
+    = yield :top_social_buttons
     .container
       = bootstrap_flash
       #content

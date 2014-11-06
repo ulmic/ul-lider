@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.7'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -17,6 +17,7 @@ gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 gem 'state_machine', git: "https://github.com/seuros/state_machine.git"
 gem 'i18n-js', git: 'https://github.com/fnando/i18n-js'
+gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 2.0'
