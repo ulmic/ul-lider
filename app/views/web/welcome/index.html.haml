@@ -1,6 +1,9 @@
 = title_is_hard t('contest.full_name')
 = stylesheet_link_tag 'web/welcome'
 = javascript_include_tag 'web/welcome'
+- content_for :top_social_buttons do
+  .top_social_buttons
+    = render 'layouts/web/shared/social_buttons'
 .row.winners_row
   .col-md-12
     .winners_images_button.link{ data: { href: '#' } }
