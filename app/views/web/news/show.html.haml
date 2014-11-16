@@ -9,7 +9,7 @@
   .title
     = @news.title
   .date
-    =l @news.published_at
+    = @news.publish_date_time
   .social_buttons
     = render 'layouts/web/shared/social_buttons'
   .body
