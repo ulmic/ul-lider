@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=develop)](https://travis-ci.org/ulmic/ul-lider) [![Coverage Status](https://img.shields.io/coveralls/ulmic/ul-lider.svg)](https://coveralls.io/r/ulmic/ul-lider) [![Code Climate](https://codeclimate.com/github/ulmic/ul-lider/badges/gpa.svg)](https://codeclimate.com/github/ulmic/ul-lider)
+[![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=develop)](https://travis-ci.org/ulmic/ul-lider) [![Coverage Status](https://img.shields.io/coveralls/ulmic/ul-lider.svg)](https://coveralls.io/r/ulmic/ul-lider?branch=develop) [![Code Climate](https://codeclimate.com/github/ulmic/ul-lider/badges/gpa.svg)](https://codeclimate.com/github/ulmic/ul-lider)
 
 
 ```shell
