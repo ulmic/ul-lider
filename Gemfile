@@ -17,7 +17,6 @@ gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 gem 'state_machine', git: "https://github.com/seuros/state_machine.git"
 gem 'i18n-js', git: 'https://github.com/fnando/i18n-js'
-gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 2.0'
@@ -87,5 +86,8 @@ group :test do
   # gem 'launchy'
   # gem 'poltergeist'
   # gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+  gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
+  gem 'coveralls', require: false
   gem 'wrong'
 end

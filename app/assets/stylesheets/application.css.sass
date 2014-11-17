@@ -1,21 +1,17 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_self
  *= require bootstrap-datetimepicker
  *= require glyphicons
  */
 
-$contest_color: #fac416
+$persic_color: #fac416
+$contest_color: #ffae00
+
+body
+  color: black
+
+h1, h2, h3, h4, h5, h6
+  color: black
 
 .link
   cursor: pointer
@@ -32,6 +28,10 @@ body
   font-family: mic_font
 
 footer
+  a
+    color: $contest_color
+    &:hover
+      color: $contest_color
   border-top: 1px solid lightgray
   .logo
     float: left
@@ -62,9 +62,15 @@ input[type="checkbox"]
   div
     background-color: $contest_color !important
 .navbar
-  background-color: $contest_color
+  background-color: linear-gradient(#fecb01, #ffae00)
+  background: linear-gradient(to bottom, #fecb01 0%, #ffae00 100%)
+  border-radius: 0px
+  box-shadow: none
 .navbar-default
   .navbar-nav
+    li
+      a
+        color: black
     .active
       a,
       a:hover
@@ -77,6 +83,7 @@ input[type="checkbox"]
   span
     padding-top: 30px
     height: 100%
+    color: black
 .navbar-header-image
   height: 60px
   margin-top: 2px
@@ -104,11 +111,14 @@ input[type="checkbox"]
       height: 185px
       float: left
 .btn
-  &.btn-very-lg
-    font-size: 15pt
-.btn-branded
-  background-color: $contest_color
+  background-image: linear-gradient($persic_color, $contest_color)
+  border: 1px solid #facb01
   color: black
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: none
   &:hover
     color: black
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+    border-color: $contest_color
+    background-color: $persic_color
+  &.btn-very-lg
+    font-size: 15pt
