@@ -4,7 +4,8 @@
 = simple_form_for :broadcast , default_form_options(url: broadcast_admin_mailers_path) do |f|
   = f.input :email, as: :string
   = f.input :subject, as: :string
-  = f.input :message, as: :text
+  = f.label :message
+  = f.cktext_area :message
   = f.button :submit, t(".send")
 
 %br
