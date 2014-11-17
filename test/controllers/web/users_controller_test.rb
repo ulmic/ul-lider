@@ -33,4 +33,14 @@ class Web::UsersControllerTest < ActionController::TestCase
     @user.reload
     assert { @user.active? }
   end
+
+  test 'should not create' do
+    attrs = attributes_for :user
+    attrs[:first_name] = nil
+    count = User.count
+    post :create, user: attrs
+    assert_response :success
+    user = User.find_by(attrs.extract(:email))
+    assert_equal count, User.count
+  end
 end
