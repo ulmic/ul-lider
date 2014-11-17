@@ -8,12 +8,12 @@ ru:
     full_name: "XIII областной конкурс актива учащейся молодёжи «Я-лидер!»"
     organization: Молодёжный инициативный центр
     definition: Положение о конкурсе
-    organization_short_title: "УОМОО \"Молодёжный инициативный центр\""
+    organization_short_title: "УОМОО «Молодёжный инициативный центр»"
     partners:
-      new_civilization_short_title: "УРМОО \"Новая цивилизация\""
+      new_civilization_short_title: "УРМОО «Новая цивилизация»"
       ministry_of_education: Министерство образования Ульяновской области
     2014_year:
-      name: 'XII конкурс "Я-лидер!"'
+      name: 'XII конкурс «Я-лидер!»'
   placeholders:
     user:
       email: на этот адрес будет приходить рассылка с новостями о конкурсе
@@ -48,7 +48,7 @@ ru:
   web:
     users:
       new:
-        hello_participant_text: "Привет, участник конкурса актива учащейся молодежи \"Я-лидер!\""
+        hello_participant_text: "Привет, участник конкурса актива учащейся молодежи «Я-лидер!»"
         title: Подать заявку
         send_request: Подать заявку
         sign_in: авторизоваться
