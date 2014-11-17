@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=1.0.14)](https://travis-ci.org/ulmic/ul-lider) 
+[![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=develop)](https://travis-ci.org/ulmic/ul-lider)
 
 
 ```shell
