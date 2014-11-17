@@ -86,6 +86,7 @@ group :test do
   # gem 'launchy'
   # gem 'poltergeist'
   # gem 'selenium-webdriver'
+  gem 'simplecov', require: false
   gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
   gem 'coveralls', require: false
   gem 'wrong'
