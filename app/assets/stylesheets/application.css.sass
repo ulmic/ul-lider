@@ -1,21 +1,11 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_self
  *= require bootstrap-datetimepicker
  *= require glyphicons
  */
 
-$contest_color: #fac416
+$persic_color: #fac416
+$contest_color: #f8b101
 
 .link
   cursor: pointer
@@ -104,11 +94,14 @@ input[type="checkbox"]
       height: 185px
       float: left
 .btn
-  &.btn-very-lg
-    font-size: 15pt
-.btn-branded
-  background-color: $contest_color
+  background-image: linear-gradient($persic_color, $contest_color)
+  border: 1px solid #facb01
   color: black
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: none
   &:hover
     color: black
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+    border-color: $contest_color
+    background-color: $persic_color
+  &.btn-very-lg
+    font-size: 15pt
