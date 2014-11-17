@@ -20,10 +20,12 @@
       %h1
         = t('contest.full_name')
 .row
-  .col-md-offset-2.col-md-8.send_request_button_row
+  .col-md-offset-1.col-md-4.send_request_button_row
     = link_to new_user_path, class: 'btn btn-very-lg btn-branded' do
       = t('.send_request')
       = image_tag 'main/logo-yal.png', class: 'navbar-header-image'
+  .col-md-4
+    = render 'vimeo_video'
 .row.for_news
   - @last_news.each do |news|
     .col-md-4.news.link{ data: { href: news_path(news) } }
