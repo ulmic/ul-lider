@@ -23,11 +23,6 @@ class Web::UsersController < Web::ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-    @user = @user.decorate
-  end
-
   def confirm
     user = User.find_by!(params.extract(:id, :confirmation_token).to_hash)
     if user.confirm
