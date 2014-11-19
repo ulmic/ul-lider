@@ -71,11 +71,12 @@ $contest_color: #ffc33c
       border-bottom: none
       .web-store-logo
         margin-top: 50px
-  &.plaha,
   &.for_news
     border-bottom: 1px solid lightgray
   &.full_width
-    background-color: #FFC200
+    background-image: url('/assets/main/background.jpg')
+    background-attachment: fixed
+    background-repeat: no-repeat
   .text,
   .image
     float: left
@@ -139,6 +140,9 @@ $contest_color: #ffc33c
     margin-left: 340px
 
 @media (max-width: 992px)
+  .row
+    &.full_width
+      background-color: #FFC200
   .winners_row
     height: auto
     text-align: center

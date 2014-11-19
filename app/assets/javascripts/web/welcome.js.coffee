@@ -38,6 +38,9 @@ $(document).ready ->
       $("#winner_info_#{id}").slideUp("hide")
     count = $('.news').length
     $('.for_news').height(240 * count)
+  document_width = screen.width
+  document_height = screen.height
+  $('.full_width').css('background-size', "#{document_width}px #{document_height}px")
   $('.winners_images_button').click ->
     if $('.winners_images').is(':visible')
       $('.winner_cell').slideUp()
