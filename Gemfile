@@ -63,12 +63,13 @@ end
 group :development do
   gem 'web-console', '2.0.0.beta2'
   gem 'spring'
-  gem 'capistrano'
+  gem 'capistrano', '3.2.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'capistrano-sidekiq'
   gem 'capistrano-rvm'
+  gem 'colorize', '0.6.0'
   gem 'quiet_assets'
 end
 
