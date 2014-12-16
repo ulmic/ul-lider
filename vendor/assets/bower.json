@@ -1,7 +1,6 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap-switch": "latest",
     "jasny-bootstrap": "latest"
   }
 }
