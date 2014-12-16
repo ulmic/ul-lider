@@ -28,6 +28,8 @@ initialize_charts = ->
   return
 
 $(document).ready ->
+  document_width = screen.width
+  document_height = screen.height
   if $(document).width() >= '991'
     $('.winner_avatar').tooltip({
       html: true,
@@ -45,6 +47,8 @@ $(document).ready ->
     #$ctx = $('#myChart')
     #$ctx.width($(document).width() * 0.4)
     #$ctx.height $ctx.width()
+    $('iframe').prop('width', (document_width - 300))
+    $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
   else
     $('.winner_cell.main_avatar').click ->
       close_info()
@@ -58,8 +62,8 @@ $(document).ready ->
       $("#winner_info_#{id}").slideUp("hide")
     count = $('.news').length
     $('.for_news').height(240 * count)
-  document_width = screen.width
-  document_height = screen.height
+    $('iframe').prop('width', $('iframe').first().parent().first().width())
+    $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
   $('.full_width').css('background-size', "#{document_width}px #{document_height}px")
   $('.winners_images_button').click ->
     if $('.winners_images').is(':visible')
