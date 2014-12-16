@@ -28,7 +28,6 @@ initialize_charts = ->
   return
 
 $(document).ready ->
-  initialize_charts()
   if $(document).width() >= '991'
     $('.winner_avatar').tooltip({
       html: true,
