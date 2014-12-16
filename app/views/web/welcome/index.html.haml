@@ -1,6 +1,7 @@
 = title_is_hard t('contest.full_name')
 = stylesheet_link_tag 'web/welcome'
 = javascript_include_tag 'web/welcome'
+= javascript_include_tag 'charts/Chart'
 - content_for :top_social_buttons do
   .top_social_buttons
     = render 'layouts/web/shared/social_buttons'
@@ -19,10 +20,13 @@
     .title
       %h1
         = t('contest.full_name')
-.row
-  .col-md-offset-2.col-md-8.send_request_button_row
+.row.with_request_button
+  .col-md-12.send_request_button_row
     = link_to new_user_path, class: 'btn btn-very-lg btn-branded' do
       = t('.send_request')
+.row.vimeo_video
+  .col-md-12
+    = render 'vimeo_video'
 .row.for_news
   - @last_news.each do |news|
     .col-md-4.news.link{ data: { href: news_path(news) } }
