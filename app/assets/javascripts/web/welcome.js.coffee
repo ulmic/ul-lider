@@ -10,23 +10,6 @@ close_info = ->
     return
   return
 
-initialize_charts = ->
-  ctx = document.getElementById("myChart").getContext("2d")
-  data = [{
-    value: 4,
-    color:"#f9bd27",
-    highlight: "#f9bd27",
-    label: "Идёт"
-  },
-  {
-    value: 2,
-    color: "lightgray",
-    highlight: "lightgray",
-    label: "Осталось"
-  }]
-  myNewChart = new Chart(ctx).Doughnut(data, { segmentStrokeWidth : 1 })
-  return
-
 $(document).ready ->
   document_width = screen.width
   document_height = screen.height
@@ -44,9 +27,6 @@ $(document).ready ->
       paddingRight: -margin_left - 10,
       marginLeft: margin_left
     })
-    #$ctx = $('#myChart')
-    #$ctx.width($(document).width() * 0.4)
-    #$ctx.height $ctx.width()
     $('iframe').prop('width', (document_width - 300))
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
   else
