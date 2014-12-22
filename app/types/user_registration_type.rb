@@ -16,7 +16,7 @@ class UserRegistrationType < User
   validates :postcode, presence: true
   validates :accept_agreement, acceptance: true
 
-  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :creative_work, :url_creative_work
+  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :creative_work, :url_creative_work, :state, :home_phone, :accept_agreement
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)

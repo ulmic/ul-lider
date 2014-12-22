@@ -28,6 +28,7 @@
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
       = f.input :avatar
+      = f.input :state, as: :hidden, input_html: { value: User.state_machines[:state].states.map(&:name).first }
       = f.input :creative_work, as: :file
       = f.hint t('hints.users.new.creative_work_size')
       = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')

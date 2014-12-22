@@ -21,6 +21,7 @@ module UlLider
     config.i18n.default_locale = :ru
     config.assets.enabled = true
     config.assets.initialize_on_precompile = true
+    config.active_record.raise_in_transactional_callbacks = true
     config.assets.version = '1.0'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
