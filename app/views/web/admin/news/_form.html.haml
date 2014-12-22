@@ -1,10 +1,11 @@
+= javascript_include_tag 'web/admin/news'
+
 .row
   .col-md-10
     = simple_form_for @news, url: { action: action, controller: 'web/admin/news' } do |f|
       = f.error_notification
       = f.input :title, as: :string
-      = f.label :body
-      = f.cktext_area :body
+      = f.input :body
       = f.input :published_at, as: :datetime_picker
       %br
       = f.hint t('.this_is_main_photo')
