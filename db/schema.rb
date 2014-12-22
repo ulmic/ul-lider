@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029182523) do
+ActiveRecord::Schema.define(version: 20141222133635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "ckeditor_assets", force: true do |t|
+  create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
     t.integer  "data_file_size"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20141029182523) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
-  create_table "news", force: true do |t|
+  create_table "news", force: :cascade do |t|
     t.text     "title"
     t.text     "body"
     t.datetime "published_at"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20141029182523) do
     t.text     "photo"
   end
 
-  create_table "pages", force: true do |t|
+  create_table "pages", force: :cascade do |t|
     t.text     "title"
     t.text     "body"
     t.text     "slug"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20141029182523) do
     t.text     "view"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20141029182523) do
     t.datetime "birth_date"
     t.string   "confirmation_token"
     t.string   "reset_password_token"
-    t.string   "state"
+    t.string   "state",                default: "waiting_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "municipality"
