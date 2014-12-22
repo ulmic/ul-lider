@@ -12,5 +12,6 @@ FactoryGirl.define do
     email
     password { generate :string }
     avatar { generate :file }
+    state 'waiting_confirmation'
   end
 end
