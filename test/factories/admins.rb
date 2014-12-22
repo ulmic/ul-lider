@@ -13,5 +13,6 @@ FactoryGirl.define do
     password { generate :string }
     avatar { generate :file }
     role :admin
+    state 'waiting_confirmation'
   end
 end

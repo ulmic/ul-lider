@@ -3,6 +3,7 @@ require 'test_helper'
 class Api::NewsControllerTest < ActionController::TestCase
   setup do
     @news = create :news
+    @controller = Api::NewsController.new
   end
   test "should get last news" do
     get :last_news, format: :json
