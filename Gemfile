@@ -11,6 +11,7 @@ gem 'sinatra', '>= 1.3.0', require: nil
 gem "bower-rails"
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby

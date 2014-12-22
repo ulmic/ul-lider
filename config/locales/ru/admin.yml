@@ -21,6 +21,10 @@ ru:
           title: Участники конкурса
           creative_work: Творческая работа
           url_creative_work: Ссылка на творческую работу
+          confirmed_by_admin: Подтверждённые заявки
+          waiting_confirmation: Ожидается подтверждение почты
+          active: Ожидающие подтверждение администратора
+          inactive: Забаненные
         edit:
           title: Изменить параметры пользователя
         new:
