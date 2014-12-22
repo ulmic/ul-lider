@@ -1,10 +1,9 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
-    if params[:state]
-      @users = UserDecorator.decorate_collection User.participants.where(state: params[:state])
-    else
-      @users = UserDecorator.decorate_collection User.participants
-    end
+    @confirmed_by_admin_users = UserDecorator.decorate_collection User.participants.where state: :confirmed_by_admin
+    @waiting_confirmation_users = UserDecorator.decorate_collection User.participants.where state: :waiting_confirmation
+    @active_users = UserDecorator.decorate_collection User.participants.where state: :active
+    @inactive_users = UserDecorator.decorate_collection User.participants.where state: :inactive
   end
 
   def new
