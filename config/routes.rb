@@ -36,11 +36,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root 'welcome#index'
       resources :news, except: :show
-      resources :users, except: :show do
-        collection do
-          get ':state' => 'users#index'
-        end
-      end
+      resources :users, except: :show
       resources :admins, only: :index
       resources :pages, except: :show
       resources :mailers, only: :index do
