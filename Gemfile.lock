@@ -6,8 +6,14 @@ GIT
       railties (>= 3.1)
 
 GIT
+  remote: git://github.com/kalashnikovisme/karamzin.git
+  revision: fa5ce21ae03a6664dfdbae1dd9db019f9a2fe72f
+  specs:
+    karamzin (0.0.1)
+
+GIT
   remote: git://github.com/rails/activeform.git
-  revision: 581dbfe4b4e1c4d84ab03691179a02d8695db7cd
+  revision: 66a051b0739cd24ecee71b41015237f4f0f36a3e
   specs:
     active_form (0.0.1)
       rails (~> 4.1)
@@ -74,7 +80,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.4.3)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (4.0.2.1)
+    autoprefixer-rails (4.0.2.2)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -368,7 +374,7 @@ GEM
       ruby2ruby (>= 2.0.1)
       ruby_parser (>= 3.0.1)
       sexp_processor (>= 4.0)
-    wysiwyg-rails (1.2.3)
+    wysiwyg-rails (1.2.4)
       font-awesome-rails (= 4.2.0.0)
       railties (>= 3.2, < 5.0)
 
@@ -406,6 +412,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
+  karamzin!
   less-rails
   mini_magick
   momentjs-rails (>= 2.8.1)!

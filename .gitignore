@@ -26,5 +26,6 @@ config/initializers/secret_token.rb
 *.sqlite3-journal
 *~
 config/secrets.yml
+config/database.yml
 
 /vendor/bundle
