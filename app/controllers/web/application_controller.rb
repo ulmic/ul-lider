@@ -2,6 +2,7 @@ class Web::ApplicationController < ApplicationController
   include Concerns::FlashHelper
   include Concerns::TitleHelper
   include Concerns::RedirectHelper
+  include KaramzinHelper
 
   helper_method :title
 
