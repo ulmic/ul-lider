@@ -1,6 +1,7 @@
 class Web::Admin::NewsController < Web::Admin::ApplicationController
   def index
-    @news = NewsDecorator.decorate_collection NewsEditType.all
+    @published_news = NewsDecorator.decorate_collection NewsEditType.published
+    @unpublished_news = NewsDecorator.decorate_collection NewsEditType.unpublished
   end
 
   def new
