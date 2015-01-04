@@ -1,8 +1,14 @@
 = title_is @page.title
 = stylesheet_link_tag 'web/pages'
 - if @page.with_own_view?
+  - content_for :meta do
+    %meta{ property: 'og:description', content: "#{@page.title} #ЯЛидер" }
+    %meta{ name:'description', content: "#{@page.title} #ЯЛидер" }
   = render "#{@page.view}"
 - else
+  - content_for :meta do
+    %meta{ property: 'og:description', content: "#{@page.description_lead} #ЯЛидер" }
+    %meta{ name:'description', content: "#{@page.description_lead} #ЯЛидер" }
   .title
     = @page.title
   .body
