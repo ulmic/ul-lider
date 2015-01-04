@@ -5,6 +5,10 @@ class NewsDecorator < ApplicationDecorator
     "#{model.body.first(250)}..."
   end
 
+  def description_lead
+    "#{model.body.first(200)}..."
+  end
+
   def long_lead
     "#{model.body.first(600)}..."
   end
