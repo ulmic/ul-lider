@@ -1,6 +1,4 @@
 = title_is_hard t('contest.full_name')
-= stylesheet_link_tag 'web/welcome'
-= javascript_include_tag 'web/welcome'
 - content_for :meta do
   %meta{ property: 'og:description', content: "#{t('contest.full_name')}" }
   %meta{ name:'description', content: "#{t('.contest.full_name')}" }
@@ -102,3 +100,5 @@
       = t('.share_us')
     %br
     = render 'layouts/web/shared/social_buttons'
+= stylesheet_link_tag 'web/welcome'
+= javascript_include_tag 'web/welcome'
