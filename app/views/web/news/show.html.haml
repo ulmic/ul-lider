@@ -13,6 +13,10 @@
   .social_buttons
     = render 'layouts/web/shared/social_buttons'
   .body
-    = image_tag @news.photo, class: 'main_photo'
+    - if mobile_device?
+      = image_tag @news.photo.mobile_thumb, class: 'main_photo'
+    - else
+      = image_tag @news.photo, class: 'main_photo'
+
     != @news.body
     = render 'layouts/web/shared/social_buttons'

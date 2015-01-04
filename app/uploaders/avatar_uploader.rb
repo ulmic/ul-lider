@@ -9,10 +9,10 @@ class AvatarUploader < ApplicationUploader
   end
 
   version :medium do
-    process :resize_to_fill => [400, 400]
+    process :resize_to_fill => [400, 400, 'North']
   end
 
   version :small do
-    process :resize_to_fill => [100, 100]
+    process :resize_to_fill => [100, 100, 'North']
   end
 end

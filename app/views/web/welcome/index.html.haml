@@ -44,10 +44,16 @@
       Конкурс актива учащейся молодежи «Я - лидер!»
     Это уникальная образовательная площадка Ульяновской области, которая способна подготовить из любого человека лидера общественного сектора.
   .col-md-6.image.left
-    = image_tag 'main/1.jpg'
+    - if mobile_device?
+      = image_tag 'main/mobile/1.jpg'
+    - else
+      = image_tag 'main/1.jpg'
 .row.plaha.full_width
   .col-md-6.image.left
-    = image_tag 'main/2.jpg'
+    - if mobile_device?
+      = image_tag 'main/mobile/2.jpg'
+    - else
+      = image_tag 'main/2.jpg'
   .col-md-6.text.right
     .title
       Кто может стать участником конкурса?
@@ -58,10 +64,16 @@
       Главный приз
     Победитель финального этапа становится кандидатом на получение президентской стипендии по поддержке талантливой молодёжи в рамках нацпроекта "Образование" в размере 30 000 рублей.
   .col-md-6.image.right
-    = image_tag 'main/3.jpg'
+    - if mobile_device?
+      = image_tag 'main/mobile/3.jpg'
+    - else
+      = image_tag 'main/3.jpg'
 .row.plaha.full_width
   .col-md-6.image.logos
-    = image_tag 'main/4.jpg'
+    - if mobile_device?
+      = image_tag 'main/mobile/4.jpg'
+    - else
+      = image_tag 'main/4.jpg'
   .col-md-6.text.right
     .title
       Организаторы конкурса
@@ -79,7 +91,10 @@
     = link_to 'Рабочее расширение', configus.chrome_extension.url
     следует установить себе всем участникам и тем, кто хочет знать самые последние новости о конкурсе.
   .col-md-6.image.right.web-store-logo
-    = image_tag 'availale_in_chrome_web_store.png', class: 'link', data: { href: configus.chrome_extension.url }
+    - if mobile_device?
+      = image_tag 'main/mobile/availale_in_chrome_web_store.png', class: 'link', data: { href: configus.chrome_extension.url }
+    - else
+      = image_tag 'main/availale_in_chrome_web_store.png', class: 'link', data: { href: configus.chrome_extension.url }
 
 .row
   .social_buttons

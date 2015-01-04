@@ -11,6 +11,10 @@ class PhotoUploader < ApplicationUploader
     process :resize_to_fill => [400, 400]
   end
 
+  version :mobile_thumb do
+    process :resize_to_fill => [225, 150]
+  end
+
   version :small do
     process :resize_to_fill => [100, 100]
   end
