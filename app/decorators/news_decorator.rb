@@ -10,6 +10,6 @@ class NewsDecorator < ApplicationDecorator
   end
 
   def publish_date_time
-    l(object.published_at)[0..23]
+    l(object.published_at)[0..22]
   end
 end
