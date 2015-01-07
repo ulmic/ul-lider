@@ -1,3 +1,4 @@
+#= require jquery
 set_background_color = (color) ->
   $('body').css('background-color', color)
   $('#content').css('background-color', color)
