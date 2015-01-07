@@ -1,3 +1,5 @@
+#= require jquery
+
 winner_id = (element) ->
   $(element).attr('data-winner-id')
 
@@ -27,7 +29,7 @@ $(document).ready ->
       paddingRight: -margin_left - 10,
       marginLeft: margin_left
     })
-    $('iframe').prop('width', (document_width - 300))
+    $('iframe').prop('width', $('.container').width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
   else
     $('.winner_cell.main_avatar').click ->

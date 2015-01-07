@@ -26,3 +26,8 @@
       .col-md-3
         = link_to configus.chrome_extension.url, target: "_blank" do
           = image_tag 'main/availale_in_chrome_web_store.png', class: :store_logo
+= stylesheet_link_tag "vendor", media: "all", debug: false
+= stylesheet_link_tag "application"
+= javascript_include_tag "vendor", debug: false
+= javascript_include_tag "application"
+= render 'layouts/web/shared/google_analytics'
