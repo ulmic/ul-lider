@@ -1,3 +1,5 @@
+#= require jquery
+
 winner_id = (element) ->
   $(element).attr('data-winner-id')
 
