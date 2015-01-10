@@ -2,6 +2,7 @@
 enable_submit = ->
   if ($('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != '') && $('#user_accept_agreement').prop('checked') == true
     $('#send_request').prop('disabled', false)
+    $('#user_birth_date').prop('disabled', false)
   else
     $('#send_request').prop('disabled', true)
   return
@@ -19,6 +20,8 @@ $(document).ready ->
     return
   if $('#user_url_creative_work').val() != ''
     $('#send_request').prop('disabled', false)
+    #it needs because disabled inputs are empty
+    $('#user_birth_date').prop('disabled', false)
   else
     $('#send_request').prop('disabled', true)
   $('#user_creative_work').change ->
