@@ -22,6 +22,8 @@
       - if signed_as_admin?
         = menu_item admin_root_path do
           = t('.admin_panel')
+          %sup
+            = new_users_count
         = menu_item session_path, method: :delete do
           = t('.sign_out')
       -#= menu_item new_session_path do
