@@ -1,4 +1,5 @@
 #= require jquery
+#= require i18n_setup
 enable_submit = ->
   if ($('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != '') && $('#user_accept_agreement').prop('checked') == true
     $('#send_request').prop('disabled', false)
