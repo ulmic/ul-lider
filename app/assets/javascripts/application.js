@@ -1,4 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require jasny-bootstrap/js/fileinput
 //= require moment
+//= require bootstrap-datetimepicker
 
 $(document).ready(function() {
   $('.datepicker').datetimepicker({
