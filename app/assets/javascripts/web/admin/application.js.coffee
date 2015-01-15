@@ -1,4 +1,5 @@
 #= require jquery
+#= require moment
 #= require bootstrap-datetimepicker
 #= require pickers
 #= require locales/ru
