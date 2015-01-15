@@ -1,9 +1,4 @@
 //= require moment
-//= require bootstrap-datetimepicker
-//= require pickers
-//= require locales/ru
-//= require glyphicons
-//= require i18n_setup
 
 $(document).ready(function() {
   $('.datepicker').datetimepicker({
