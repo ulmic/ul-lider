@@ -29,6 +29,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :fair_participants, only: [ :new, :create ]
+
     namespace :account do
       root 'welcome#index'
     end
