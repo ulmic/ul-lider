@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117071622) do
+ActiveRecord::Schema.define(version: 20150118224204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150117071622) do
     t.text     "url_creative_work"
     t.text     "life_goals"
     t.text     "fair_goals"
+    t.text     "region",               default: "Ульяновская область"
   end
 
 end
