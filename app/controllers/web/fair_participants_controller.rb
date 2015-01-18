@@ -4,7 +4,7 @@ class Web::FairParticipantsController < Web::ApplicationController
   end
 
   def create
-    @fair_part = FairParticipantRegistrationType.new params[:fair_part]
+    @fair_part = FairParticipantRegistrationType.new params[:user]
     @fair_part.generate_confirmation_token
     if @fair_part.save
       UserMailer.delay.confirmation_instructions @fair_part

@@ -54,6 +54,14 @@ ru:
         sign_in: авторизоваться
         or: или
         password_reveal: Показать пароль
+    fair_participants:
+      new:
+        hello_participant_text: "Привет, участник профильной смены «Ярмарка идей»!"
+        title: "Подать заявку на «Ярмарку идей»"
+        send_request: Подать заявку
+        sign_in: авторизоваться
+        or: или
+        password_reveal: Показать пароль
     news:
       index:
         title: Новости
