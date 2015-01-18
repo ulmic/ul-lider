@@ -2,7 +2,6 @@
 open_region_input = ->
   $('div.user_municipality').slideUp()
   $('div.user_region').slideDown()
-  $('#user_i_am_not_from_73reg').prop('checked', true)
 
 $ ->
   if $('#user_accept_agreement').prop('checked') == true
@@ -16,7 +15,7 @@ $ ->
       $('#send_request').prop('disabled', true)
     return
   $('div.user_region').hide()
-  if $('#user_region').val() != 'Ульяновская область'
+  if $('#user_i_am_not_from_73reg').prop('checked') == true
     open_region_input()
   $('#user_i_am_not_from_73reg').change ->
     if $(this).prop('checked') == true
