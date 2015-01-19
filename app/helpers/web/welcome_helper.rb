@@ -4,10 +4,10 @@ module Web::WelcomeHelper
   end
   def new_participants_count
     count = User.participants.where(state: :active).count
-    count unless count == 0
+    content_tag(:sup, count, class: 'text-primary notification') unless count == 0
   end
   def new_fair_participants_count
     count = User.fair_participants.where(state: :active).count
-    count unless count == 0
+    content_tag(:sup, count, class: 'text-success notification') unless count == 0
   end
 end
