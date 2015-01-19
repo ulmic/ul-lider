@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   extend Enumerize
   include Municipalities
   enumerize :municipality, in: Municipalities.list, default: Municipalities.list.first
-  enumerize :role, in: [ :participant, :admin, :fair_participant ], default: :participant
+  enumerize :role, in: [ :participant, :admin, :fair_participant, :reserve_school ], default: :participant
   include RussiaRegions
   enumerize :region, in: RussiaRegions.name_list
 

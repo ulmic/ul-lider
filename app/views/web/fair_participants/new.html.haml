@@ -28,6 +28,8 @@
       = f.input :school, as: :string, placeholder: t('placeholders.user.school')
       = f.input :group, as: :string
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
+      != t('hints.fair_participant.new.you_know_if_you_in_reserve_school')
+      = f.input :i_am_reserve_school, as: :boolean
       = f.input :life_goals
       = f.input :fair_goals
       = f.input :avatar

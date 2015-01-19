@@ -9,6 +9,7 @@ module UserRepository
     scope :active, -> { where state: :active }
     scope :confirmed, -> { where state: :confirmed_by_admin }
     scope :waiting_confirmation, -> { where state: :waiting_confirmation }
+    scope :reserve_schoolers, -> { where role: :reserve_school }
   end
 end
 

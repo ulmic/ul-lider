@@ -36,10 +36,11 @@ ru:
       fair_participants:
         index:
           title: "Заявки на 'Ярмарку идей'"
-          confirmed_by_admin: Подтверждённые заявки
+          confirmed_by_admin: Подтверждённые
           waiting_confirmation: Ожидается подтверждение почты
           active: Ожидающие подтверждение администратора
           inactive: Забаненные
+          reserve_schoolers: Заявки на ШКР
         edit:
           title: Изменить параметры заявки
         new:
