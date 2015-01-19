@@ -22,6 +22,6 @@ class UserMailer < ApplicationMailer
 
   def fair_idea_confirmation(user)
     @user = user
-    mail to: user.email
+    mail to: user.email, subject: I18n.t('mailers.fair_idea_confirmation.subject')
   end
 end
