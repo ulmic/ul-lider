@@ -41,6 +41,7 @@ Rails.application.routes.draw do
       resources :users, except: :show
       resources :admins, only: :index
       resources :pages, except: :show
+      resources :fair_participants, except: :show
       resources :mailers, only: :index do
         collection do
           post :broadcast

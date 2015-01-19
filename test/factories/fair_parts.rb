@@ -10,9 +10,6 @@ FactoryGirl.define do
     mobile_phone { generate :phone }
     birth_date { generate :date }
     email
-    password { generate :string }
     avatar { generate :file }
-    state 'waiting_confirmation'
-    role :fair_participant
   end
 end

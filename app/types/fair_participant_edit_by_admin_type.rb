@@ -1,4 +1,4 @@
-class FairParticipantRegistrationType < User
+class FairParticipantEditByAdminType < User
   include ApplicationType
 
   attr_accessor :i_am_not_from_73reg
@@ -15,7 +15,7 @@ class FairParticipantRegistrationType < User
   validates :fair_goals, presence: true
   validates :region, presence: true
 
-  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :state, :accept_agreement, :life_goals, :fair_goals, :region, :i_am_not_from_73reg, :avatar_cache, :role
+  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :state, :accept_agreement, :life_goals, :fair_goals, :region, :i_am_not_from_73reg, :avatar_cache, :state_event, :role
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)

@@ -1,0 +1,37 @@
+- model_class = User
+%table.table.table-striped.table-condensed
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:avatar)
+      %th= model_class.human_attribute_name(:full_name)
+      %th= model_class.human_attribute_name(:birth_date)
+      %th= model_class.human_attribute_name(:place)
+      %th= model_class.human_attribute_name(:school_group)
+      %th= model_class.human_attribute_name(:contacts)
+      %th= model_class.human_attribute_name(:creative_work)
+      %th= model_class.human_attribute_name(:state)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', default: t("helpers.actions")
+  %tbody
+    - fair_parts.each do |fair_part|
+      %tr
+        %td= link_to fair_part.id, edit_admin_fair_participant_path(fair_part)
+        %td= image_tag fair_part.avatar.small
+        %td= link_to fair_part.full_name, edit_admin_fair_participant_path(fair_part)
+        %td= fair_part.formated_birth_date
+        %td= fair_part.place
+        %td= fair_part.school_group
+        %td= fair_part.contacts
+        %td
+          - if fair_part.creative_work.present?
+            = link_to t('.creative_work'), fair_part.creative_work.url
+          - if fair_part.url_creative_work.present?
+            = link_to t('.url_creative_work'), fair_part.url_creative_work
+        %td= fair_part.state
+        %td=l fair_part.created_at
+        %td
+          = link_to t('.edit', default: t("helpers.links.edit")), edit_admin_fair_participant_path(fair_part), class: 'btn btn-warning btn-xs'
+          = link_to t('.destroy', default: t("helpers.links.destroy")), admin_fair_participant_path(fair_part), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-xs btn-danger'
+
+= link_to t('.new', default: t("helpers.links.new")), new_admin_fair_participant_path, class: 'btn btn-primary'
