@@ -29,6 +29,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :fair_participants, only: [ :new, :create ]
+
     namespace :account do
       root 'welcome#index'
     end
@@ -39,6 +41,7 @@ Rails.application.routes.draw do
       resources :users, except: :show
       resources :admins, only: :index
       resources :pages, except: :show
+      resources :fair_participants, except: :show
       resources :mailers, only: :index do
         collection do
           post :broadcast

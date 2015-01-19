@@ -25,4 +25,9 @@ $(document).ready(function() {
       $(this).html(I18n.t('javascript.helpers.password_reveal'));
     }
   });
+  $('textarea').focus(function() {
+    $(this).height(300);
+  }).focusout(function() {
+    $(this).height(50);
+  });
 });

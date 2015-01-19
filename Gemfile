@@ -59,6 +59,7 @@ gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
 gem 'ckeditor'
 gem 'karamzin', github: 'kalashnikovisme/karamzin'
+gem 'russia_regions'
 
 group :assets do
   gem 'coffee-rails'

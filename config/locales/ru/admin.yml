@@ -33,6 +33,17 @@ ru:
           title: Изменить параметры пользователя
         new:
           title: Добавить пользователя
+      fair_participants:
+        index:
+          title: "Заявки на 'Ярмарку идей'"
+          confirmed_by_admin: Подтверждённые заявки
+          waiting_confirmation: Ожидается подтверждение почты
+          active: Ожидающие подтверждение администратора
+          inactive: Забаненные
+        edit:
+          title: Изменить параметры заявки
+        new:
+          title: Добавить заявку
       pages:
         index:
           title: Страницы
@@ -60,3 +71,4 @@ ru:
           admins: Администраторы
           mailers: Рассылки
           sign_out: Выйти
+          fair_participants: 'Заявки на "Ярмарку идей"'

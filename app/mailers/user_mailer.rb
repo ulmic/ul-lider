@@ -19,4 +19,9 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email
   end
+
+  def fair_idea_confirmation(user)
+    @user = user
+    mail to: user.email
+  end
 end
