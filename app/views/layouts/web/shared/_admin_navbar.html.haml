@@ -10,7 +10,7 @@
   .navbar-collapse.collapse
     %ul.nav.navbar-nav
       = menu_item admin_users_path do
-        = t('.participants')
+        = "#{t('.participants')} / #{@contest_parts.count}"
       = menu_item admin_news_index_path do
         = t('.news')
       = menu_item admin_pages_path do
@@ -20,7 +20,7 @@
       = menu_item admin_mailers_path do
         = t('.mailers')
       = menu_item admin_fair_participants_path do
-        = t('.fair_participants')
+        = "#{t('.fair_participants')} / #{@fair_parts.count}"
     %ul.nav.navbar-nav.pull-right
       = menu_item admin_root_path do
         = t('.admin_panel')
