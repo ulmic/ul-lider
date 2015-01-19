@@ -5,6 +5,7 @@ module UserRepository
   included do
     scope :participants, -> { where role: :participant }
     scope :admins, -> { where role: :admin }
+    scope :fair_participants, -> { where role: :fair_participant }
     scope :active, -> { where state: :active }
     scope :confirmed, -> { where state: :confirmed_by_admin }
     scope :waiting_confirmation, -> { where state: :waiting_confirmation }

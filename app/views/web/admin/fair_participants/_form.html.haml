@@ -1,0 +1,22 @@
+.row
+  .col-md-4.col-md-offset-2
+    = simple_form_for @fair_part, url: { controller: 'web/admin/fair_participants', action: action }, html: { class: 'form-horizontal' } do |f|
+      = f.hint t('hints.users.new.require_fields')
+      = f.input :email
+      = f.input :role
+      = f.input :first_name
+      = f.input :patronymic, as: :string
+      = f.input :last_name
+      = f.input :birth_date, as: :date_picker
+      = f.input :postcode, as: :string
+      = f.input :region
+      = f.input :municipality
+      = f.input :locality, as: :string, placeholder: t('placeholders.user.locality')
+      = f.input :school, as: :string, placeholder: t('placeholders.user.school')
+      = f.input :group, as: :string
+      = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
+      = f.input :life_goals
+      = f.input :fair_goals
+      = f.input :avatar, as: :image_preview, input_html: { preview_version: :medium }
+      = f.input :state_event, as: :state_event
+      = f.button :submit
