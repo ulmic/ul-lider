@@ -22,9 +22,13 @@
       %h1
         = t('contest.full_name')
 .row.with_request_button
-  .col-md-12.send_request_button_row
+  .col-md-2
+  .col-md-4.send_request_button_row
     = link_to new_user_path, class: 'btn btn-very-lg btn-branded' do
       = t('.send_request')
+  .col-md-4.send_request_button_row
+    = link_to new_fair_participants_count, class: 'btn btn-very-lg btn-branded' do
+      = t('.send_request_on_fair_idea')
 .row.vimeo_video
   .col-md-12
     = render 'vimeo_video'
