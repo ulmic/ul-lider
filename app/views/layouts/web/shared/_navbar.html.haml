@@ -22,10 +22,8 @@
       - if signed_as_admin?
         = menu_item admin_root_path do
           = t('.admin_panel')
-          %sup.text-primary.notification
-            = new_participants_count
-          %sup.text-danger.notification
-            = new_fair_participants_count
+          = new_participants_count
+          = new_fair_participants_count
         = menu_item session_path, method: :delete do
           = t('.sign_out')
       -#= menu_item new_session_path do
