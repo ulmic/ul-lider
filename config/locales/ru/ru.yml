@@ -81,3 +81,7 @@ ru:
     helpers:
       password_reveal: Показать пароль
       password_hide: Скрыть пароль
+  mailers:
+    fair_idea_confirmation:
+      subject:
+        "Подтверждение анкеты-заявки на смену 'Ярмарка идей'"
