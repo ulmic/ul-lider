@@ -26,7 +26,7 @@ class Web::Admin::FairParticipantsController < Web::Admin::ApplicationController
   def update
     @fair_part = FairParticipantEditByAdminType.find params[:id]
     if @fair_part.update_attributes params[:user]
-      UserMailer.delay.activation_info @fair_part if @fair_part.confirmed_by_admin?
+      UserMailer.delay.fair_idea_confirmation @fair_part if @fair_part.confirmed_by_admin?
       redirect_to admin_fair_participants_path
     else
       render action: :edit
