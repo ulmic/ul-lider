@@ -33,7 +33,7 @@ ru:
         accept_agreement: "Вы принимаете условия <a href = 'http://ul-lider.ru/pages/privacy'>Пользовательского соглашения</a>."
     fair_participant:
       new:
-        you_know_if_you_in_reserve_school: 'Если вы участник Школы кадрового резерва, вы точно об этом знаете.'
+        you_know_if_you_in_reserve_school: 'Участником Школы кадрового резерва могут быть лишь те, кто отправлял заявку в сентябре 2014 года.Если вы не отправляли заявку в сентябре 2014 года, не ставьте эту галочку!'
   layouts:
     web:
       shared:
