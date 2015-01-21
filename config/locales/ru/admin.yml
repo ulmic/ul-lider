@@ -1,6 +1,7 @@
 ru:
   web:
     admin:
+      need_minimum_requests_to_fair_of_idea: "Заявок на Ярмарку идей требуется ещё минимум %{count}"
       welcome:
         index:
           title: Админка
