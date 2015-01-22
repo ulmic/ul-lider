@@ -1,9 +1,9 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
-    @confirmed_by_admin_users = UserDecorator.decorate_collection User.participants.where state: :confirmed_by_admin
-    @waiting_confirmation_users = UserDecorator.decorate_collection User.participants.where state: :waiting_confirmation
-    @active_users = UserDecorator.decorate_collection User.participants.where state: :active
-    @inactive_users = UserDecorator.decorate_collection User.participants.where state: :inactive
+    @confirmed_by_admin_users = UserDecorator.decorate_collection User.participants.where(state: :confirmed_by_admin).reverse
+    @waiting_confirmation_users = UserDecorator.decorate_collection User.participants.where(state: :waiting_confirmation).reverse
+    @active_users = UserDecorator.decorate_collection User.participants.where(state: :active).reverse
+    @inactive_users = UserDecorator.decorate_collection User.participants.where(state: :inactive).reverse
   end
 
   def new
