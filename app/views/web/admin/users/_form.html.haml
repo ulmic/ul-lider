@@ -3,6 +3,8 @@
     = simple_form_for @user, url: { controller: 'web/admin/users', action: action }, html: { class: 'form-horizontal' } do |f|
       = f.hint t('hints.users.new.require_fields')
       = f.input :email, placeholder: t('placeholders.user.email')
+      - if @user.email.nil?
+        = f.input :password
       = f.input :role
       = f.input :first_name
       = f.input :patronymic, as: :string
