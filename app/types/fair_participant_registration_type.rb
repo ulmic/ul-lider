@@ -22,7 +22,7 @@ class FairParticipantRegistrationType < User
   end
 
   def i_am_reserve_school=(i_am_reserve_school)
-    if i_am_reserve_school == 1
+    if i_am_reserve_school == '1'
       write_attribute :role, :reserve_school
     else
       write_attribute :role, :fair_participant
