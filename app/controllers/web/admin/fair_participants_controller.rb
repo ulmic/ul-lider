@@ -1,10 +1,10 @@
 class Web::Admin::FairParticipantsController < Web::Admin::ApplicationController
   def index
-    @confirmed_by_admin_requests = UserDecorator.decorate_collection User.fair_participants.where state: :confirmed_by_admin
-    @waiting_confirmation_requests = UserDecorator.decorate_collection User.fair_participants.where state: :waiting_confirmation
-    @active_requests = UserDecorator.decorate_collection User.fair_participants.where state: :active
-    @inactive_requests = UserDecorator.decorate_collection User.fair_participants.where state: :inactive
-    @reserve_schoolers_requests = UserDecorator.decorate_collection User.reserve_schoolers
+    @confirmed_by_admin_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :confirmed_by_admin).reverse
+    @waiting_confirmation_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :waiting_confirmation).reverse
+    @active_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :active).reverse
+    @inactive_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :inactive).reverse
+    @reserve_schoolers_requests = UserDecorator.decorate_collection User.reserve_schoolers.reverse
   end
 
   def new
