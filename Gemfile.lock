@@ -6,12 +6,6 @@ GIT
       railties (>= 3.1)
 
 GIT
-  remote: git://github.com/kalashnikovisme/karamzin.git
-  revision: 3f426ac9d53061fb0cfacee61d41c93ffac4f6d3
-  specs:
-    karamzin (0.0.1)
-
-GIT
   remote: git://github.com/rails/activeform.git
   revision: 48314fa99672a93e04b804f75a181f97824cdd09
   specs:
@@ -209,6 +203,7 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    karamzin (1.0)
     kgio (2.9.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
@@ -413,7 +408,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
-  karamzin!
+  karamzin
   less-rails
   mini_magick
   momentjs-rails (>= 2.8.1)!
