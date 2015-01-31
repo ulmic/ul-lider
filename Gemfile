@@ -58,7 +58,7 @@ gem 'validates_timeliness', '~> 3.0'
 gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
 gem 'ckeditor'
-gem 'karamzin', github: 'kalashnikovisme/karamzin'
+gem 'karamzin'
 gem 'russia_regions'
 
 group :assets do
