@@ -15,6 +15,12 @@ Configus.build Rails.env do
     end
 
     host "ul-lider.ru"
+    dates do
+      #конец приёма заявок на конкурс
+      end_of_filling "2015-02-04"
+      #конец приёма заявок на Ярмарку идей
+      end_of_filling_on_fair_idea "2015-02-09"
+    end
   end
 
   env :staging, parent: :production do
