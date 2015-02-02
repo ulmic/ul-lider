@@ -19,9 +19,4 @@ module Web::ApplicationHelper
     end
   end
 
-  MAX_PARTICIPANTS_ON_FAIR_IDEA = 140
-
-  def requests_to_fair_idea_needs_count(participants_on_fair_count)
-    I18n.t('web.admin.need_minimum_requests_to_fair_of_idea', count: MAX_PARTICIPANTS_ON_FAIR_IDEA - participants_on_fair_count)
-  end
 end

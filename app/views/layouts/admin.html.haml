@@ -6,7 +6,6 @@
   %body
     = render 'layouts/web/shared/admin_navbar'
     .container
-      = requests_to_fair_idea_needs_count(@participants_on_fair_count)
       = bootstrap_flash
       #content
         %h2= yield :header
