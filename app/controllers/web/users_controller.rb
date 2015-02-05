@@ -6,7 +6,11 @@ class Web::UsersController < Web::ApplicationController
   end
 
   def new
-    @user = UserRegistrationType.new
+    if filling_is_during?
+      @user = UserRegistrationType.new
+    else
+      redirect_to "/pages/#{:end_of_filling}", status: :moved_permanently
+    end
   end
 
   def create

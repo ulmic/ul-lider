@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
   include Concerns::AuthManagment
+  include Concerns::StagesHelper
   include MobileDeviceHelper
 
   def default_search_form_options(options = {})
