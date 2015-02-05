@@ -1,17 +1,13 @@
 = stylesheet_link_tag 'web/errors'
 = javascript_include_tag 'web/pages'
-#data{ style: 'display: none', data: { color: '#6e66af' } }
+#data{ style: 'display: none', data: { color: '#7b5f6d' } }
 .row
   .col-md-12
     %h3
-      = t('.filling_on_contest_ends')
-    - if filling_on_fair_idea_is_during?
-      %h5
-        = t('.but_you_can_parts_in_fair_idea')
-        = link_to t('.here'), new_fair_participant_path
+      = t('.filling_on_fair_idea_ends')
 .row.mr_mrs
   .col-md-6
-    %h3
-      = t(".this_is_mr_mic_2014")
+    %h3{ style: 'margin-top: 40%'}
+      = t(".this_is_mrs_mic_2014")
   .col-md-6.image
-    = image_tag "pages/end_of_filling.jpg"
+    = image_tag "pages/end_of_filling_to_fair_idea.jpg"
