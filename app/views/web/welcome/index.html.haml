@@ -12,10 +12,7 @@
       = '2002 - 2014'
     .winners_images
       - (0..12).each do |i|
-        - if i == 12
-          = render 'winner_cell', i: i, klass: 'link'
-        - else
-          = render 'winner_cell', i: i, klass: ''
+        = render 'winner_cell', i: i, klass: ''
 .row
   .col-md-12
     .title
@@ -23,9 +20,6 @@
         = t('contest.full_name')
 .row.with_request_button
   .col-md-2
-  .col-md-4.send_request_button_row
-    = link_to new_user_path, class: 'btn btn-very-lg btn-branded' do
-      = t('.send_request')
   .col-md-4.send_request_button_row
     = link_to new_fair_participant_path, class: 'btn btn-very-lg btn-branded' do
       = t('.send_request_on_fair_idea')
