@@ -1,9 +1,6 @@
-.winner_cell.main_avatar{ data: { winner: { id: i } }, id: "winner_cell_#{i}" }
-  .winner_year
-    %span
-      = "#{2003 + i}"
-  .winner_avatar{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { toggle: :tooltip, placement: :bottom, original: { title: winner_info(i)} } }
-.winner_info{ id: "winner_info_#{i}" }
-  .winner_avatar.in_info{ style: "background-image: url('#{image_path("winners/#{i}.png")}'); background-repeat: no-repeat", data: { winner: { id: i } } }
+.winner_cell.main_avatar{ data: { winner: { id: participant.id } }, id: "winner_cell_#{participant.id}" }
+  .winner_avatar{ style: "background-image: url('#{participant.avatar}'); background-repeat: no-repeat" }
+.winner_info{ id: "winner_info_#{participant.id}" }
+  .winner_avatar.in_info{ style: "background-image: url('#{participant.avatar}'); background-repeat: no-repeat", data: { winner: { id: participant.id } } }
   .winner_info_text
-    != winner_info(i)
+    != winner_info(participant.id)

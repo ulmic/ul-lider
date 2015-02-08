@@ -12,15 +12,11 @@ close_info = ->
     return
   return
 
+
 $(document).ready ->
   document_width = screen.width
   document_height = screen.height
   if $(document).width() >= '991'
-    $('.winner_avatar').tooltip({
-      html: true,
-      content: ->
-        return $(this).attr('data-original-title')
-    })
     $('.full_width').width(screen.width - 75)
     width_of_parent = $('.full_width').parents('div').first().width()
     margin_left = (width_of_parent - screen.width + 67) / 2
