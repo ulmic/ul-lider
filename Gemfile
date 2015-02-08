@@ -60,6 +60,7 @@ gem 'font-awesome-rails'
 gem 'ckeditor'
 gem 'karamzin'
 gem 'russia_regions'
+gem 'russian_sex'
 
 group :assets do
   gem 'coffee-rails'
