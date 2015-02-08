@@ -61,6 +61,8 @@ gem 'ckeditor'
 gem 'karamzin'
 gem 'russia_regions'
 gem 'russian_sex'
+gem 'auto_html'
+gem 'youtube_addy'
 
 group :assets do
   gem 'coffee-rails'

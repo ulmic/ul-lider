@@ -19,6 +19,8 @@
             = participant.home_city
           .school
             = participant.school
+          .creative_work
+            = view_of_creative_work(participant)
     %hr
     .popup_social_buttons
       = render 'layouts/web/shared/social_buttons'
