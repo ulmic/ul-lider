@@ -6,13 +6,13 @@
 - content_for :top_social_buttons do
   .top_social_buttons
     = render 'layouts/web/shared/social_buttons'
-.row.winners_row
+.row.participants_row
   .col-md-12
-    .winners_images_button.link{ data: { href: '#' } }
+    .participants_images_button.link{ data: { href: '#' } }
       = '2002 - 2014'
-    .winners_images
+    .participants_images
       - @participants.each do |participant|
-        = render 'winner_cell', participant: participant
+        = render 'participant_cell', participant: participant
 .row
   .col-md-12
     .title

@@ -2,26 +2,26 @@ $contest_color: #ffc33c
 
 footer
   border-top: 1px solid lightgray
-.winners_images_button
+.participants_images_button
   display: none
-.winners_images
+.participants_images
   width: 100%
   padding-left: 0.6%
   padding-right: 0.6%
   height: 100px
   text-align: center
-  .winner_cell
+  .participant_cell
     width: 85px
     height: 100px
     float: left
-  .winner_avatar
+  .participant_avatar
     width: 85px
     height: 75px
     border: 1px solid lightgray
     float: left
     background-repeat: no-repeat
     background-size: 100%
-  .winner_year
+  .participant_year
     margin-bottom: 5px
     text-align: center
     float: left
@@ -32,10 +32,10 @@ footer
     font-family: bold_mic_font
     span
       display: none
-  .winner_info
+  .participant_info
     display: none
-  .winner_cell:hover
-    .winner_year
+  .participant_cell:hover
+    .participant_year
       span
         display: block
     .tooltip-inner
@@ -144,44 +144,44 @@ footer
   margin-right: -5px
 
 @media (min-width: 993px) and (max-width: 1199px)
-  #winner_cell_10
+  #participant_cell_10
     margin-left: 340px
 
 @media (max-width: 992px)
   .row
     &.full_width
       background-color: #FFC200
-  .winners_row
+  .participants_row
     height: auto
     text-align: center
-  .winners_images
+  .participants_images
     display: none
     text-align: center
     height: 0px
     min-width: 275px
     width: 50%
     margin: auto
-    .winner_cell
+    .participant_cell
       display: none
       height: 75px
       float: left
       margin-right: 5px
       margin-bottom: 5px
-    .winner_year
+    .participant_year
       display: none
-    .winner_info
+    .participant_info
       display: none
       float: left
       width: 260px
       height: auto
       text-align: justify
-      .winner_avatar
+      .participant_avatar
         float: left
         margin-right: 5px
-      .winner_info_text
+      .participant_info_text
         font-size: 12px
         line-height: 1.4em
-  .winners_images_button
+  .participants_images_button
     display: block
     width: 50%
     min-width: 260px
