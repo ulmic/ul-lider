@@ -21,6 +21,12 @@ class UserDecorator < ApplicationDecorator
     "#{email}, #{mobile_phone}, #{home_phone}"
   end
 
+  def age
+    now = Time.now.utc.to_date
+    years = now.year - object.birth_date.year - ((now.month > object.birth_date.month || (now.month == object.birth_date.month && now.day > object.birth_date.day)) ? 0 : 1)
+    "#{years} #{Russian.p(years, 'год', 'года', 'лет')}"
+  end
+
   def formated_birth_date
     if birth_date
       birth_date.strftime("%d/%m/%Y")
