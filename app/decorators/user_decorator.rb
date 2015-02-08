@@ -27,6 +27,14 @@ class UserDecorator < ApplicationDecorator
     "#{years} #{Russian.p(years, 'год', 'года', 'лет')}"
   end
 
+  def home_city
+    if object.municipality.include? 'г.'
+      "#{object.locality}"
+    else
+      "#{object.municipality}, #{object.locality}"
+    end
+  end
+
   def formated_birth_date
     if birth_date
       birth_date.strftime("%d/%m/%Y")

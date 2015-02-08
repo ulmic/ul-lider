@@ -1,6 +1,6 @@
 $ ->
   $('body').append('<div id = "blackout"></div>')
-  box_width = 400
+  box_width = 480
   last_opened_popup = 0
 
   centerBox = ->
