@@ -1,6 +1,7 @@
 $ ->
   $('body').append('<div id = "blackout"></div>')
   box_width = 400
+  last_opened_popup = 0
 
   centerBox = ->
     winWidth = $(window).width()
@@ -18,7 +19,8 @@ $ ->
     name = $(this).attr('class')
     id = name[name.length - 1]
     scrollPos = $(window).scrollTop()
-    $('#popup1').show()
+    last_opened_popup = $(this).attr('data-participant-id')
+    $("#popup#{last_opened_popup}").show()
     $('#blackout').show()
     $('html').scrollTop(scrollPos)
 
@@ -27,14 +29,14 @@ $ ->
 
   $('html').click ->
     scrollPos = $(window).scrollTop()
-    $('#popup1').hide()
+    $("#popup#{last_opened_popup}").hide()
     $('#blackout').hide()
     $("html,body").css("overflow","auto")
     $('html').scrollTop(scrollPos)
 
   $('.close').click ->
     scrollPos = $(window).scrollTop()
-    $('#popup1').hide()
+    $("#popup#{last_opened_popup}").hide()
     $('#blackout').hide()
     $("html,body").css("overflow","auto")
     $('html').scrollTop(scrollPos)

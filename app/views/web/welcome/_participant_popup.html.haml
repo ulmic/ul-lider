@@ -1,9 +1,9 @@
-= stylesheet_link_tag 'popup'
-= javascript_include_tag 'popup'
-.popup#popup1
+.popup{ id: "popup#{participant.id}" }
   .close
-    X
+    .btn.btn-branded
+      X
   .top
-    Title
+    %h2
+      = participant.short_name
   .bottom
     content

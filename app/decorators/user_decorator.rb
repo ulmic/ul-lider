@@ -5,6 +5,10 @@ class UserDecorator < ApplicationDecorator
     "#{object.first_name} #{object.patronymic} #{object.last_name}"
   end
 
+  def short_name
+    "#{object.first_name} #{object.last_name}"
+  end
+
   def place
     "#{object.municipality}, #{object.locality}"
   end
