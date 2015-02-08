@@ -100,5 +100,5 @@ ru:
       subject:
         "Подтверждение анкеты-заявки на смену 'Ярмарка идей'"
   popup:
-    man_participant_runned_to_second_stage: "%{name} прошёл во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года"
-    woman_participant_runned_to_second_stage: "%{name} прошла во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года"
+    man_participant_runned_to_second_stage: "%{name} прошёл во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года."
+    woman_participant_runned_to_second_stage: "%{name} прошла во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года."
