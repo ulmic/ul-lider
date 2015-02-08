@@ -3,6 +3,11 @@ $ ->
   box_width = 550
   last_opened_popup = 0
 
+  close_opened_popup = ->
+    if last_opened_popup == 0
+      last_opened_popup = window.location.hash.substring(1)
+    $("#popup#{last_opened_popup}").hide()
+
   centerBox = ->
     winWidth = $(window).width()
     winHeight = $(document).height()
@@ -20,7 +25,7 @@ $ ->
     id = name[name.length - 1]
     scrollPos = $(window).scrollTop()
     last_opened_popup = $(this).attr('data-participant-id')
-    $("#popup#{last_opened_popup}").show()
+    $("#popup#{$(this).attr('data-participant-id')}").show()
     $('#blackout').show()
     $('html').scrollTop(scrollPos)
 
@@ -29,14 +34,14 @@ $ ->
 
   $('html').click ->
     scrollPos = $(window).scrollTop()
-    $("#popup#{last_opened_popup}").hide()
+    close_opened_popup()
     $('#blackout').hide()
     $("html,body").css("overflow","auto")
     $('html').scrollTop(scrollPos)
 
   $('.close').click ->
     scrollPos = $(window).scrollTop()
-    $("#popup#{last_opened_popup}").hide()
+    close_opened_popup()
     $('#blackout').hide()
     $("html,body").css("overflow","auto")
     $('html').scrollTop(scrollPos)

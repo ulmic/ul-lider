@@ -12,6 +12,12 @@ close_info = ->
     return
   return
 
+open_popup = ->
+  $("#popup#{window.location.hash.substring(1)}").show()
+  $('#blackout').show()
+  scrollPos = $(window).scrollTop()
+  $('html').scrollTop(scrollPos)
+
 $(document).ready ->
   document_width = screen.width
   document_height = screen.height
@@ -26,6 +32,8 @@ $(document).ready ->
     })
     $('iframe').prop('width', $('.container').width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
+  if window.location.hash != ''
+    open_popup()
   else
     $('.participant_cell.main_avatar').click ->
       close_info()
