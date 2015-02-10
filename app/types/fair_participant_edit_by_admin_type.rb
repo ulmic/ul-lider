@@ -15,7 +15,7 @@ class FairParticipantEditByAdminType < User
   validates :fair_goals, presence: true
   validates :region, presence: true
 
-  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :state, :accept_agreement, :life_goals, :fair_goals, :region, :i_am_not_from_73reg, :avatar_cache, :state_event, :role
+  permit :email, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :state, :accept_agreement, :life_goals, :fair_goals, :region, :i_am_not_from_73reg, :avatar_cache, :state_event, :role, :reserve_order_number
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)
