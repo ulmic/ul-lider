@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
     state :confirmed_by_admin
     state :on_second_stage
     state :fair_participant_approved
+    state :fair_participant_declined
 
     event :confirm do
       transition all => :active
@@ -42,8 +43,12 @@ class User < ActiveRecord::Base
       transition all => :on_second_stage
     end
 
-    event :fair_participant_approv do
+    event :fair_participant_approve do
       transition all => :fair_participant_approved
+    end
+
+    event :fair_participant_decline do
+      transition all => :fair_participant_declined
     end
   end
 

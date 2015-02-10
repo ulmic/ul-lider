@@ -1,4 +1,5 @@
 #= require jquery
+#= require i18n_setup
 open_region_input = ->
   $('div.user_municipality').slideUp()
   $('div.user_region').slideDown()
@@ -24,4 +25,15 @@ $ ->
       $('div.user_municipality').slideDown('slow')
       $('div.user_region').slideUp('slow')
     return
+
+  $('form.edit_user').hide()
+  $('.show-approve-form').click (e) ->
+    e.preventDefault()
+    $form = $("#edit_user_#{$(this).data().id}")
+    if $form.css('display') == 'none'
+      $form.show()
+      $(this).html(I18n.t('helpers.hide'))
+    else
+      $form.hide()
+      $(this).html(I18n.t('web.fair_participants.users_list.approve_fair_participant'))
   return
