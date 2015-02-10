@@ -25,6 +25,9 @@ ru:
       url_creative_work: "ссылка на файл с творческой работой в облаке"
     page:
       slug: ссылка на страницу
+    fair_participants:
+      approve:
+        email: Введите email, указанный при регистрации
   hints:
     users:
       new:
@@ -67,6 +70,10 @@ ru:
         sign_in: авторизоваться
         or: или
         password_reveal: Показать пароль
+      users_list:
+        approve_fair_participant: ПОДТВЕРДИТЬ УЧАСТИЕ
+        decline_fair_participant: ОТКАЗАТЬСЯ
+        approved: Участие подтверждено
     news:
       index:
         title: Новости
