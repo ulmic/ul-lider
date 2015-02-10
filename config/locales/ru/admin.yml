@@ -42,7 +42,9 @@ ru:
       fair_participants:
         index:
           title: "Заявки на 'Ярмарку идей'"
-          confirmed_by_admin: Подтверждённые участники
+          confirmed_by_admin: В списке на смену
+          fair_participant_approved: Подтвердили участие
+          fair_participant_declined: Отказались от участия
           waiting_confirmation: Ожидается подтверждение почты
           active: Резерв
           inactive: Забаненные
