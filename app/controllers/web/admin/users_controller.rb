@@ -42,4 +42,14 @@ class Web::Admin::UsersController < Web::Admin::ApplicationController
     @user.push_to_second_stage
     redirect_to admin_users_path
   end
+
+  def edit_average
+    if User.update(params[:id], average: params[:user][:average])
+      redirect_to admin_users_path
+      f(:success)
+    else
+      redirect_to admin_users_path
+      f(:error)
+    end
+  end
 end

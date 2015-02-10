@@ -41,6 +41,7 @@ Rails.application.routes.draw do
       resources :users, except: :show do
         member do
           patch :push_to_second_stage
+          patch :edit_average
         end
       end
       resources :admins, only: :index
