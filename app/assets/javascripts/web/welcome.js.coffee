@@ -1,26 +1,27 @@
 #= require jquery
 
-winner_id = (element) ->
-  $(element).attr('data-winner-id')
+participant_id = (element) ->
+  $(element).attr('data-participant-id')
 
 close_info = ->
-  $('.winner_info').each ->
+  $('.participant_info').each ->
     if $(this).is(':visible')
       $(this).hide()
       id = $(this).attr('id').substring($(this).attr('id').lastIndexOf('_'))
-      $("#winner_cell#{id}").show()
+      $("#participant_cell#{id}").show()
     return
   return
+
+open_popup = ->
+  $("#popup#{window.location.hash.substring(1)}").show()
+  $('#blackout').show()
+  scrollPos = $(window).scrollTop()
+  $('html').scrollTop(scrollPos)
 
 $(document).ready ->
   document_width = screen.width
   document_height = screen.height
   if $(document).width() >= '991'
-    $('.winner_avatar').tooltip({
-      html: true,
-      content: ->
-        return $(this).attr('data-original-title')
-    })
     $('.full_width').width(screen.width - 75)
     width_of_parent = $('.full_width').parents('div').first().width()
     margin_left = (width_of_parent - screen.width + 67) / 2
@@ -31,35 +32,37 @@ $(document).ready ->
     })
     $('iframe').prop('width', $('.container').width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
+  if window.location.hash != ''
+    open_popup()
   else
-    $('.winner_cell.main_avatar').click ->
+    $('.participant_cell.main_avatar').click ->
       close_info()
-      id = winner_id this
-      $("#winner_info_#{id}").slideDown("show")
+      id = participant_id this
+      $("#participant_info_#{id}").slideDown("show")
       $(this).hide()
       return
-    $('.winner_avatar.in_info').click ->
-      id = winner_id this
-      $("#winner_cell_#{id}").slideDown("show")
-      $("#winner_info_#{id}").slideUp("hide")
+    $('.participant_avatar.in_info').click ->
+      id = participant_id this
+      $("#participant_cell_#{id}").slideDown("show")
+      $("#participant_info_#{id}").slideUp("hide")
     count = $('.news').length
     $('.for_news').height(240 * count)
     $('iframe').prop('width', $('iframe').first().parent().first().width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
   $('.full_width').css('background-size', "#{document_width}px #{document_height}px")
-  $('.winners_images_button').click ->
-    if $('.winners_images').is(':visible')
-      $('.winner_cell').slideUp()
-      $('.winners_images').hide()
+  $('.participants_images_button').click ->
+    if $('.participants_images').is(':visible')
+      $('.participant_cell').slideUp()
+      $('.participants_images').hide()
     else
-      $('.winners_images').show()
-      $('.winner_cell').slideDown("slow")
+      $('.participants_images').show()
+      $('.participant_cell').slideDown("slow")
     return
-  $('#winner_cell_12').unbind('click')
-  $('#winner_cell_12').click ->
+  $('#participant_cell_12').unbind('click')
+  $('#participant_cell_12').click ->
     close_info()
-    id = winner_id this
-    $("#winner_info_#{id}").slideDown("show")
+    id = participant_id this
+    $("#participant_info_#{id}").slideDown("show")
     $(this).hide()
     return
   return

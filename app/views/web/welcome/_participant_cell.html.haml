@@ -1,0 +1,6 @@
+.participant_cell.main_avatar.link{ data: { participant: { id: participant.id }, href: "##{participant.id}" }, id: "participant_cell_#{participant.id}" }
+  .participant_avatar{ style: "background-image: url('#{participant.avatar.medium}'); background-repeat: no-repeat" }
+.participant_info{ id: "participant_info_#{participant.id}" }
+  .participant_avatar.in_info{ style: "background-image: url('#{participant.avatar.medium}'); background-repeat: no-repeat", data: { participant: { id: participant.id } } }
+  .participant_info_text
+    != participant_info(participant.id)

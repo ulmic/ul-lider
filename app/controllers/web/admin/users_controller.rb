@@ -1,9 +1,7 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
-    @confirmed_by_admin_users = UserDecorator.decorate_collection User.participants.where(state: :confirmed_by_admin).reverse
-    @waiting_confirmation_users = UserDecorator.decorate_collection User.participants.where(state: :waiting_confirmation).reverse
-    @active_users = UserDecorator.decorate_collection User.participants.where(state: :active).reverse
-    @inactive_users = UserDecorator.decorate_collection User.participants.where(state: :inactive).reverse
+    @first_stage_users = UserDecorator.decorate_collection User.participants.where.not(state: :on_second_stage).reverse
+    @second_stage_users = UserDecorator.decorate_collection User.participants.where(state: :on_second_stage).reverse
   end
 
   def new
@@ -37,5 +35,21 @@ class Web::Admin::UsersController < Web::Admin::ApplicationController
     @user = UserEditByAdminType.find params[:id]
     @user.destroy
     redirect_to admin_users_path
+  end
+
+  def push_to_second_stage
+    @user = User.find params[:id]
+    @user.push_to_second_stage
+    redirect_to admin_users_path
+  end
+
+  def edit_average
+    if User.update(params[:id], average: params[:user][:average])
+      redirect_to admin_users_path
+      f(:success)
+    else
+      redirect_to admin_users_path
+      f(:error)
+    end
   end
 end

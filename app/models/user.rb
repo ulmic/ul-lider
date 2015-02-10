@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
     state :inactive
     state :active
     state :confirmed_by_admin
+    state :on_second_stage
 
     event :confirm do
       transition [:waiting_confirmation, :inactive, :active] => :active
@@ -34,6 +35,10 @@ class User < ActiveRecord::Base
 
     event :deactivate do
       transition [:waiting_confirmation, :active] => :inactive
+    end
+
+    event :push_to_second_stage do
+      transition all => :on_second_stage
     end
   end
 
