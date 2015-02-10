@@ -1,6 +1,10 @@
 class Web::FairParticipantsController < Web::ApplicationController
   def new
+    if filling_on_fair_idea_is_during?
       @fair_part = FairParticipantRegistrationType.new
+    else
+      redirect_to "/pages/#{:end_of_filling_to_fair_idea}", status: :moved_permanently
+    end
   end
 
   def create
