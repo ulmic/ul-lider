@@ -1,0 +1,9 @@
+- model_class = User
+%table.table.table-striped.table-condensed
+  %tbody
+    - users.each_with_index do |user, i|
+      %tr
+        %td= i + 1
+        %td= image_tag user.avatar.small
+        %td= user.full_name
+        %td= user.place
