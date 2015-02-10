@@ -1,0 +1,14 @@
+- model_class = User
+%table.table.table-striped.table-condensed
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:avatar)
+      %th= model_class.human_attribute_name(:full_name)
+      %th= model_class.human_attribute_name(:place)
+  %tbody
+    - users.each do |user|
+      %tr
+        %td= image_tag user.avatar.small
+        %td= link_to user.full_name, edit_admin_user_path(user)
+        %td= user.place
+= render 'layouts/web/shared/social_buttons'

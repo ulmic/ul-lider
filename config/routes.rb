@@ -23,13 +23,13 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :users, only: [:new, :index, :create] do
+    resources :users, only: [:new, :create] do
       member do
         get :confirm
       end
     end
 
-    resources :fair_participants, only: [ :new, :create ]
+    resources :fair_participants, only: [ :new, :index, :create ]
 
     namespace :account do
       root 'welcome#index'

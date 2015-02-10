@@ -1,8 +1,6 @@
 class Web::UsersController < Web::ApplicationController
   def index
-    query = { s: 'created_at desc' }.merge(params[:q] || {})
-    @search = User.ransack(query)
-    @users = @search.result(distinct: true).page(params[:page]).decorate
+    @users = User.where state: :confirmed_by_admin
   end
 
   def new
