@@ -1,17 +1,16 @@
-.popup.participant_popup{ id: "popup#{participant.id}" }
+.popup.participant_popup#popup
   .close
     .btn.btn-branded
       X
   .top
-    %h2
-      = participant.short_name
+    %h2.short_name
   .bottom
     .text
-      = second_stage_message(participant)
+      Участник прошёл во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года.
     %table
       %tr
         %td.avatar
-          = image_tag participant.avatar.medium, class: 'img-rounded'
+          = image_tag '', class: 'img-rounded'
         %td.info
           .age
             = participant.age
@@ -19,8 +18,6 @@
             = participant.home_city
           .school
             = participant.school
-          .creative_work
-            = view_of_creative_work(participant)
     %hr
     .popup_social_buttons
       = render 'layouts/web/shared/social_buttons'
