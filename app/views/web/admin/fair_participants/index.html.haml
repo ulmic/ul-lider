@@ -11,18 +11,18 @@
     %li
       = link_to "#{t('.confirmed_by_admin')} / #{@confirmed_by_admin_requests.count}", '#confirmed_by_admin'
     %li
-      = link_to "#{t('.waiting_confirmation')} / #{@waiting_confirmation_requests.count}", '#waiting_confirmation'
+      = link_to "#{t('.fair_participant_approved')} / #{@fair_participant_approved_requests.count}", '#fair_participant_approved'
     %li
-      = link_to "#{t('.inactive')}/ #{@inactive_requests.count}", '#inactive'
+      = link_to "#{t('.fair_participant_declined')} / #{@fair_participant_declined_requests.count}", '#fair_participant_approved'
     %li
       = link_to "#{t('.reserve_schoolers')}/ #{@reserve_schoolers_requests.count}", '#reserve_schoolers'
   #confirmed_by_admin
     = render 'fair_parts_list', fair_parts: @confirmed_by_admin_requests
-  #waiting_confirmation
-    = render 'fair_parts_list', fair_parts: @waiting_confirmation_requests
+  #fair_participant_approved
+    = render 'fair_parts_list', fair_parts: @fair_participant_approved_requests
+  #fair_participant_declined
+    = render 'fair_parts_list', fair_parts: @fair_participant_declined_requests
   #active
     = render 'fair_parts_list', fair_parts: @active_requests
-  #inactive
-    = render 'fair_parts_list', fair_parts: @inactive_requests
   #reserve_schoolers
     = render 'fair_parts_list', fair_parts: @reserve_schoolers_requests
