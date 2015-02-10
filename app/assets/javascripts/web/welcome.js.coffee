@@ -45,8 +45,8 @@ $(document).ready ->
     })
     $('iframe').prop('width', $('.container').width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
-  if window.location.hash != ''
-    open_popup()
+    if window.location.hash != ''
+      open_popup()
   else
     count = $('.news').length
     $('.for_news').height(240 * count)
