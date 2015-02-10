@@ -5,5 +5,18 @@
       %tr
         %td= i + 1
         %td= image_tag user.avatar.small
-        %td= user.full_name
+        %td= user.short_name
         %td= user.place
+        - unless user.active?
+          %td
+            - if user.confirmed_by_admin?
+              = simple_form_for user, url: { controller: 'web/fair_participants', action: :update_status, id: user.id }, method: :patch do |f|
+                = f.input :first_name, as: :hidden
+                = f.input :last_name, as: :hidden
+                = f.input :email, label: false, input_html: { value: '' }, placeholder: t('placeholders.fair_participants.approve.email')
+                = f.button :submit, t('.approve_fair_participant'), class: 'btn btn-success', style: 'float: left', name: :approve
+                = f.button :submit, t('.decline_fair_participant'), class: 'btn btn-danger', style: 'float: left', name: :decline
+              = link_to t('.approve_fair_participant'), '#', class: 'show-approve-form', data:{ id: user.id  }, style: 'margin-top: -2px; margin-left: 5px'
+            - elsif user.fair_participant_approved?
+              %span.label.label-success
+                = t('.approved')
