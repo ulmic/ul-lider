@@ -17,7 +17,7 @@
       - @participants.each do |participant|
         = render 'participant_cell', participant: participant
 %hr
--#.row.with_request_button
+.row.with_request_button
   .col-md-4
   .col-md-4.send_request_button_row
     = link_to fair_participants_path, class: 'btn btn-very-lg btn-branded' do
