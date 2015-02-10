@@ -3,4 +3,9 @@ class Web::WelcomeController < Web::ApplicationController
     @last_news = NewsDecorator.decorate_collection News.published.last 3
     @participants = UserDecorator.decorate_collection User.participants.shuffle.first 13
   end
+
+  def index2
+    @last_news = NewsDecorator.decorate_collection News.published.last 3
+    @participants = UserDecorator.decorate_collection User.participants.shuffle.first 13
+  end
 end

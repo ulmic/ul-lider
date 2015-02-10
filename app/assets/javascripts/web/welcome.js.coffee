@@ -12,8 +12,19 @@ close_info = ->
     return
   return
 
+window.fill_popup = (element) ->
+  $popup = $('#popup')
+  $data = element.data()
+  $('#popup h2.short_name').first().html($data.shortName)
+  $('#popup img.img-rounded').first().prop('src', $data.image)
+  $('#popup div.age').first().html($data.age)
+  $('#popup div.home_city').first().html($data.homeCity)
+  $('#popup div.school').first().html($data.school)
+  return
+
 open_popup = ->
-  $("#popup#{window.location.hash.substring(1)}").show()
+  fill_popup($("#participant_cell_#{window.location.hash.substring(1)}"))
+  $("#popup").show()
   $('#blackout').show()
   scrollPos = $(window).scrollTop()
   $('html').scrollTop(scrollPos)
@@ -35,16 +46,6 @@ $(document).ready ->
   if window.location.hash != ''
     open_popup()
   else
-    $('.participant_cell.main_avatar').click ->
-      close_info()
-      id = participant_id this
-      $("#participant_info_#{id}").slideDown("show")
-      $(this).hide()
-      return
-    $('.participant_avatar.in_info').click ->
-      id = participant_id this
-      $("#participant_cell_#{id}").slideDown("show")
-      $("#participant_info_#{id}").slideUp("hide")
     count = $('.news').length
     $('.for_news').height(240 * count)
     $('iframe').prop('width', $('iframe').first().parent().first().width())
