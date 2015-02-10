@@ -1,6 +1,7 @@
 class Web::FairParticipantsController < Web::ApplicationController
   def index
     @users = UserDecorator.decorate_collection User.where(state: :confirmed_by_admin).where.not(role: :admin)
+    @reserve_users = UserDecorator.decorate_collection User.where(state: :active).where.not(role: :admin)
   end
   def new
     if filling_on_fair_idea_is_during?
