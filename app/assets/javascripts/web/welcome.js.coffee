@@ -1,4 +1,5 @@
 #= require jquery
+#= require i18n_setup
 
 participant_id = (element) ->
   $(element).attr('data-participant-id')
@@ -20,7 +21,7 @@ window.fill_popup = (element) ->
   $('#popup div.age').first().html($data.age)
   $('#popup div.home_city').first().html($data.homeCity)
   $('#popup div.school').first().html($data.school)
-  $('#popup div.average').first().html("Средний бал #{$data.average}")
+  $('#popup div.average').first().html("#{I18n.t('activerecord.attributes.user.average')} #{$data.average}")
   return
 
 open_popup = ->
