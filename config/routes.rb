@@ -6,11 +6,6 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   scope module: :web do
     root "welcome#index"
-    resources :welcome, only: [] do
-      collection do
-        get :index2
-      end
-    end
 
     resource :session, only: [:new, :create, :destroy]
     resource :password, only: [:edit, :update]
@@ -34,7 +29,7 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :fair_participants, only: [ :new, :index, :create ]
+    #resources :fair_participants, only: [ :new, :index, :create ]
 
     namespace :account do
       root 'welcome#index'
