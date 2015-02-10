@@ -40,6 +40,7 @@ ru:
         navbar:
           send_request: "Подать заявку на «Я-лидер!»"
           send_request_on_fair_idea: "Подать заявку на «Ярмарку идей»"
+          fair_participants: "Участники «Ярмарки идей»"
           sign_in: Войти
           sign_out: Выйти
           news: Новости
@@ -73,6 +74,7 @@ ru:
       index:
         send_request: "ПОДАТЬ ЗАЯВКУ НА «Я-ЛИДЕР!»"
         send_request_on_fair_idea: "ПОДАТЬ ЗАЯВКУ НА «Ярмарку идей»"
+        participants_of_fair_part: "УЧАСТНИКИ «ЯРМАРКИ ИДЕЙ»"
         share_us: Расскажите о нас
     errors:
       not_found:

@@ -20,6 +20,7 @@ window.fill_popup = (element) ->
   $('#popup div.age').first().html($data.age)
   $('#popup div.home_city').first().html($data.homeCity)
   $('#popup div.school').first().html($data.school)
+  $('#popup div.average').first().html("Средний бал #{$data.average}")
   return
 
 open_popup = ->
