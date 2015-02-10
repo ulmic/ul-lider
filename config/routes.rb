@@ -38,7 +38,11 @@ Rails.application.routes.draw do
     namespace :admin do
       root 'welcome#index'
       resources :news, except: :show
-      resources :users, except: :show
+      resources :users, except: :show do
+        member do
+          patch :push_to_second_stage
+        end
+      end
       resources :admins, only: :index
       resources :pages, except: :show
       resources :fair_participants, except: :show

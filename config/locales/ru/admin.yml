@@ -30,6 +30,10 @@ ru:
           waiting_confirmation: Ожидается подтверждение почты
           active: Ожидающие подтверждение администратора
           inactive: Забаненные
+          on_first_stage: Участники I этапа
+          on_second_stage: Участники II этапа
+        users_list:
+          push_to_second_stage: "=> II этап"
         edit:
           title: Изменить параметры пользователя
         new:
