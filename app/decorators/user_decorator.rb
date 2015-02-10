@@ -5,6 +5,10 @@ class UserDecorator < ApplicationDecorator
     "#{object.first_name} #{object.patronymic} #{object.last_name}"
   end
 
+  def short_name
+    "#{object.first_name} #{object.last_name}"
+  end
+
   def place
     "#{object.municipality}, #{object.locality}"
   end
@@ -15,6 +19,20 @@ class UserDecorator < ApplicationDecorator
 
   def contacts
     "#{email}, #{mobile_phone}, #{home_phone}"
+  end
+
+  def age
+    now = Time.now.utc.to_date
+    years = now.year - object.birth_date.year - ((now.month > object.birth_date.month || (now.month == object.birth_date.month && now.day > object.birth_date.day)) ? 0 : 1)
+    "#{years} #{Russian.p(years, 'год', 'года', 'лет')}"
+  end
+
+  def home_city
+    if object.municipality.include? 'г.'
+      "#{object.locality}"
+    else
+      "#{object.municipality}, #{object.locality}"
+    end
   end
 
   def formated_birth_date

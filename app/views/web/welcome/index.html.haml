@@ -6,13 +6,13 @@
 - content_for :top_social_buttons do
   .top_social_buttons
     = render 'layouts/web/shared/social_buttons'
-.row.winners_row
-  .col-md-12
-    .winners_images_button.link{ data: { href: '#' } }
+-#.row.participants_row
+  .col-md-12.participants_cols
+    .participants_images_button.link{ data: { href: '#' } }
       = '2002 - 2014'
-    .winners_images
-      - (0..12).each do |i|
-        = render 'winner_cell', i: i, klass: ''
+    .participants_images
+      - @participants.each do |participant|
+        = render 'participant_cell', participant: participant
 .row
   .col-md-12
     .title
@@ -94,5 +94,11 @@
       = t('.share_us')
     %br
     = render 'layouts/web/shared/social_buttons'
+
+- @participants.each do |participant|
+  = render 'participant_popup', participant: participant
+
+= stylesheet_link_tag 'popup'
+= javascript_include_tag 'popup'
 = javascript_include_tag 'web/welcome'
 = stylesheet_link_tag 'web/welcome'

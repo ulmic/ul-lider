@@ -73,4 +73,11 @@ class Web::Admin::UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to admin_users_path
   end
+
+  test "should push to second_stage" do
+    put :push_to_second_stage, id: @user
+    @user.reload
+    assert @user.on_second_stage?
+    assert_redirected_to admin_users_path
+  end
 end

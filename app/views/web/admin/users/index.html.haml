@@ -7,18 +7,10 @@
 #tabs
   %ul.nav.nav-tabs{ role: :tablist }
     %li
-      = link_to "#{t('.active')} / #{@active_users.count}", '#active'
+      = link_to "#{t('.on_second_stage')}/ #{@second_stage_users.count}", '#on_second_stage'
     %li
-      = link_to "#{t('.confirmed_by_admin')} / #{@confirmed_by_admin_users.count}", '#confirmed_by_admin'
-    %li
-      = link_to "#{t('.waiting_confirmation')} / #{@waiting_confirmation_users.count}", '#waiting_confirmation'
-    %li
-      = link_to "#{t('.inactive')}/ #{@inactive_users.count}", '#inactive'
-  #confirmed_by_admin
-    = render 'users_list', users: @confirmed_by_admin_users
-  #waiting_confirmation
-    = render 'users_list', users: @waiting_confirmation_users
-  #active
-    = render 'users_list', users: @active_users
-  #inactive
-    = render 'users_list', users: @inactive_users
+      = link_to "#{t('.on_first_stage')}/ #{@first_stage_users.count}", '#on_first_stage'
+  #on_second_stage
+    = render 'users_list', users: @second_stage_users
+  #on_first_stage
+    = render 'users_list', users: @first_stage_users

@@ -99,3 +99,9 @@ ru:
     fair_idea_confirmation:
       subject:
         "Подтверждение анкеты-заявки на смену 'Ярмарка идей'"
+  popup:
+    man_participant_runned_to_second_stage: "%{name} прошёл во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года."
+    woman_participant_runned_to_second_stage: "%{name} прошла во II этап областного конкурса актива учащейся молодёжи «Я-лидер!» 2015 года."
+    link_to_creative_work: Скачать творческую работу
+    link_to_creative_work_part1: Скачать творческую работу. Часть 1
+    link_to_creative_work_part2: Скачать творческую работу. Часть 2
