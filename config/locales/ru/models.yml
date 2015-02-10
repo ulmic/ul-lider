@@ -80,6 +80,6 @@ ru:
             active: Активный
             admin_confirm: Подтверждён администратором
           events:
-            confirm: Подтвердить почту
+            confirm: В резерв
             admin_confirm: "Подтверждение анкеты-заявки"
             deactivate: Забанить
