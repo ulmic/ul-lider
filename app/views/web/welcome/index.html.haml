@@ -11,7 +11,7 @@
     .title
       %h1
         = t('contest.full_name')
--#.row.participants_row
+.row.participants_row
   .col-md-12.participants_cols
     .participants_images_button.link{ data: { href: '#' } }
       = '2002 - 2014'
@@ -19,7 +19,7 @@
       - @participants.each do |participant|
         = render 'participant_cell', participant: participant
 %hr
-.row.with_request_button
+-#.row.with_request_button
   .col-md-4
   .col-md-4.send_request_button_row
     = link_to fair_participants_path, class: 'btn btn-very-lg btn-branded' do

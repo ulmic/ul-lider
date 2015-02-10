@@ -2,12 +2,9 @@
 .page-header
   %h2
     = 'Участники профильной смены «Ярмарка идей»'
-- model_class = User
-%table.table.table-striped.table-condensed
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= image_tag user.avatar.small
-        %td= user.full_name
-        %td= user.place
+= render 'users_list', users: @users
+%hr
+%h2
+  = 'Резервный список'
+= render 'users_list', users: @users
 = render 'layouts/web/shared/social_buttons'
