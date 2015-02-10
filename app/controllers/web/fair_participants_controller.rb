@@ -1,4 +1,7 @@
 class Web::FairParticipantsController < Web::ApplicationController
+  def index
+    @users = UserDecorator.decorate_collection User.where state: :confirmed_by_admin
+  end
   def new
     if filling_on_fair_idea_is_during?
       @fair_part = FairParticipantRegistrationType.new
