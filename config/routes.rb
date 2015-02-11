@@ -23,7 +23,7 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :users, only: [:new, :create] do
+    resources :users, only: [:new, :index, :create] do
       member do
         get :confirm
       end
