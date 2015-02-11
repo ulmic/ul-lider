@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :index, :create] do
       member do
         get :confirm
+        patch :update_status
       end
     end
 
