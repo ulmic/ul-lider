@@ -6,7 +6,7 @@
         %td= i + 1
         %td= image_tag user.avatar.small
         %td= user.short_name
-        %td= user.place
+        %td= user.home_city
         - unless user.active?
           %td
             - if user.confirmed_by_admin?
