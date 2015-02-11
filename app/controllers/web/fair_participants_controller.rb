@@ -1,5 +1,6 @@
 class Web::FairParticipantsController < Web::ApplicationController
   def index
+    @second_stage_users = UserDecorator.decorate_collection User.where("state = 'on_second_stage' OR state = 'second_stage_approved'").where.not(role: :admin)
     @users = UserDecorator.decorate_collection User.where("state = 'confirmed_by_admin' OR state = 'fair_participant_approved'").where.not(role: :admin)
     @reserve_users = UserDecorator.decorate_collection User.where(state: :active).where.not(role: :admin).order('reserve_order_number asc')
   end
