@@ -1,9 +1,12 @@
 = javascript_include_tag 'web/fair_participants'
 - title_is 'Участники профильной смены «Ярмарка идей»'
 .page-header
-  %h2
-    = 'Участники профильной смены «Ярмарка идей». Вне конкурса «Я-лидер!»'
+  = 'Участники прошедшие во II этап конкурса «Я-лидер!»'
   = render 'layouts/web/shared/social_buttons'
+= render 'users_list', users: @second_stage_users
+%hr
+%h2
+  = 'Участники профильной смены «Ярмарка идей». Вне конкурса «Я-лидер!»'
 = render 'users_list', users: @users
 %hr
 %h2
