@@ -7,6 +7,8 @@
         %td= image_tag user.avatar.small
         %td= user.short_name
         %td= user.home_city
+        - if user.on_second_stage? or user.second_stage_approved?
+          %td= user.average
         - unless user.active?
           %td
             - if user.confirmed_by_admin?
