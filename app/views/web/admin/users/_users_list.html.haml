@@ -25,6 +25,9 @@
           - if user.second_stage_approved?
             %span.label.label-success
               = t('.approved')
+          - elsif user.fair_participant_declined?
+            %span.label.label-danger
+              = t('.declined')
         %td= user.formated_birth_date
         %td= user.place
         %td= user.school_group
