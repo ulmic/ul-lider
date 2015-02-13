@@ -1,7 +1,7 @@
 class Web::Admin::UsersController < Web::Admin::ApplicationController
   def index
     @first_stage_users = UserDecorator.decorate_collection User.participants.where.not(state: :on_second_stage).reverse
-    @second_stage_users = UserDecorator.decorate_collection User.participants.where(state: :on_second_stage).reverse
+    @second_stage_users = UserDecorator.decorate_collection User.participants.where("state = 'on_second_stage' OR state = 'second_stage_approved'")
   end
 
   def new
