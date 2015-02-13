@@ -47,7 +47,6 @@ gem 'virtus'
 gem "mini_magick"
 gem 'rails-observers'
 #gem 'sir_trevor_rails', github: 'madebymany/sir-trevor-rails', branch: 'redesign-gem'
-gem 'active_form', github: 'rails/activeform'
 gem 'rest_in_place'
 gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
