@@ -35,6 +35,7 @@ ru:
         users_list:
           push_to_second_stage: "=> II этап"
           update_average: Обновить средний бал
+          approved: Подтвердил
         edit:
           title: Изменить параметры пользователя
         new:
