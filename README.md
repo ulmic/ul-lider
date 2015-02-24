@@ -5,20 +5,20 @@
 # Installation
 
 Your need install some packages:
-``zsh
+```zsh
 $ sudo apt-get install redis-server imagemagick
-``
+```
 After your need clone this repo:
-``zsh
+```zsh
 $ git clone git@github.com:ulmic/ul-lider.git
-``
+```
 After a little bit magick ;)
-``bash
+```bash
 $ cd ul-lider
 $ bundle
 $ cp config/secrets.yml.sample config/secrets.yml
-``
+```
 At finish just run:
-``bash
+```bash
 $ rails s
 ```
