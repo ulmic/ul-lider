@@ -25,7 +25,14 @@
 .row.vimeo_video
   .col-md-12
     = render 'vimeo_video'
-=render 'last_news', :last_news => @last_news
+.row.for_news
+  - @last_news.each do |news|
+    .col-md-4.news.link{ data: { href: news_path(news) } }
+      .title
+        = news.title
+      .body
+        = image_tag news.photo
+        = strip_tags news.lead
 .row.plaha
   .col-md-6.text.left
     .title
