@@ -32,8 +32,10 @@ ru:
           inactive: Забаненные
           on_first_stage: Участники I этапа
           on_second_stage: Участники II этапа
+          on_third_stage: Участники III этапа
         users_list:
           push_to_second_stage: "=> II этап"
+          push_to_third_stage: "=> III этап"
           update_average: Обновить средний бал
           approved: Подтвердил
           declined: Отказался

@@ -7,9 +7,13 @@
 #tabs
   %ul.nav.nav-tabs{ role: :tablist }
     %li
+      = link_to "#{t('.on_third_stage')}/ #{@third_stage_users.count}", '#on_third_stage'
+    %li
       = link_to "#{t('.on_second_stage')}/ #{@second_stage_users.count}", '#on_second_stage'
     %li
       = link_to "#{t('.on_first_stage')}/ #{@first_stage_users.count}", '#on_first_stage'
+  #on_third_stage
+    = render 'users_list', users: @third_stage_users
   #on_second_stage
     = render 'users_list', users: @second_stage_users
   #on_first_stage

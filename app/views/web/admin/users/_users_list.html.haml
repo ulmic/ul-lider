@@ -25,6 +25,7 @@
           - if user.second_stage_approved?
             %span.label.label-success
               = t('.approved')
+            = link_to t('.push_to_third_stage'), admin_user_path(user, user: { state: :on_third_stage }), method: :patch, class: 'btn btn-success btn-xs'
           - elsif user.fair_participant_declined?
             %span.label.label-danger
               = t('.declined')
@@ -41,7 +42,7 @@
           %h3
             = user.average
         %td
-          - if user.confirmed_by_admin?
+          - if user.second_stage_approved?
             = simple_form_for user, url: { controller: 'web/admin/users', action: :edit_average, id: user.id }, method: :patch do |f|
               = f.input :average
               = f.button :submit, t('.update_average'), class: 'btn btn-xs'
