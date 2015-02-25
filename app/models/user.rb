@@ -11,10 +11,8 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true, human_name: true
   validates :last_name, presence: true, human_name: true
   validates :patronymic, presence: true, human_name: true
-  validates :mobile_phone, presence: true,
-                           phone: true
-  validates :avatar, presence: true,
-                     file_size: { maximum: 3.megabytes.to_i }
+  validates :mobile_phone, phone: true
+  validates :avatar, file_size: { maximum: 3.megabytes.to_i }
   validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
   validates :role, presence: true
 
@@ -27,6 +25,7 @@ class User < ActiveRecord::Base
     state :fair_participant_approved
     state :fair_participant_declined
     state :second_stage_approved
+    state :third_stage
 
     event :confirm do
       transition all => :active
@@ -42,6 +41,10 @@ class User < ActiveRecord::Base
 
     event :push_to_second_stage do
       transition all => :on_second_stage
+    end
+
+    event :push_to_third_stage do
+      transition all => :on_third_stage
     end
 
     event :fair_participant_approve do

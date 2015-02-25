@@ -1,7 +1,7 @@
 = title_is_hard t('contest.full_name')
 - content_for :meta do
   %meta{ property: 'og:description', content: "#{t('contest.full_name')}" }
-  %meta{ name:'description', content: "#{t('.contest.full_name')}" }
+  %meta{ name:'description', content: "#{t('contest.full_name')}" }
   %meta{ name: "google-site-verification", content: "UQDwT4uM9-1bXt9jvXHVOeDT2ifyo8wboHFreC-quJQ" }
 - content_for :top_social_buttons do
   .top_social_buttons
@@ -11,17 +11,12 @@
     .title
       %h1
         = t('contest.full_name')
-.row.participants_row
+-#.row.participants_row
   .col-md-12.participants_cols
     .participants_images
       - @participants.each do |participant|
         = render 'participant_cell', participant: participant
 %hr
-.row.with_request_button
-  .col-md-4
-  .col-md-4.send_request_button_row
-    = link_to fair_participants_path, class: 'btn btn-very-lg btn-branded' do
-      = t('.participants_of_fair_part')
 .row.vimeo_video
   .col-md-12
     = render 'vimeo_video'
