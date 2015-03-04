@@ -1,0 +1,11 @@
+= stylesheet_link_tag 'web/events'
+- title_is @event.title
+.page-header.event-header
+  .row
+    .col-md-6
+      %h2
+        = @event.title
+    .col-md-6
+      .user_button.link{ data: { href: root_path(anchor: @event.user.id) } }
+        = @event.user.decorate.short_name
+        = image_tag @event.user.avatar.small, class: 'event_avatar'
