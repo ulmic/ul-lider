@@ -13,11 +13,6 @@ class Web::UsersControllerTest < ActionController::TestCase
     assert_response :redirect, status: :moved_permanently
   end
 
-  test "index" do
-    get :index
-    assert_response :success
-  end
-
   test "create" do
     attrs = attributes_for :user
     post :create, user: attrs
