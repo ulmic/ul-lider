@@ -1,10 +1,14 @@
 class Event < ActiveRecord::Base
+
+  belongs_to :user
+
   validates :title, presence: true
   validates :description, presence: true
   validates :begin_date, presence: true
   validates :end_date, presence: true
   validates :place, presence: true
   validate :begin_before_end_date
+  validates :user_id, presence: true
 
   def begin_before_end_date
     if begin_date.present? && end_date.present?

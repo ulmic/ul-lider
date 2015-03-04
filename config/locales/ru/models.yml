@@ -46,6 +46,12 @@ ru:
         body: Текст
         slug: Slug
         created_at: Дата создания
+      event:
+        title: Название
+        description: Описание
+        place: Место проведения
+        begin_date: Время начала
+        end_date: Время конца
     errors:
       models:
         user:

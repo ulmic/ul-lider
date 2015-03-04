@@ -10,7 +10,7 @@ class Web::Account::EventsController < Web::Account::ApplicationController
   def create
     @event = EventEditByUserType.new params[:event]
     if @event.save
-      redirect_to root_path
+      redirect_to account_root_path
     else
       render action: :new
     end
@@ -19,7 +19,7 @@ class Web::Account::EventsController < Web::Account::ApplicationController
   def update
     @event = EventEditByUserType.find params[:id]
     if @event.update_attributes params[:event]
-      redirect_to root_path
+      redirect_to account_root_path
     else
       render action: :edit
     end

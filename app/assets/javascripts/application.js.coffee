@@ -4,6 +4,8 @@
 #= require jasny-bootstrap/js/fileinput
 #= require moment
 #= require bootstrap-datetimepicker
+#= require pickers
+#= require moment/ru
 
 $(document).ready ->
   $('.datepicker').datetimepicker({

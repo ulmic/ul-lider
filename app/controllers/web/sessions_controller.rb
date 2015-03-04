@@ -13,8 +13,10 @@ class Web::SessionsController < Web::ApplicationController
       f(:success)
       if user.role.admin?
         try_redirect_to_from_or admin_root_path
-      else
+      elsif user.on_third_stage?
         try_redirect_to_from_or account_root_path
+      else
+        try_redirect_to_from_or root_path
       end
     else
       render :new
