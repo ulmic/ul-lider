@@ -83,6 +83,7 @@ ru:
         send_request_on_fair_idea: "ПОДАТЬ ЗАЯВКУ НА «Ярмарку идей»"
         participants_of_fair_part: "УЧАСТНИКИ «ЯРМАРКИ ИДЕЙ»"
         share_us: Расскажите о нас
+        i_am_participant: Я участник конкурса
     errors:
       not_found:
         this_is_404_error_page: 'Ошибка 404. Запрашиваемая вами страница не существует.'
