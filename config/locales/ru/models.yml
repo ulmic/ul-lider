@@ -35,7 +35,7 @@ ru:
         i_am_not_from_73reg: 'Я не из Ульяновской области'
         region: Субъект Российской Федерации
         i_am_reserve_school: 'Я участник Школы кадрового резерва'
-        average: Средний балл
+        average: Балл
       news:
         title: Название
         body: Текст
