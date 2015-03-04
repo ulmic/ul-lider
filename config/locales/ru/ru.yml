@@ -105,6 +105,10 @@ ru:
       new:
         title: Авторизация
         remind_password: Я забыл пароль
+    remind_passwords:
+      new:
+        title: Восстановление пароля
+        enter_your_password: 'Введите свой адрес электронной почты, на который был зарегистрирован аккаунт. Вам на почту придёт инструкция по восстановлению пароля.'
   javascript:
     helpers:
       password_reveal: Показать пароль
