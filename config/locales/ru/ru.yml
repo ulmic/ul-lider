@@ -114,3 +114,6 @@ ru:
     link_to_creative_work: Скачать творческую работу
     link_to_creative_work_part1: Скачать творческую работу. Часть 1
     link_to_creative_work_part2: Скачать творческую работу. Часть 2
+  validations:
+    errors:
+      end_date_must_be_after_begin_date: Дата окончания должна быть после даты начала

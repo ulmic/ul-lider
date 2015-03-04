@@ -38,6 +38,7 @@ Rails.application.routes.draw do
 
     namespace :account do
       root 'welcome#index'
+      resources :events, except: [ :show, :destroy, :index ]
     end
 
     namespace :admin do
