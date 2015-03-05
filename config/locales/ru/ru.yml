@@ -114,6 +114,10 @@ ru:
       show:
         where: Где?
         when: Когда?
+        get_part_by_social_network: Зарегистрироваться на мероприятие
+        auth: Авторизоваться
+        registration: Регистрация
+        social_participants: Участники мероприятия
       index:
         title: Мероприятия участников этапа «Время реальных дел»
     account:
