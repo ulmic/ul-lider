@@ -17,6 +17,10 @@
       - @participants.each do |participant|
         = render 'participant_cell', participant: participant
 %hr
+.row
+  .auth_button_row
+    = link_to t('.i_am_participant'), account_root_path, class: 'btn btn-branded'
+%hr
 .row.vimeo_video
   .col-md-12
     = render 'vimeo_video'

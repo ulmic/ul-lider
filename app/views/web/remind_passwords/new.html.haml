@@ -1,5 +1,11 @@
+= title_is
+.page-header
+  %h1
+    = t('.title')
+.row-fluid
+  = t('.enter_your_password')
 .row
   .col-md-6
     = simple_form_for @form, url: remind_password_path do |f|
       = f.input :email
-      = f.button :submit, class: 'btn btn-shine'
+      = f.button :submit, t('helpers.links.send'), class: 'btn btn-shine'

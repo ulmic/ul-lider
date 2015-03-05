@@ -1,0 +1,10 @@
+- title
+.page-header
+  %h1
+    = t('.title')
+= t('.welcome_text')
+- if current_user.event.present?
+  = link_to t('.view_my_event'), event_path(current_user.event), class: 'btn btn-branded'
+  = link_to t('.edit_my_event'), edit_account_event_path(current_user.event), class: 'btn btn-branded'
+- else
+  = link_to t('.anounce_my_event'), new_account_event_path, class: 'btn btn-branded'
