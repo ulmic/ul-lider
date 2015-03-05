@@ -1,6 +1,6 @@
 class Web::EventsController < Web::ApplicationController
   def index
-    @events = Event.all
+    @events = Event.all.decorate
   end
 
   def show

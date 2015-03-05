@@ -47,6 +47,7 @@ ru:
           sign_in: Войти
           sign_out: Выйти
           news: Новости
+          events: Мероприятия участников
           admin_panel: Админка
         footer:
           send_request: Подать заявку
@@ -113,6 +114,8 @@ ru:
       show:
         where: Где?
         when: Когда?
+      index:
+        title: Мероприятия участников этапа «Время реальных дел»
     account:
       welcome:
         index:

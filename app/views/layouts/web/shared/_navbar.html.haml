@@ -10,6 +10,8 @@
         = t('application.attributes.name')
   .navbar-collapse.collapse
     %ul.nav.navbar-nav
+      = menu_item events_path do
+        = t('.events')
       = menu_item news_index_path do
         = t('.news')
       = menu_item '/pages/the_competition' do
