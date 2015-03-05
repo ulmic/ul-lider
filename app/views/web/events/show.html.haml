@@ -31,3 +31,28 @@
         %td
           .data
             = @event.duration
+      %tr
+        %td{ colspan: 2 }
+          - if session[:events]
+            - if session[:events].include? @event.id
+              = t('.you_are_participant')
+            - else
+              %h6
+                = t('.get_part_by_social_network')
+              = link_to event_social_participants_path(event_id: @event.id), method: :post, class: 'btn btn-branded auth' do
+                = t('.registration')
+                = image_tag 'vk.png'
+          - else
+            %h6
+              = t('.get_part_by_social_network')
+            = link_to event_social_participants_path(event_id: @event.id), method: :post, class: 'btn btn-branded auth' do
+              = t('.registration')
+              = image_tag 'vk.png'
+      %tr
+        %td{ colspan: 2 }
+          - if @social_participants.any?
+            %h6
+              = t('.social_participants')
+            - @social_participants.each do |participant|
+              = link_to participant.profile, target: 'blank' do
+                = image_tag participant.photo

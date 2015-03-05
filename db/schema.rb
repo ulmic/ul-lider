@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 20150305005207) do
   create_table "event_social_participants", force: true do |t|
     t.text     "provider"
     t.text     "uid"
+    t.text     "first_name"
+    t.text     "last_name"
+    t.text     "photo"
+    t.text     "profile"
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
 
   belongs_to :user
+  has_many :event_social_participants
 
   validates :title, presence: true
   validates :description, presence: true
