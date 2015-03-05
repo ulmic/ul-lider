@@ -109,15 +109,22 @@ ru:
       new:
         title: Восстановление пароля
         enter_your_password: 'Введите свой адрес электронной почты, на который был зарегистрирован аккаунт. Вам на почту придёт инструкция по восстановлению пароля.'
+    events:
+      show:
+        where: Где?
+        when: Когда?
     account:
       welcome:
         index:
           title: Время реальных дел
           anounce_my_event: Анонсировать моё мероприятие
           view_my_event: Посмотреть моё мероприятие
+          edit_my_event: Редактировать моё мероприятие
       events:
         new:
           title: Анонсировать мероприятие
+        edit:
+          title: Редактировать анонс мероприятия
   javascript:
     helpers:
       password_reveal: Показать пароль
