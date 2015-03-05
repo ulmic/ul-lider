@@ -54,6 +54,8 @@
           - if @social_participants.any?
             %h6
               = t('.social_participants')
+              \-
+              = @social_participants_count
             - @social_participants.each do |participant|
               = link_to participant.profile, target: 'blank', class: 'social_participant', title: "#{participant.first_name} #{participant.last_name}" do
                 = image_tag participant.photo

@@ -48,6 +48,7 @@ ru:
           sign_out: Выйти
           news: Новости
           events: Мероприятия участников
+          i_am_participant: 'Я-участник!'
           admin_panel: Админка
         footer:
           send_request: Подать заявку
