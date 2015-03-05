@@ -1,0 +1,9 @@
+development:
+  vk_client_id: VK_CLIENT_ID
+  vk_client_secret: VK_CLIENT_SECRET
+test:
+  vk_client_id: VK_CLIENT_ID
+  vk_client_secret: VK_CLIENT_SECRET
+production:
+  vk_client_id: VK_CLIENT_ID
+  vk_client_secret: VK_CLIENT_SECRET
