@@ -7,7 +7,7 @@
 .page-header.event-header
   .row
     .col-md-6
-      %h2
+      %h3
         = @event.title
     .col-md-6
       .user_button.link{ data: { href: root_path(anchor: @event.user.id) } }
@@ -15,7 +15,13 @@
         = image_tag @event.user.avatar.small, class: 'event_avatar'
 .row.event
   .col-md-6.event_description
-    = @event.description
+    %p
+      %b
+        = t('.goal')
+      %br
+      = @event.goal
+    %p
+      = @event.description
   .col-md-6
     %table.table
       %tr

@@ -10,6 +10,8 @@ class Event < ActiveRecord::Base
   validates :place, presence: true
   validate :begin_before_end_date
   validates :user_id, presence: true
+  validates :participant_count, presence: true
+  validates :goal, presence: true
 
   def begin_before_end_date
     if begin_date.present? && end_date.present?
