@@ -19,6 +19,7 @@ After a little bit magick ;)
 $ cd ul-lider
 $ bundle
 $ cp config/secrets.yml.sample config/secrets.yml
+$ cp config/oauth.yml.sample config/oauth.yml
 ```
 At finish just run:
 ```bash
