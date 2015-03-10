@@ -52,6 +52,8 @@ ru:
         place: Место проведения
         begin_date: Время начала
         end_date: Время конца
+        goal: Цель
+        participant_count: Предполагаемое количество участников
     errors:
       models:
         user:
