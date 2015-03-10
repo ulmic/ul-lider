@@ -4,17 +4,20 @@
 .page-header{ style: 'border-bottom: none' }
   %h2
     = t('.title')
-%table.table.table-hover.table-condensed.event_list
-  %tbody
-    - @events.each do |event|
-      %tr.link{ data: { href: event_path(event) } }
-        %td= image_tag 'event.png', class: 'event_icon'
-        %td
-          %h3
-            = event.title
-        %td
-          .avatar
-            = image_tag event.user.avatar.small
-          .short_name
-            %h6
-              = event.user.decorate.short_name
+- if @events.any?
+  %table.table.table-hover.table-condensed.event_list
+    %tbody
+      - @events.each do |event|
+        %tr.link{ data: { href: event_path(event) } }
+          %td= image_tag 'event.png', class: 'event_icon'
+          %td
+            %h3
+              = event.title
+          %td
+            .avatar
+              = image_tag event.user.avatar.small
+            .short_name
+              %h6
+                = event.user.decorate.short_name
+- else
+  = t('.there_is_no_events')
