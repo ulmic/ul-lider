@@ -7,5 +7,7 @@ FactoryGirl.define do
     end_date { generate :date }
     place { generate :string }
     description { generate :string }
+    participant_count { generate :string }
+    goal { generate :string }
   end
 end
