@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq', constraints: SidekiqConstraint.new
 
   mount Ckeditor::Engine => '/ckeditor'
+
+  get '/auth/vkontakte/callback' => 'web/event_social_participants#callback'
+
   scope module: :web do
     root "welcome#index"
 
@@ -11,6 +14,8 @@ Rails.application.routes.draw do
     resource :password, only: [:edit, :update]
     resource :remind_password, only: [:new, :create]
     resources :news, only: [ :index, :show ]
+    resources :events, only: [ :index, :show ]
+    resources :event_social_participants, only: :create
     resources :pages, only: [] do
       collection do
         get "/:slug" => "pages#show"
@@ -23,7 +28,7 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :users, only: [:new, :index, :create] do
+    resources :users, only: [:new, :create] do
       member do
         get :confirm
         patch :update_status
@@ -38,6 +43,7 @@ Rails.application.routes.draw do
 
     namespace :account do
       root 'welcome#index'
+      resources :events, except: [ :show, :destroy, :index ]
     end
 
     namespace :admin do

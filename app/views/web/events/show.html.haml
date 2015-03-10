@@ -1,0 +1,67 @@
+= stylesheet_link_tag 'web/events'
+= javascript_include_tag 'web/events'
+- title_is @event.title
+- content_for :top_social_buttons do
+  .top_social_buttons
+    = render 'layouts/web/shared/social_buttons'
+.page-header.event-header
+  .row
+    .col-md-6
+      %h3
+        = @event.title
+    .col-md-6
+      .user_button.link{ data: { href: root_path(anchor: @event.user.id) } }
+        = @event.user.decorate.short_name
+        = image_tag @event.user.avatar.small, class: 'event_avatar'
+.row.event
+  .col-md-6.event_description
+    %p
+      %b
+        = t('.goal')
+      %br
+      = @event.goal
+    %p
+      = @event.description
+  .col-md-6
+    %table.table
+      %tr
+        %td
+          %h4
+            = t('.where')
+        %td
+          .data
+            = @event.place
+      %tr
+        %td
+          %h4
+            = t('.when')
+        %td
+          .data
+            = @event.duration
+      %tr
+        %td{ colspan: 2 }
+          - if session[:events]
+            - if session[:events].include? @event.id
+              = t('.you_are_participant')
+            - else
+              %h6
+                = t('.get_part_by_social_network')
+              = link_to event_social_participants_path(event_id: @event.id), method: :post, class: 'btn btn-branded auth' do
+                = t('.registration')
+                = image_tag 'vk.png'
+          - else
+            %h6
+              = t('.get_part_by_social_network')
+            = link_to event_social_participants_path(event_id: @event.id), method: :post, class: 'btn btn-branded auth' do
+              = t('.registration')
+              = image_tag 'vk.png'
+      %tr
+        %td{ colspan: 2 }
+          - if @social_participants.any?
+            %h6
+              = t('.social_participants')
+              \-
+              = @social_participants_count
+            - @social_participants.each do |participant|
+              = link_to participant.profile, target: 'blank', class: 'social_participant', title: "#{participant.first_name} #{participant.last_name}" do
+                = image_tag participant.photo

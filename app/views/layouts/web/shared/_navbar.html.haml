@@ -10,6 +10,11 @@
         = t('application.attributes.name')
   .navbar-collapse.collapse
     %ul.nav.navbar-nav
+      - if signed_in?
+        = menu_item account_root_path do
+          = t('.i_am_participant')
+      = menu_item events_path do
+        = t('.events')
       = menu_item news_index_path do
         = t('.news')
       = menu_item '/pages/the_competition' do

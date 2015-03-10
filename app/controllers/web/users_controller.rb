@@ -1,8 +1,4 @@
 class Web::UsersController < Web::ApplicationController
-  def index
-    @users = User.where state: :confirmed_by_admin
-  end
-
   def new
     if filling_is_during?
       @user = UserRegistrationType.new

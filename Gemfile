@@ -49,8 +49,8 @@ gem 'rails-observers'
 #gem 'sir_trevor_rails', github: 'madebymany/sir-trevor-rails', branch: 'redesign-gem'
 #gem 'active_form'
 gem 'rest_in_place'
-gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'unicorn-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
@@ -63,6 +63,7 @@ gem 'russia_regions'
 gem 'russian_sex'
 gem 'auto_html'
 gem 'youtube_addy'
+gem 'omniauth-vkontakte'
 
 group :assets do
   gem 'coffee-rails'

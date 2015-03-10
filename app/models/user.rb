@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   has_secure_password validations: false
 
+  has_one :event
+
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
                     email: true

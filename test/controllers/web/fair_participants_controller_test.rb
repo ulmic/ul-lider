@@ -3,7 +3,7 @@ require 'test_helper'
 class Web::FairParticipantsControllerTest < ActionController::TestCase
   test "new" do
     get :new
-    assert_response :success
+    assert_response :redirect
   end
 
 #  test "create" do

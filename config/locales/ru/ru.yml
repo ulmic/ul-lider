@@ -47,6 +47,8 @@ ru:
           sign_in: Войти
           sign_out: Выйти
           news: Новости
+          events: Мероприятия участников
+          i_am_participant: 'Я-участник!'
           admin_panel: Админка
         footer:
           send_request: Подать заявку
@@ -83,6 +85,8 @@ ru:
         send_request_on_fair_idea: "ПОДАТЬ ЗАЯВКУ НА «Ярмарку идей»"
         participants_of_fair_part: "УЧАСТНИКИ «ЯРМАРКИ ИДЕЙ»"
         share_us: Расскажите о нас
+        i_am_participant: Я участник конкурса
+        events: Мероприятия участников
     errors:
       not_found:
         this_is_404_error_page: 'Ошибка 404. Запрашиваемая вами страница не существует.'
@@ -100,6 +104,37 @@ ru:
       end_of_filling_to_fair_idea:
         filling_on_fair_idea_ends: "Приём заявок на профильную смену «Ярмарка идей» завершён."
         this_is_mrs_mic_2014: "На фотографии Ксения Парфёнова победитель конкурса «Мисс МИЦ 2014»"
+    sessions:
+      new:
+        title: Авторизация
+        remind_password: Я забыл пароль
+    remind_passwords:
+      new:
+        title: Восстановление пароля
+        enter_your_password: 'Введите свой адрес электронной почты, на который был зарегистрирован аккаунт. Вам на почту придёт инструкция по восстановлению пароля.'
+    events:
+      show:
+        where: Где?
+        when: Когда?
+        get_part_by_social_network: Зарегистрироваться на мероприятие
+        auth: Авторизоваться
+        registration: Участвовать
+        social_participants: Участники мероприятия
+        goal: 'Цель мероприятия:'
+      index:
+        title: Мероприятия участников этапа «Время реальных дел»
+    account:
+      welcome:
+        index:
+          title: Время реальных дел!
+          anounce_my_event: Анонсировать мероприятие
+          view_my_event: Посмотреть моё мероприятие
+          edit_my_event: Редактировать моё мероприятие
+      events:
+        new:
+          title: Анонсировать мероприятие
+        edit:
+          title: Редактировать анонс мероприятия
   javascript:
     helpers:
       password_reveal: Показать пароль
@@ -114,3 +149,6 @@ ru:
     link_to_creative_work: Скачать творческую работу
     link_to_creative_work_part1: Скачать творческую работу. Часть 1
     link_to_creative_work_part2: Скачать творческую работу. Часть 2
+  validations:
+    errors:
+      end_date_must_be_after_begin_date: Дата окончания должна быть после даты начала
