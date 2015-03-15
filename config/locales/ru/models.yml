@@ -54,6 +54,9 @@ ru:
         end_date: Время конца
         goal: Цель
         participant_count: Предполагаемое количество участников
+        duration: Продолжительность
+        created_at: Дата создания
+        user_id: Участник
     errors:
       models:
         user:

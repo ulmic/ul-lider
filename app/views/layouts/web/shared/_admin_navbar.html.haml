@@ -21,6 +21,8 @@
         = t('.mailers')
       = menu_item admin_fair_participants_path do
         = "#{t('.fair_participants')} / #{@fair_parts_count}"
+      = menu_item admin_events_path do
+        = "#{t('.events')} / #{@events_count}"
     %ul.nav.navbar-nav.pull-right
       = menu_item admin_root_path do
         = t('.admin_panel')
