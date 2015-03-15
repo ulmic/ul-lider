@@ -10,6 +10,7 @@ module UserRepository
     scope :confirmed, -> { where state: :confirmed_by_admin }
     scope :waiting_confirmation, -> { where state: :waiting_confirmation }
     scope :reserve_schoolers, -> { where role: :reserve_school }
+    scope :on_third_stage, -> { where state: :on_third_stage }
   end
 end
 
