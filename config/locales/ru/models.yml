@@ -49,11 +49,14 @@ ru:
       event:
         title: Название
         description: Описание
-        place: Место проведения
+        place: Адрес места проведения
         begin_date: Время начала
         end_date: Время конца
         goal: Цель
         participant_count: Предполагаемое количество участников
+        duration: Продолжительность
+        created_at: Дата создания
+        user_id: Участник
     errors:
       models:
         user:
