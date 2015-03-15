@@ -9,7 +9,6 @@ class Event < ActiveRecord::Base
   validates :end_date, presence: true
   validates :place, presence: true
   validate :begin_before_end_date
-  validates :user_id, presence: true
   validates :participant_count, presence: true
   validates :goal, presence: true
 

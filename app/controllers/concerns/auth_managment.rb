@@ -10,7 +10,7 @@ module Concerns
     end
 
     def signed_in?
-      current_user.nil?
+      !current_user.guest?
     end
 
     def signed_as_admin?
