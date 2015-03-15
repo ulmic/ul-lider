@@ -1,5 +1,7 @@
-[![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=develop)](https://travis-ci.org/ulmic/ul-lider)
+Сайт конкурса "Я-лидер!" 2015 года. 
 =======
+http://ul-lider.ru
+
 [![Build Status](https://travis-ci.org/ulmic/ul-lider.svg?branch=develop)](https://travis-ci.org/ulmic/ul-lider) [![Coverage Status](https://coveralls.io/repos/ulmic/ul-lider/badge.png?branch=develop)](https://coveralls.io/r/ulmic/ul-lider?branch=develop) [![Code Climate](https://codeclimate.com/github/ulmic/ul-lider/badges/gpa.svg)](https://codeclimate.com/github/ulmic/ul-lider)
 
 # Installation
@@ -17,6 +19,7 @@ After a little bit magick ;)
 $ cd ul-lider
 $ bundle
 $ cp config/secrets.yml.sample config/secrets.yml
+$ cp config/oauth.yml.sample config/oauth.yml
 ```
 At finish just run:
 ```bash
