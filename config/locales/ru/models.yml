@@ -49,7 +49,7 @@ ru:
       event:
         title: Название
         description: Описание
-        place: Место проведения
+        place: Адрес места проведения
         begin_date: Время начала
         end_date: Время конца
         goal: Цель
