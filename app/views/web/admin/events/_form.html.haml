@@ -1,13 +1,12 @@
 .row
   .col-md-4.col-md-offset-2
     = simple_form_for @event, url: { controller: 'web/admin/events', action: action }, html: { class: 'form-horizontal' } do |f|
-      = f.hint t('hints.events.new.require_fields')
       = f.input :title, as: :string
       = f.input :description
       = f.input :begin_date, as: :datetime_picker
       = f.input :end_date, as: :datetime_picker
-      = f.input :place
-      = f.input :goal
+      = f.input :place, as: :string
+      = f.input :goal, as: :string
       = f.association :user, label_method: lambda { |user| "#{user.first_name} #{user.last_name}" }, value_method: :id
-      = f.input :participant_count
+      = f.input :participant_count, as: :string
       = f.button :submit

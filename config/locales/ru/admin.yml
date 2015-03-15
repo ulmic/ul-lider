@@ -72,6 +72,13 @@ ru:
           send_all: Отправить всем
           send_by_email: Отправить одному пользователю по емейлу
           send_for_all: Сделать массовую рассылку для всех
+      events:
+        index:
+          title: Мероприятия
+        edit:
+          title: Редактировать мероприятие
+        new:
+          title: Добавить мероприятие
   layouts:
     web:
       shared:
@@ -85,3 +92,4 @@ ru:
           mailers: Рассылки
           sign_out: Выйти
           fair_participants: 'Заявки на "Ярмарку идей"'
+          events: Мероприятия
