@@ -1,10 +1,21 @@
 = javascript_include_tag 'web/account/events'
+= javascript_include_tag 'web/account/reports'
 .row
-  .col-md-4.col-md-offset-2
+  .col-md-8.col-md-offset-2
     = simple_form_for @report, url: { controller: 'web/account/event/reports', action: :create }, method: :post, html: { class: 'form-horizontal' } do |f|
       = f.input :results
+      = f.input :photo, as: :string
+      = f.input :video, as: :string
       = f.hint t('hints.event.report.new.file_size')
       = f.input :file, as: :file
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+      %h4
+        = t('activerecord.attributes.event.participants')
+      = f.simple_fields_for :participants do |fp|
+        = fp.input :first_name, as: :string, label: false, placeholder: t('activerecord.attributes.event.participant.first_name')
+        = fp.input :last_name, as: :string, label: false, placeholder: t('activerecord.attributes.event.participant.last_name')
+        = fp.input :phone, as: :string, label: false, placeholder: t('activerecord.attributes.event.participant.phone')
+        %hr
+      = link_to t('.add_participant'), '#', class: 'btn btn-branded', id: 'add_participant'
       = f.button :submit, t('helpers.links.save')
       = link_to t('helpers.links.back'), account_root_path, class: "btn"

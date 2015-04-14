@@ -60,6 +60,13 @@ ru:
         results: Результаты мероприятия
         file: Приложение
         user: Участник
+        participants: Участники мероприятия
+        photo: Ссылка на фотоальбом
+        video: Ссылка на видео
+        participant:
+          first_name: Имя
+          last_name: Фамилия
+          phone: Номер телефона
     errors:
       models:
         user:

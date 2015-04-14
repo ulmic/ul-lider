@@ -146,6 +146,8 @@ ru:
         reports:
           new:
             title: Создать отчёт о мероприятии
+          form:
+            add_participant: Добавить участника
           show:
             title: Отчёт о проделанном мероприятии
   javascript:
