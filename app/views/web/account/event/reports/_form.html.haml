@@ -3,6 +3,7 @@
   .col-md-4.col-md-offset-2
     = simple_form_for @report, url: { controller: 'web/account/event/reports', action: :create }, method: :post, html: { class: 'form-horizontal' } do |f|
       = f.input :results
+      = f.hint t('hints.event.report.new.file_size')
       = f.input :file, as: :file
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
       = f.button :submit, t('helpers.links.save')

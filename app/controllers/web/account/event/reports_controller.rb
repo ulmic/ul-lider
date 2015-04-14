@@ -16,6 +16,6 @@ class Web::Account::Event::ReportsController < Web::Account::Event::ApplicationC
   end
 
   def show
-    @report = EventDecorator.decorate ::Event::Report.find params[:id]
+    @report = EventDecorator.decorate ::Event::Report.find_by_user_id params[:id]
   end
 end

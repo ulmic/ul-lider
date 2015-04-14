@@ -18,4 +18,8 @@ class Event < ActiveRecord::Base
     end
     errors.add(:end_date, I18n.t('validations.errors.end_date_must_be_after_begin_date'))
   end
+
+  def has_report?
+    type == 'Event::Report'
+  end
 end
