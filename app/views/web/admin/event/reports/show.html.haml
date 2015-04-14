@@ -1,0 +1,65 @@
+- title_is @report.title
+%table.table
+  %tr
+    %td
+      = t('activerecord.attributes.event.title')
+    %td
+      = @report.title
+  %tr
+    %td
+      = t('activerecord.attributes.event.description')
+    %td
+      = @report.description
+  %tr
+    %td
+      = t('activerecord.attributes.event.duration')
+    %td
+      = @report.duration
+  %tr
+    %td
+      = t('activerecord.attributes.event.place')
+    %td
+      = @report.place
+  %tr
+    %td
+      = t('activerecord.attributes.event.user')
+    %td
+      = @report.user.decorate.short_name
+  %tr
+    %td
+      = t('activerecord.attributes.event.goal')
+    %td
+      = @report.goal
+  %tr
+    %td
+      = t('activerecord.attributes.event.participant_count')
+    %td
+      = @report.participant_count
+  %tr
+    %td
+      = t('activerecord.attributes.event.results')
+    %td
+      = @report.results
+  %tr
+    %td
+      = t('activerecord.attributes.event.file')
+    %td
+      = link_to t('helpers.download'), @report.file.url
+  %tr
+    %td
+      = t('activerecord.attributes.event.photo')
+    %td
+      = link_to @report.photo, @report.photo
+  %tr
+    %td
+      = t('activerecord.attributes.event.video')
+    %td
+      = link_to @report.video, @report.video
+  %tr
+    %td
+      = "#{t('activerecord.attributes.event.participants')} (#{@report.participants.count})"
+    %td
+      %ol
+        - @report.participants.each do |participant|
+          %li
+            = "#{participant.first_name} #{participant.last_name} #{participant.phone}"

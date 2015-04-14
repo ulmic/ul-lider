@@ -79,6 +79,10 @@ ru:
           title: Редактировать мероприятие
         new:
           title: Добавить мероприятие
+      event:
+        reports:
+          index:
+            title: Отчёты о мероприятиях
   layouts:
     web:
       shared:
@@ -93,3 +97,4 @@ ru:
           sign_out: Выйти
           fair_participants: 'Заявки на "Ярмарку идей"'
           events: Мероприятия
+          reports: Отчёты

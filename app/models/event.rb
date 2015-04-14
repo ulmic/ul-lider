@@ -1,5 +1,4 @@
 class Event < ActiveRecord::Base
-
   belongs_to :user
   has_many :event_social_participants
 
@@ -17,5 +16,9 @@ class Event < ActiveRecord::Base
       return if begin_date <= end_date
     end
     errors.add(:end_date, I18n.t('validations.errors.end_date_must_be_after_begin_date'))
+  end
+
+  def has_report?
+    type == 'Event::Report'
   end
 end

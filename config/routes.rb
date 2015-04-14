@@ -44,6 +44,9 @@ Rails.application.routes.draw do
     namespace :account do
       root 'welcome#index'
       resources :events, except: [ :show, :destroy, :index ]
+      namespace :event do
+        resources :reports, only: [ :new, :create, :show ]
+      end
     end
 
     namespace :admin do
@@ -64,6 +67,9 @@ Rails.application.routes.draw do
           post :broadcast
           post :broadcast_all
         end
+      end
+      namespace :event do
+        resources :reports, only: [ :index, :show ]
       end
     end
   end
