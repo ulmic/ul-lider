@@ -1,0 +1,14 @@
+= title_is
+- model_class = Event::Report
+.page-header
+  %h1=t '.title', default: model_class.model_name.human.pluralize.titleize
+%table.table.table-striped.table-condensed
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:user)
+      %th= model_class.human_attribute_name(:title)
+  %tbody
+    - @reports.each do |report|
+      %tr
+        %td= report.user.decorate.short_name
+        %td= link_to report.title, admin_event_report_path(report)
