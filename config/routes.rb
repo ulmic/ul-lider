@@ -68,6 +68,9 @@ Rails.application.routes.draw do
           post :broadcast_all
         end
       end
+      namespace :event do
+        resources :reports, only: [ :index, :show ]
+      end
     end
   end
   namespace :api do
