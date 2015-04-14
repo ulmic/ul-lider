@@ -57,6 +57,9 @@ ru:
         duration: Продолжительность
         created_at: Дата создания
         user_id: Участник
+        results: Результаты мероприятия
+        file: Приложение
+        user: Участник
     errors:
       models:
         user:

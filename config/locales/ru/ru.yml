@@ -131,11 +131,18 @@ ru:
           anounce_my_event: Анонсировать мероприятие
           view_my_event: Посмотреть моё мероприятие
           edit_my_event: Редактировать моё мероприятие
+          create_report: Создать отчёт о мероприятии
       events:
         new:
           title: Анонсировать мероприятие
         edit:
           title: Редактировать анонс мероприятия
+      event:
+        reports:
+          new:
+            title: Создать отчёт о мероприятии
+          show:
+            title: Отчёт о проделанном мероприятии
   javascript:
     helpers:
       password_reveal: Показать пароль
