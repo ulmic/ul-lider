@@ -80,6 +80,8 @@ group :development do
   gem 'capistrano-rvm'
   gem 'colorize', '0.6.0'
   gem 'quiet_assets'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rails-tail-log'
 end
 
 group :development, :test do
