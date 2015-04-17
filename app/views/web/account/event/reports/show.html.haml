@@ -48,6 +48,31 @@
         = link_to t('helpers.download'), @report.file.url
     %tr
       %td
+        = t('activerecord.attributes.event.pluses')
+      %td
+        = @report.pluses
+    %tr
+      %td
+        = t('activerecord.attributes.event.minuses')
+      %td
+        = @report.minuses
+    %tr
+      %td
+        = t('activerecord.attributes.event.can_change')
+      %td
+        = @report.can_change
+    %tr
+      %td
+        = t('activerecord.attributes.event.work_with_command')
+      %td
+        = @report.work_with_command
+    %tr
+      %td
+        = t('activerecord.attributes.event.resources')
+      %td
+        = @report.resources
+    %tr
+      %td
         = t('activerecord.attributes.event.photo')
       %td
         = link_to @report.photo, @report.photo

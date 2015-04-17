@@ -6,6 +6,12 @@
       = f.input :results
       = f.input :photo, as: :string
       = f.input :video, as: :string
+      = f.input :pluses
+      = f.input :minuses
+      = f.input :most_liked
+      = f.input :can_change
+      = f.input :work_with_command
+      = f.input :resources
       = f.hint t('hints.event.report.new.file_size')
       = f.input :file, as: :file
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
