@@ -1,10 +1,25 @@
-- title_is @report.title
+- title_is
 %table.table
   %tr
     %td
       = t('activerecord.attributes.event.title')
     %td
       = @report.title
+  %tr
+    %td
+      = t('activerecord.attributes.event.goal')
+    %td
+      = @report.goal
+  %tr
+    %td
+      = t('activerecord.attributes.event.tasks')
+    %td
+      = @report.tasks
+  %tr
+    %td
+      = t('activerecord.attributes.event.jury')
+    %td
+      = @report.jury
   %tr
     %td
       = t('activerecord.attributes.event.description')
@@ -45,6 +60,31 @@
       = t('activerecord.attributes.event.file')
     %td
       = link_to t('helpers.download'), @report.file.url
+  %tr
+    %td
+      = t('activerecord.attributes.event.pluses')
+    %td
+      = @report.pluses
+  %tr
+    %td
+      = t('activerecord.attributes.event.minuses')
+    %td
+      = @report.minuses
+  %tr
+    %td
+      = t('activerecord.attributes.event.can_change')
+    %td
+      = @report.can_change
+  %tr
+    %td
+      = t('activerecord.attributes.event.work_with_command')
+    %td
+      = @report.work_with_command
+  %tr
+    %td
+      = t('activerecord.attributes.event.resources')
+    %td
+      = @report.resources
   %tr
     %td
       = t('activerecord.attributes.event.photo')
