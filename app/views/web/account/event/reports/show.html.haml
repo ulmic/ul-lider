@@ -8,6 +8,21 @@
         = @report.title
     %tr
       %td
+        = t('activerecord.attributes.event.goal')
+      %td
+        = @report.goal
+    %tr
+      %td
+        = t('activerecord.attributes.event.tasks')
+      %td
+        = @report.tasks
+    %tr
+      %td
+        = t('activerecord.attributes.event.jury')
+      %td
+        = @report.jury
+    %tr
+      %td
         = t('activerecord.attributes.event.description')
       %td
         = @report.description

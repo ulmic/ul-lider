@@ -3,6 +3,11 @@
 .row
   .col-md-8.col-md-offset-2
     = simple_form_for @report, url: { controller: 'web/account/event/reports', action: :create }, method: :post, html: { class: 'form-horizontal' } do |f|
+      = f.input :title
+      = f.input :goal, as: :string
+      = f.input :tasks, required: true
+      = f.input :begin_date, as: :date_picker
+      = f.input :end_date, as: :date_picker
       = f.input :results
       = f.input :photo, as: :string
       = f.input :video, as: :string
@@ -12,6 +17,7 @@
       = f.input :can_change
       = f.input :work_with_command
       = f.input :resources
+      = f.input :jury, as: :string
       = f.hint t('hints.event.report.new.file_size')
       = f.input :file, as: :file
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
