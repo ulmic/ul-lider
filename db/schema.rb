@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420211430) do
+ActiveRecord::Schema.define(version: 20150421212015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20150420211430) do
     t.text     "resources"
     t.text     "jury"
     t.text     "tasks"
+    t.integer  "result_participant_count"
   end
 
   create_table "news", force: true do |t|

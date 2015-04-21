@@ -6,6 +6,5 @@ class Event::Report < Event
 
   accepts_nested_attributes_for :participants
 
-  validates :results, presence: true
   validates :file, presence: true
 end
