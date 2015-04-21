@@ -52,6 +52,11 @@
       = @report.participant_count
   %tr
     %td
+      = t('activerecord.attributes.event.result_participant_count')
+    %td
+      = @report.result_participant_count
+  %tr
+    %td
       = t('activerecord.attributes.event.results')
     %td
       = @report.results
@@ -97,7 +102,7 @@
       = link_to @report.video, @report.video
   %tr
     %td
-      = "#{t('activerecord.attributes.event.participants')} (#{@report.participants.count})"
+      = t('activerecord.attributes.event.participants')
     %td
       %ol
         - @report.participants.each do |participant|
