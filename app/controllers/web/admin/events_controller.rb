@@ -22,6 +22,7 @@ class Web::Admin::EventsController < Web::Admin::ApplicationController
 
   def update
     @event = EventEditByAdminType.find params[:id]
+    params[:event].permit!
     if @event.update_attributes params[:event]
       redirect_to admin_events_path
     else

@@ -18,6 +18,7 @@ class Web::Account::EventsController < Web::Account::ApplicationController
 
   def update
     @event = EventEditByUserType.find params[:id]
+    params[:event].permit!
     if @event.update_attributes params[:event]
       redirect_to account_root_path
     else
