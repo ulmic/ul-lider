@@ -9,5 +9,6 @@ FactoryGirl.define do
     description { generate :string }
     participant_count { generate :string }
     goal { generate :string }
+    type 'Event'
   end
 end
