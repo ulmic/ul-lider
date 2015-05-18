@@ -33,9 +33,11 @@ ru:
           on_first_stage: Участники I этапа
           on_second_stage: Участники II этапа
           on_third_stage: Участники III этапа
+          on_final_stage: Участники финала
         users_list:
           push_to_second_stage: "=> II этап"
           push_to_third_stage: "=> III этап"
+          push_to_final_stage: "=> Финал"
           update_average: Обновить средний бал
           approved: Подтвердил
           declined: Отказался

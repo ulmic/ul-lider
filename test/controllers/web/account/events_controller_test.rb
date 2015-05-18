@@ -29,12 +29,12 @@ class Web::Account::EventsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit by admin" do
+  test "should get edit" do
     get :edit, id: @event
     assert_response :success
   end
 
-  test "should update event by admin" do
+  test "should update event" do
     attributes = attributes_for :event
     put :update, id: @event, event: attributes
     assert_response :redirect
