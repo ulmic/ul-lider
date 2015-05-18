@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
     state :fair_participant_declined
     state :second_stage_approved
     state :on_third_stage
+    state :on_final_stage
 
     event :confirm do
       transition all => :active

@@ -3,6 +3,7 @@ class Web::Admin::UsersController < Web::Admin::ApplicationController
     @first_stage_users = UserDecorator.decorate_collection User.participants.where.not(state: :on_second_stage).reverse
     @second_stage_users = UserDecorator.decorate_collection User.participants.where("state = 'on_second_stage' OR state = 'second_stage_approved' OR state = 'fair_participant_declined'")
     @third_stage_users = UserDecorator.decorate_collection User.participants.where state: :on_third_stage
+    @final_stage_users = UserDecorator.decorate_collection User.participants.where state: :on_final_stage
   end
 
   def new

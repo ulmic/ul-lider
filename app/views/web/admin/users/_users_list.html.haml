@@ -29,6 +29,8 @@
           - elsif user.fair_participant_declined?
             %span.label.label-danger
               = t('.declined')
+          - if user.on_third_stage?
+            = link_to t('.push_to_final_stage'), admin_user_path(user, user: { state: :on_final_stage }), method: :patch, class: 'btn btn-success btn-xs'
         %td= user.formated_birth_date
         %td= user.place
         %td= user.school_group
