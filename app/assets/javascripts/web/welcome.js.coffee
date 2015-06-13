@@ -48,7 +48,7 @@ changes = ->
 
 init_main_question = ->
   parent_width = $main_question.parents().first().width()
-  $main_question.css 'font-size', "#{parent_width}px"
+  $main_question.css 'height', "#{parent_width}px"
   $main_question.css 'width', "#{parent_width}px"
   $main_question.click ->
     if $('body').width() > 767

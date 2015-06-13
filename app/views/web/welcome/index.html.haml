@@ -26,11 +26,13 @@
       %h5
         = t('.who_will_receive_the_cash')
         %i.fa.fa-ruble
+        \?
     .alert.alert-warning.alert-main-question
       %h5
         = t('.all_answers')
   .col-md-offset-4.col-md-4
-    %i.fa.fa-question#main_question.link
+    #main_question.link
+      = image_tag 'main/logo-yal.png'
 .row.poll{ style: 'display: none' }
   = render 'vk_poll'
 .row.for_news
