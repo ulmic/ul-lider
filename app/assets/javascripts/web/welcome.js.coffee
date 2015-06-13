@@ -31,6 +31,34 @@ open_popup = ->
   scrollPos = $(window).scrollTop()
   $('html').scrollTop(scrollPos)
 
+$main_question = $('#main_question')
+
+changes = ->
+  $questions = $('#questions')
+  $poll = $('.poll')
+  if $('body').width() > 767
+    $main_question.css('margin-left', '0px')
+  else
+    $main_question.css('margin-top', '0px')
+  $main_question.parents('div').first().removeClass('col-md-offset-4')
+  $questions.fadeIn()
+  $main_question.removeClass 'link'
+  $main_question.unbind 'click'
+  $poll.fadeIn()
+
+init_main_question = ->
+  parent_width = $main_question.parents().first().width()
+  $main_question.css 'font-size', "#{parent_width}px"
+  $main_question.css 'width', "#{parent_width}px"
+  $main_question.click ->
+    if $('body').width() > 767
+      $(this).animate {
+        marginLeft: "+=#{parent_width}"
+      }, 1000, changes
+    else
+      $(this).css { margintop: "+=#{parent_width}" }
+      changes()
+
 $(document).ready ->
   document_width = screen.width
   document_height = screen.height
@@ -68,4 +96,8 @@ $(document).ready ->
     $("#participant_info_#{id}").slideDown("show")
     $(this).hide()
     return
+  return
+
+$ ->
+  init_main_question()
   return
