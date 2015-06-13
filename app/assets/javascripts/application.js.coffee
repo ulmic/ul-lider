@@ -12,7 +12,8 @@ $(document).ready ->
     pickTime: false
   })
   $('.link').click ->
-    location.href = $(this).attr('data-href')
+    href = $(this).data('href')
+    location.href = href unless href == undefined
   $('.target_blank').attr('target', '_blank')
   $('.password_reveal').click ->
     e.preventDefault()

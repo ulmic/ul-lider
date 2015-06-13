@@ -1,0 +1,6 @@
+%script{charset: "windows-1251", src: "http://vk.com/js/api/openapi.js", type: "text/javascript"}
+#vk_poll
+:javascript
+  VK.init({apiId: 4812657, onlyWidgets: true});
+  poll_width = $('.row.poll').width()
+  VK.Widgets.Poll('vk_poll', { width: poll_width }, '185957220_51ada9ad72dd2d8f59');
