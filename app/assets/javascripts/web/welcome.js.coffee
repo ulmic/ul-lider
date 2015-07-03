@@ -1,6 +1,19 @@
 #= require jquery
 #= require i18n_setup
 
+
+winner_id = (element) ->
+  $(element).attr('data-winner-id')
+
+close_winner_info = ->
+  $('.winner_info').each ->
+    if $(this).is(':visible')
+      $(this).hide()
+      id = $(this).attr('id').substring($(this).attr('id').lastIndexOf('_'))
+      $("#winner_cell#{id}").show()
+      return
+    return
+
 participant_id = (element) ->
   $(element).attr('data-participant-id')
 
@@ -75,11 +88,26 @@ $(document).ready ->
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
     if window.location.hash != ''
       open_popup()
+    $('.winner_avatar').tooltip({
+      html: true,
+      content: ->
+        return $(this).attr('data-original-title')
+    })
   else
     count = $('.news').length
     $('.for_news').height(240 * count)
     $('iframe').prop('width', $('iframe').first().parent().first().width())
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
+    $('.winner_cell.main_avatar').click ->
+      close_winner_info()
+      id = winner_id this
+      $("#winner_info_#{id}").slideDown("show")
+      $(this).hide()
+      return
+    $('.winner_avatar.in_info').click ->
+      id = winner_id this
+      $("#winner_cell_#{id}").slideDown("show")
+      $("#winner_info_#{id}").slideUp("hide")
   $('.full_width').css('background-size', "#{document_width}px #{document_height}px")
   $('.participants_images_button').click ->
     if $('.participants_images').is(':visible')
@@ -95,6 +123,14 @@ $(document).ready ->
     id = participant_id this
     $("#participant_info_#{id}").slideDown("show")
     $(this).hide()
+    return
+  $('.winners_images_button').click ->
+    if $('.winners_images').is(':visible')
+      $('.winner_cell').slideUp()
+      $('.winners_images').hide()
+    else
+      $('.winners_images').show()
+      $('.winner_cell').slideDown("slow")
     return
   return
 

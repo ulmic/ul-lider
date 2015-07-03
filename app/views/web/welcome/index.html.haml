@@ -11,30 +11,29 @@
     .title
       %h1
         = t('contest.full_name')
-.row.participants_row
-  .col-md-12.participants_cols
-    .participants_images
-      - @participants.each do |participant|
-        = render 'participant_cell', participant: participant
+.row.winners_row
+  .col-md-12
+    .winners_images_button.link{ data: { href: '#' } }
+      = '2002 - 2014'
+    .winners_images
+      - (0..12).each do |i|
+        = render 'winner_cell', i: i, klass: ''
 %hr
 .row.main_question
-  .col-md-8#questions{ style: 'display: none' }
+  .col-md-8#questions
     .alert.alert-warning.alert-main-question
       %h5
-        = t('.who_the_best')
+        = t('.who_is_winner')
     .alert.alert-warning.alert-main-question
       %h5
-        = t('.who_will_receive_the_cash')
+        = t('.who_is_cash')
         %i.fa.fa-ruble
         \?
     .alert.alert-warning.alert-main-question
       %h5
-        = t('.all_answers')
-  .col-md-offset-4.col-md-4
-    #main_question.link
-      = image_tag 'main/logo-yal.png'
-.row.poll{ style: 'display: none' }
-  = render 'vk_poll'
+        = t('.next_contest')
+  .col-md-4.winner
+    = image_tag 'main/winner.jpg'
 .row.for_news
   - @last_news.each do |news|
     .col-md-4.news.link{ data: { href: news_path(news) } }
