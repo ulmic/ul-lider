@@ -34,4 +34,7 @@ module Web::WelcomeHelper
       content_tag(:a, I18n.t('popup.link_to_creative_work'), href: participant.creative_work, class: 'btn btn-branded')
     end
   end
+  def winner_info(index)
+    YAML.load_file("#{Rails.root}/lib/yaml/winners_info.yml")["info"][index]
+  end
 end
