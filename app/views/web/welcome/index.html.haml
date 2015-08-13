@@ -10,6 +10,8 @@
   .col-md-12
     .title
       %h1
+        = t('contest.soon')
+      %h1
         = t('contest.full_name')
 .row.winners_row
   .col-md-12
@@ -19,21 +21,12 @@
       - (0..12).each do |i|
         = render 'winner_cell', i: i, klass: ''
 %hr
-.row.main_question
-  .col-md-8#questions
-    .alert.alert-warning.alert-main-question
-      %h5
-        = t('.who_is_winner')
-    .alert.alert-warning.alert-main-question
-      %h5
-        = t('.who_is_cash')
-        %i.fa.fa-ruble
-        \?
-    .alert.alert-warning.alert-main-question
-      %h5
-        = t('.next_contest')
-  .col-md-4.winner
-    = image_tag 'main/winner.jpg'
+.row.with_request_button
+  .col-md-offset-2.col-md-8.send_request_button_row
+    %h3
+      = t('.full_time_session_lider_club')
+    = link_to new_club_participant_path, class: 'btn btn-very-lg btn-branded' do
+      = t('.send_request')
 .row.for_news
   - @last_news.each do |news|
     .col-md-4.news.link{ data: { href: news_path(news) } }

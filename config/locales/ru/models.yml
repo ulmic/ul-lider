@@ -76,6 +76,14 @@ ru:
           first_name: Имя
           last_name: Фамилия
           phone: Номер телефона
+      club/participant:
+        first_name: Имя
+        patronymic: Отчество
+        last_name: Фамилия
+        birth_date: Дата рождения
+        phone: Телефон
+        past_participation: Участвовал ли до этого в лидер-клубах?
+        full_name: ФИО
     errors:
       models:
         user:
@@ -113,3 +121,8 @@ ru:
             confirm: В резерв
             admin_confirm: "Подтверждение анкеты-заявки"
             deactivate: Забанить
+  enumerize:
+    club/participant:
+      past_participation:
+        part: Участвовал
+        not_part: Не участвовал

@@ -23,6 +23,8 @@
         = "#{t('.fair_participants')} / #{@fair_parts_count}"
       = menu_item admin_event_reports_path do
         = "#{t('.reports')} / #{@reports_count}"
+      = menu_item admin_club_participants_path do
+        = "#{t('.lider_club')} / #{@club_participants_count}"
     %ul.nav.navbar-nav.pull-right
       = menu_item admin_root_path do
         = t('.admin_panel')

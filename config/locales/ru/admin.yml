@@ -85,6 +85,10 @@ ru:
         reports:
           index:
             title: Отчёты о мероприятиях
+      club:
+        participants:
+          index:
+            title: Заявки на участие в лидер-клубе
   layouts:
     web:
       shared:
@@ -100,3 +104,4 @@ ru:
           fair_participants: 'Заявки на "Ярмарку идей"'
           events: Мероприятия
           reports: Отчёты
+          lider_club: Лидер-клуб

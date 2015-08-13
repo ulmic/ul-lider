@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421212015) do
+ActiveRecord::Schema.define(version: 20150813171533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20150421212015) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "club_participants", force: true do |t|
+    t.text     "first_name"
+    t.text     "last_name"
+    t.text     "patronymic"
+    t.text     "phone"
+    t.text     "email"
+    t.text     "past_participation"
+    t.datetime "birth_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "event_participants", force: true do |t|
     t.integer  "event_id"
@@ -124,7 +136,6 @@ ActiveRecord::Schema.define(version: 20150421212015) do
     t.text     "life_goals"
     t.text     "fair_goals"
     t.text     "region",               default: "Ульяновская область"
-    t.boolean  "reserve_school"
     t.string   "average"
     t.integer  "reserve_order_number"
   end
