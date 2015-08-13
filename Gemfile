@@ -50,7 +50,7 @@ gem 'rails-observers'
 #gem 'active_form'
 gem 'rest_in_place'
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
-gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', submodules: true
 gem 'unicorn-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
@@ -71,7 +71,6 @@ end
 
 group :development do
   gem 'web-console', '2.0.0.beta2'
-  gem 'spring', '1.3.4'
   gem 'capistrano', '3.2.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'

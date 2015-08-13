@@ -5,10 +5,11 @@ ru:
     developers: 'Разработчики ИТ-проектов МИЦ'
     github_link: Ссылка на Github
   contest:
-    full_name: "XIII областной конкурс актива учащейся молодёжи «Я-лидер!»"
+    full_name: "XIV областной конкурс актива учащейся молодёжи «Я-лидер!»"
     organization: Молодёжный инициативный центр
     definition: Положение о конкурсе
     organization_short_title: "УОМОО «МИЦ»"
+    soon: 'Скоро!'
     partners:
       new_civilization_short_title: "УРМОО «Новая цивилизация»"
       ministry_of_education: Министерство образования и науки Ульяновской области
@@ -85,8 +86,9 @@ ru:
         title: Новости
     welcome:
       index:
-        send_request: "ПОДАТЬ ЗАЯВКУ НА «Я-ЛИДЕР!»"
+        send_request: "ПОДАТЬ ЗАЯВКУ"
         send_request_on_fair_idea: "ПОДАТЬ ЗАЯВКУ НА «Ярмарку идей»"
+        full_time_session_lider_club: Очная сессия Лидер-клуба 24-26 августа
         participants_of_fair_part: "УЧАСТНИКИ «ЯРМАРКИ ИДЕЙ»"
         share_us: Расскажите о нас
         i_am_participant: Я участник конкурса
@@ -156,6 +158,14 @@ ru:
             add_participant: Добавить участника
           show:
             title: Отчёт о проделанном мероприятии
+    club:
+      participants:
+        new:
+          title: 'Подать заявку на очную сессию  Лидер-клуба'
+          download_my_data: Загрузить
+          if_you_mic_member: Если ты член МИЦ, то просто введи номер своего членского билета
+          i_am_not_mic_member: Я не член МИЦ
+          send_request: Подать заявку
   javascript:
     helpers:
       password_reveal: Показать пароль
