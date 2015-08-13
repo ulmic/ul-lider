@@ -71,6 +71,9 @@ Rails.application.routes.draw do
       namespace :event do
         resources :reports, only: [ :index, :show ]
       end
+      namespace :club do
+        resources :participants, except: :show
+      end
     end
     namespace :club do
       resources :participants, only: [ :new, :create ]

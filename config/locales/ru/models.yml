@@ -83,6 +83,7 @@ ru:
         birth_date: Дата рождения
         phone: Телефон
         past_participation: Участвовал ли до этого в лидер-клубах?
+        full_name: ФИО
     errors:
       models:
         user:

@@ -12,7 +12,7 @@ class Web::Club::ParticipantsControllerTest < ActionController::TestCase
 
   test 'should post create' do
     attributes = attributes_for :club_participant
-    post :create, participant: attributes
+    post :create, club_participant: attributes
     assert_response :redirect, @response.body
     participant = Club::Participant.last
     assert_equal participant.email, attributes[:email]
