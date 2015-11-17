@@ -1,0 +1,8 @@
+.row.for_news
+  - @last_news.each do |news|
+    .col-md-4.news.link{ data: { href: ulmic_news_path(news.id) } }
+      .title
+        = news.title
+      .body
+        = image_tag news.photo
+        != strip_tags news.text

@@ -19,4 +19,10 @@ module ApplicationHelper
   def select_options_for_model_state(model)
     model_states(model).map { |x| [x.human_name, x.name] }
   end
+
+  #FIXME create ulmic wrapper
+
+  def ulmic_news_path(id)
+    "http://ulmic.ru/news/#{id}"
+  end
 end

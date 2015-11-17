@@ -23,14 +23,7 @@
   .col-md-offset-2.col-md-8.send_request_button_row
     = link_to new_user_path, class: 'btn btn-very-lg btn-branded' do
       = t('.send_request')
-.row.for_news
-  - @last_news.each do |news|
-    .col-md-4.news.link{ data: { href: news_path(news) } }
-      .title
-        = news.title
-      .body
-        = image_tag news.photo
-        = strip_tags news.lead
+= render 'news'
 .row.plaha
   .col-md-6.text.left
     .title

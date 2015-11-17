@@ -22,6 +22,11 @@ Configus.build Rails.env do
       #конец приёма заявок на Ярмарку идей
       end_of_filling_on_fair_idea "2015-02-10T00:00:00 +0300"
     end
+    api do
+      ulmic do
+        host 'ulmic.ru'
+      end
+    end
   end
 
   env :staging, parent: :production do
@@ -38,6 +43,11 @@ Configus.build Rails.env do
   end
 
   env :development, parent: :staging do
+    api do
+      ulmic do
+        host 'localhost:3001'
+      end
+    end
   end
 
   env :test, parent: :development do

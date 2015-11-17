@@ -81,6 +81,7 @@ group :development do
   gem 'quiet_assets'
   gem 'capistrano-rails-console'
   gem 'capistrano-rails-tail-log'
+  gem 'better_errors'
 end
 
 group :development, :test do
