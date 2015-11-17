@@ -17,8 +17,6 @@
       = menu_item '/pages/the_competition' do
         = t('contest.definition')
     %ul.nav.navbar-nav.pull-right
-      = menu_item configus.sites.year_2014 do
-        2014
       - if signed_as_admin?
         = menu_item admin_root_path do
           = t('.admin_panel')
