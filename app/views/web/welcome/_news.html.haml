@@ -4,5 +4,5 @@
       .title
         = news.title
       .body
-        = image_tag news.photo
+        = image_tag "http://ulmic.ru/#{news.photo}"
         != strip_tags news.text
