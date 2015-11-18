@@ -1,7 +1,7 @@
 set :application, 'lider_v2'
 set :repo_url, 'git@github.com:ulmic/ul-lider.git'
 
-set :rvm_type, :user
+set :rvm_type, :system
 set :rvm_ruby_version, 'ruby-2.1.1'
 set :use_sudo, false
 #set :sidekiq_service_name, "sidekiq"
@@ -36,10 +36,10 @@ set :ssh_options, {
 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
-set :linked_files, %w{config/secrets.yml config/oauth.yml}
+set :linked_files, %w{config/secrets.yml config/oauth.yml config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -105,3 +105,4 @@ end
 #    end
 #  end
 #end
+
