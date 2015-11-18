@@ -3,9 +3,9 @@ working_directory "#{app_path}/current"
 
 worker_processes 1
 
-listen "127.0.0.1:8080"
+listen app_path + "/shared/.sock", backlog: 64
 
-timeout 15
+timeout 60
 # preload_app true
 
 stderr_path "#{app_path}/current/log/unicorn.stderr.log"
