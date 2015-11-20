@@ -72,7 +72,38 @@ init_main_question = ->
       $(this).css { margintop: "+=#{parent_width}" }
       changes()
 
+news_template = (news) ->
+  "<div class='col-md-4 news link' data-href='http://ulmic.ru/news/#{news.id}'>
+    <div class='title'>
+      #{news.title}
+    </div>
+    <div class='body'>
+      <img alt='Ulmic' src='http://ulmic.ru/#{news.photo}' />
+      #{news.text}
+    </div>
+  </div>"
+
+download_news_from_ulmicru = ->
+  $.ajax {
+    url: 'http://ulmic.ru/api/news'
+    data: {
+      count: 3
+      tag: {
+        tag_type: 'link'
+        target_type: 'ActivityLine'
+        title: 'Лидер'
+      }
+    }
+    dataType: 'json'
+    success: (data) ->
+      $(data).each ->
+        $('.row.for_news').append news_template @
+      $('.link').click ->
+        location.href = $(this).attr('data-href')
+  }
+
 $(document).ready ->
+  download_news_from_ulmicru()
   document_width = screen.width
   document_height = screen.height
   if $(document).width() >= '991'
