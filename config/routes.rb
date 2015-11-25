@@ -86,6 +86,11 @@ Rails.application.routes.draw do
         get :last_news_id
       end
     end
+    resources :promocodes, only: [] do
+      collection do
+        patch :update
+      end
+    end
   end
   get '*unmatched_route', to: "web/errors#not_found" if Rails.env.production?
 end

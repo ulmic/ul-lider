@@ -69,6 +69,8 @@ ru:
         sign_in: авторизоваться
         or: или
         password_reveal: Показать пароль
+        you_code_is_not_right: Ваш код неверный
+        you_code_is_right: Ваш код верный
     fair_participants:
       new:
         hello_participant_text: "Привет, участник профильной смены «Ярмарка идей»!"

@@ -4,6 +4,7 @@ ru:
       user: Пользователь
       news: Новость
       page: Страница
+      promocode: Промокод
     attributes:
       user:
         first_name: Имя
@@ -84,6 +85,8 @@ ru:
         phone: Телефон
         past_participation: Участвовал ли до этого в лидер-клубах?
         full_name: ФИО
+      promocode:
+        code: Код
     errors:
       models:
         user:

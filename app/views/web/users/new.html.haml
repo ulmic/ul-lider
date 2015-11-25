@@ -11,7 +11,7 @@
     = render 'hat'
 
 .row
-  .col-md-4.col-md-offset-2
+  .col-md-6.col-md-offset-2
     = simple_form_for @user, url: users_path(params.extract(:from)), html: { class: 'form-horizontal' } do |f|
       = f.hint t('hints.users.new.require_fields')
       = f.input :email, placeholder: t('placeholders.user.email')
@@ -35,3 +35,15 @@
       != t('hints.users.new.accept_agreement')
       = f.input :accept_agreement, as: :boolean
       = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }
+  .col-md-3
+    = form_tag api_promocodes_path, method: :patch, remote: true, id: 'check_code', style: 'margin-top: 1000px' do
+      = label 'promocode', 'code' do
+        = t('activerecord.attributes.promocode.code')
+      = text_field 'promocode', 'code'
+      = hidden_field 'promocode', 'email'
+      .pull-right
+        = submit_tag t('helpers.check'), class: 'btn btn-branded', id: 'submit_check_code'
+    .hidden.success
+      = t('.you_code_is_right')
+    .hidden.error
+      = t('.you_code_is_not_right')
