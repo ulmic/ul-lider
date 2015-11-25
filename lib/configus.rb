@@ -18,7 +18,7 @@ Configus.build Rails.env do
     dates do
       start_of_filling "2015-11-16T00:00:00 +0300"
       #конец приёма заявок на конкурс
-      end_of_filling "2016-02-04T00:00:00 +0300"
+      end_of_filling "2016-01-26T00:00:00 +0300"
       #конец приёма заявок на Ярмарку идей
       end_of_filling_on_fair_idea "2015-02-10T00:00:00 +0300"
     end
