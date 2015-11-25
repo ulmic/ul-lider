@@ -13,10 +13,9 @@ class UserRegistrationType < User
   validates :locality, presence: true
   validates :url_creative_work, url: true,
                                 allow_blank: true
-  validates :postcode, presence: true
   validates :accept_agreement, acceptance: true
 
-  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :postcode, :creative_work, :url_creative_work, :state, :home_phone, :accept_agreement, :avatar_cache
+  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :creative_work, :url_creative_work, :state, :home_phone, :accept_agreement, :avatar_cache
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)
