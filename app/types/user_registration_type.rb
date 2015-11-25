@@ -6,6 +6,7 @@ class UserRegistrationType < User
   validates :birth_date, presence: true,
                          timeliness: { on_or_after: lambda { Date.parse('31 May 1993') } }
   validates :municipality, presence: true
+  validates :mobile_phone, presence: true
   validates :school, presence: true
   validates :group, presence: true
   validates :home_phone, phone: true,
