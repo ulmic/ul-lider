@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813171533) do
+ActiveRecord::Schema.define(version: 20151125135724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,6 +138,7 @@ ActiveRecord::Schema.define(version: 20150813171533) do
     t.text     "region",               default: "Ульяновская область"
     t.string   "average"
     t.integer  "reserve_order_number"
+    t.integer  "contest_year"
   end
 
 end
