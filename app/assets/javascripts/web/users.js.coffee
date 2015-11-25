@@ -8,7 +8,7 @@ enable_submit = ->
     $('#send_request').prop('disabled', true)
   return
 
-$(document).ready ->
+$ ->
   if $('#user_url_creative_work').val() != ''
     $('#send_request').prop('disabled', false)
     #it needs because disabled inputs are empty
@@ -24,4 +24,12 @@ $(document).ready ->
   $('#user_accept_agreement').change ->
     enable_submit()
     return
+  $('#user_email').on 'change', ->
+    $('#promocode_email').val $(this).val()
+  $('#check_code').on('ajax:error', (->
+    $('.success').addClass 'hidden'
+    $('.hidden.error').removeClass 'hidden')
+  ).on 'ajax:success', ->
+    $('.hidden.success').removeClass 'hidden'
+    $('error').addClass 'hidden'
   return

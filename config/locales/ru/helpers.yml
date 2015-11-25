@@ -2,6 +2,7 @@ ru:
   helpers:
     actions: Действия
     download: Скачать
+    check: Проверить
     links:
       edit: Изменить
       destroy: Удалить
