@@ -42,7 +42,7 @@
       = text_field 'promocode', 'code'
       = hidden_field 'promocode', 'email'
       .pull-right
-        = submit_tag t('helpers.check'), class: 'btn btn-branded'
+        = submit_tag t('helpers.check'), class: 'btn btn-branded', id: 'submit_check_code'
     .hidden.success
       = t('.you_code_is_right')
     .hidden.error

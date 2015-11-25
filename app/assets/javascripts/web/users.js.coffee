@@ -24,8 +24,11 @@ $ ->
   $('#user_accept_agreement').change ->
     enable_submit()
     return
+  $('#submit_check_code').prop 'disabled', true
   $('#user_email').on 'change', ->
     $('#promocode_email').val $(this).val()
+    unless $(this).val() == ''
+      $('#submit_check_code').prop 'disabled', false
   $('#check_code').on('ajax:error', (->
     $('.success').addClass 'hidden'
     $('.hidden.error').removeClass 'hidden')
