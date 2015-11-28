@@ -36,6 +36,7 @@ $ ->
     $('.success').addClass 'hidden'
     $('.hidden.error').removeClass 'hidden')
   ).on 'ajax:success', ->
+    $('.creative_work_fields').slideUp()
     $('.hidden.success').removeClass 'hidden'
     $('error').addClass 'hidden'
   return

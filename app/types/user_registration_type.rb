@@ -17,7 +17,7 @@ class UserRegistrationType < User
   validates :accept_agreement, acceptance: true
   validates :accept_personal_data_actions, acceptance: true
 
-  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :creative_work, :url_creative_work, :state, :home_phone, :accept_agreement, :avatar_cache
+  permit :email, :password, :avatar, :first_name, :last_name, :birth_date, :municipality, :patronymic, :school, :group, :mobile_phone, :locality, :creative_work, :url_creative_work, :state, :home_phone, :accept_agreement, :avatar_cache, :accept_personal_data_actions
 
   def email=(email)
     write_attribute(:email, email.mb_chars.downcase)
