@@ -1,7 +1,7 @@
 #= require jquery
 #= require i18n_setup
 enable_submit = ->
-  if ($('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != '') && $('#user_accept_agreement').prop('checked') == true
+  if ($('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != '') && $('#user_accept_agreement').prop('checked') == true && $('#user_accept_personal_data_actions').prop('checked') == true
     $('#send_request').prop('disabled', false)
     $('#user_birth_date').prop('disabled', false)
   else
@@ -22,6 +22,9 @@ $ ->
     enable_submit()
     return
   $('#user_accept_agreement').change ->
+    enable_submit()
+    return
+  $('#user_accept_personal_data_actions').change ->
     enable_submit()
     return
   $('#submit_check_code').prop 'disabled', true

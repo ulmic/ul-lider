@@ -34,6 +34,7 @@
       = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')
       != t('hints.users.new.accept_agreement')
       = f.input :accept_agreement, as: :boolean
+      = f.input :accept_personal_data_actions, as: :boolean
       = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }
   .col-md-3
     = form_tag api_promocodes_path, method: :patch, remote: true, id: 'check_code', style: 'margin-top: 1000px' do
