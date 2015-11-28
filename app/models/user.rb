@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_one :event
 
   validates :email, presence: true,
-                    uniqueness: { case_sensitive: false },
+                    uniqueness: { case_sensitive: false, scope: :contest_year },
                     email: true
   validates :first_name, presence: true, human_name: true
   validates :last_name, presence: true, human_name: true

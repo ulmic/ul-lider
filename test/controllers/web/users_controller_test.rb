@@ -10,7 +10,7 @@ class Web::UsersControllerTest < ActionController::TestCase
 
   test "new" do
     get :new
-    assert_response :redirect, status: :moved_permanently
+    assert_response :success
   end
 
   test "create" do
