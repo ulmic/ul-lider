@@ -28,6 +28,7 @@
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
       = f.input :avatar
+      = f.input :contest_year, as: :hidden, input_html: { value: configus.current_contest_year }
       = f.input :state, as: :hidden, input_html: { value: User.state_machines[:state].states.map(&:name).first }
       .creative_work_fields
         = f.input :creative_work, as: :file

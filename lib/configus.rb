@@ -27,6 +27,7 @@ Configus.build Rails.env do
         host 'ulmic.ru'
       end
     end
+    current_contest_year 2016
   end
 
   env :staging, parent: :production do

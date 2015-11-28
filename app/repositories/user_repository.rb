@@ -11,6 +11,7 @@ module UserRepository
     scope :waiting_confirmation, -> { where state: :waiting_confirmation }
     scope :reserve_schoolers, -> { where role: :reserve_school }
     scope :on_third_stage, -> { where state: :on_third_stage }
+    scope :contest_year, -> (year) { where contest_year: year  }
   end
 end
 
