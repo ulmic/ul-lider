@@ -6,13 +6,11 @@ default: &default
 
 development:
   <<: *default
-  username: develop
   database: ul_lider_development
+
 test:
-  adapter: postgresql
+  <<: *default
   database: ul_lider_test
-  pool: 5
-  timeout: 5000
 
 staging:
   <<: *default

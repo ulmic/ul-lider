@@ -43,7 +43,7 @@
   .col-md-6.text.right
     .title
       Кто может стать участником конкурса?
-    Учащиеся средних общеобразовательных учреждений, учреждений начального и среднего профессионального образования Приволжского федерального округа в возрасте от 14 лет до 21 года.
+    В Конкурсе могут принимать участие учащиеся в образовательных организаций среднего и высшего профессионального образования в возрасте от 14 до 21 года.
 .row.plaha
   .col-md-6.text.left
     .title
@@ -63,25 +63,34 @@
   .col-md-6.text.right
     .title
       Организаторы конкурса
-    Организаторами XIII конкурса «Я-лидер» выступают:
+    Организаторами XIV конкурса «Я-лидер» выступают:
     %br
     = link_to t('contest.organization_short_title'), configus.sites.ulmic, target: '_blank'
     %br
     = link_to t('contest.partners.new_civilization_short_title'), configus.sites.ulnc, target: '_blank'
     %br
     = link_to t('contest.partners.ministry_of_education'), configus.sites.ministry_of_edu, target: '_blank'
-.row.plaha.last-plaha
+.row.plaha
   .col-md-6.text.left
     .title
       Расширение для браузера Google Chrome
     = link_to 'Рабочее расширение', configus.chrome_extension.url
-    следует установить себе всем участникам и тем, кто хочет знать самые последние новости о конкурсе.
+    следует установить всем участникам и тем, кто хочет знать самые последние новости о конкурсе.
   .col-md-6.image.right.web-store-logo
     - if mobile_device?
       = image_tag 'main/mobile/availale_in_chrome_web_store.png', class: 'link', data: { href: configus.chrome_extension.url }
     - else
       = image_tag 'main/availale_in_chrome_web_store.png', class: 'link', data: { href: configus.chrome_extension.url }
-
+.row.plaha.full_width.last_plaha.logo
+  .col-md-6.image.left
+    = image_tag configus.logos.ulmic.square, class: 'link', data: { href: configus.sites.ulmic }, style: 'background-color: white;'
+  .col-md-6.text.right
+    .title
+      Следить за другими мероприятиями МИЦ
+    Следить за другими мероприятиями Молодёжного инициативного центра можно на официальном
+    = link_to 'сайте организации', configus.sites.ulmic
+    %br
+    = link_to configus.sites.ulmic, configus.sites.ulmic
 .row
   .social_buttons
     %span

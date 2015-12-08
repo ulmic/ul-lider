@@ -13,6 +13,11 @@ Configus.build Rails.env do
     mailer do
       from "info@ul-lider.ru"
     end
+    logos do
+      ulmic do
+        square 'https://raw.githubusercontent.com/ulmic/ulmicru/develop/app/assets/images/apps/logo-mic-square.png'
+      end
+    end
 
     host "ul-lider.ru"
     dates do
