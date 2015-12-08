@@ -11,7 +11,7 @@ class Web::UsersController < Web::ApplicationController
     @user = UserRegistrationType.new params[:user]
     @user.generate_confirmation_token
     if @user.save
-      UserMailer.delay.confirmation_instructions(@user)
+      #UserMailer.delay.confirmation_instructions(@user)
       sign_in @user
       f(:success)
       redirect_to root_path
