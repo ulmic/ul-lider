@@ -64,6 +64,7 @@ gem 'russian_sex'
 gem 'auto_html'
 gem 'youtube_addy'
 gem 'omniauth-vkontakte'
+gem 'responders', '~> 2.0'
 
 group :assets do
   gem 'coffee-rails'
