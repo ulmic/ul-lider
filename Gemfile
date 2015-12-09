@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.1.7'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -31,7 +31,7 @@ gem 'configus'
 gem 'simple_form', '>= 3.1.0.rc2'
 #gem 'authority'
 gem 'enumerize'
-gem 'sidekiq', '3.3.2'
+gem 'sidekiq'
 gem 'foreman'
 gem 'validates'
 gem "draper"
@@ -51,6 +51,7 @@ gem 'rails-observers'
 gem 'rest_in_place'
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', submodules: true
+gem 'unicorn-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'validates_timeliness', '~> 3.0'
@@ -68,20 +69,13 @@ group :assets do
   gem 'coffee-rails'
 end
 
-group :production do
-  gem 'unicorn', '4.8.3'
-  gem 'unicorn-rails'
-end
-
 group :development do
-  gem 'net-ssh', '2.9.2'
-  gem 'sshkit', '1.5.1'
   gem 'web-console', '2.0.0.beta2'
   gem 'capistrano', '3.2.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'capistrano-sidekiq', '0.4.0'
+  gem 'capistrano-sidekiq'
   gem 'capistrano-rvm'
   gem 'colorize', '0.6.0'
   gem 'quiet_assets'
