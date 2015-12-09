@@ -51,7 +51,6 @@ gem 'rails-observers'
 gem 'rest_in_place'
 gem 'momentjs-rails', '>= 2.8.1',  github: 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', submodules: true
-gem 'unicorn-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'validates_timeliness', '~> 3.0'
@@ -69,7 +68,13 @@ group :assets do
   gem 'coffee-rails'
 end
 
+group :production do
+  gem 'unicorn', '4.8.3'
+  gem 'unicorn-rails'
+end
+
 group :development do
+  gem 'sshkit', '1.5.1'
   gem 'web-console', '2.0.0.beta2'
   gem 'capistrano', '3.2.1'
   gem 'capistrano-bundler'
