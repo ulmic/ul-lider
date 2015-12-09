@@ -31,7 +31,7 @@ gem 'configus'
 gem 'simple_form', '>= 3.1.0.rc2'
 #gem 'authority'
 gem 'enumerize'
-gem 'sidekiq'
+gem 'sidekiq', '3.3.2'
 gem 'foreman'
 gem 'validates'
 gem "draper"
@@ -74,13 +74,14 @@ group :production do
 end
 
 group :development do
+  gem 'net-ssh', '2.9.2'
   gem 'sshkit', '1.5.1'
   gem 'web-console', '2.0.0.beta2'
   gem 'capistrano', '3.2.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'capistrano-sidekiq'
+  gem 'capistrano-sidekiq', '0.4.0'
   gem 'capistrano-rvm'
   gem 'colorize', '0.6.0'
   gem 'quiet_assets'
