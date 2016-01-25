@@ -14,9 +14,11 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true, human_name: true
   validates :patronymic, presence: true, human_name: true
   validates :mobile_phone, phone: true
-  validates :avatar, file_size: { maximum: 3.megabytes.to_i }
+  validates :avatar, file_size: { maximum: 3.megabytes.to_i },
+                     presence: true
   validates :creative_work, file_size: { maximum: 25.megabytes.to_i }
   validates :role, presence: true
+  validate :presence_of_creative_work
 
   state_machine initial: :waiting_confirmation do
     state :waiting_confirmation
@@ -90,5 +92,15 @@ class User < ActiveRecord::Base
 
   def to_s
     "#{id} | #{first_name} #{last_name} | #{email}"
+  end
+
+  private
+
+  def presence_of_creative_work
+    unless Promocode.where(email: email).any?
+      if !creative_work.present? && !url_creative_work.present?
+        errors.add(:creative_work, I18n.t('validations.errors.creative_work'))
+      end
+    end
   end
 end
