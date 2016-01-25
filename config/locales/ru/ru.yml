@@ -185,3 +185,4 @@ ru:
   validations:
     errors:
       end_date_must_be_after_begin_date: Дата окончания должна быть после даты начала
+      creative_work: Творческая работа не может быть пустой
