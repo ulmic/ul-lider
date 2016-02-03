@@ -5,6 +5,7 @@ class Web::Admin::FairParticipantsController < Web::Admin::ApplicationController
     @reserve_schoolers_requests = UserDecorator.decorate_collection User.reserve_schoolers.reverse
     @fair_participant_approved_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :fair_participant_approved)
     @fair_participant_declined_requests = UserDecorator.decorate_collection User.fair_participants.where(state: :fair_declined_approved)
+    @fair_wait_confirmation = UserDecorator.decorate_collection User.fair_participants.where(state: :wait_confirmation)
   end
 
   def new
