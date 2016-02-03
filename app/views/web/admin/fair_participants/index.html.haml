@@ -16,6 +16,8 @@
       = link_to "#{t('.fair_participant_declined')} / #{@fair_participant_declined_requests.count}", '#fair_participant_approved'
     %li
       = link_to "#{t('.reserve_schoolers')}/ #{@reserve_schoolers_requests.count}", '#reserve_schoolers'
+    %li
+      = link_to "Ожидают подтверждения / #{@fair_wait_confirmation.count}", '#wait_confirmation'
   #confirmed_by_admin
     = render 'fair_parts_list', fair_parts: @confirmed_by_admin_requests
   #fair_participant_approved
@@ -26,3 +28,5 @@
     = render 'fair_parts_list', fair_parts: @active_requests
   #reserve_schoolers
     = render 'fair_parts_list', fair_parts: @reserve_schoolers_requests
+  #wait_confirmation
+    = render 'fair_parts_list', fair_parts: @fair_wait_confirmation

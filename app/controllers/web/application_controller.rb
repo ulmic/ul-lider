@@ -4,8 +4,13 @@ class Web::ApplicationController < ApplicationController
   include Concerns::RedirectHelper
   include KaramzinHelper
 
-  helper_method :title
 
+
+  helper_method :title, :filling_on_fair_idea_is_during?
+
+  def filling_on_fair_idea_is_during?
+    true
+  end
   #before_action :required_basic_auth! if Rails.env.staging?
 
   # Prevent CSRF attacks by raising an exception.
