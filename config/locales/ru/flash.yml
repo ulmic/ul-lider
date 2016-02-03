@@ -1,6 +1,8 @@
 ru:
   flash:
     base:
+      create:
+        success: Создание выполнено успешно
         error: Создание не выполнено
       update:
         success: Обновление выполнено успешно
