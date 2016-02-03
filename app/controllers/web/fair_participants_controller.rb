@@ -4,6 +4,7 @@ class Web::FairParticipantsController < Web::ApplicationController
     @users = UserDecorator.decorate_collection User.where("state = 'confirmed_by_admin' OR state = 'fair_participant_approved'").where.not(role: :admin)
     @reserve_users = UserDecorator.decorate_collection User.where(state: :active).where.not(role: :admin).order('reserve_order_number asc')
   end
+
   def new
     if filling_on_fair_idea_is_during?
       @fair_part = FairParticipantRegistrationType.new
@@ -11,6 +12,7 @@ class Web::FairParticipantsController < Web::ApplicationController
       redirect_to "/pages/#{:end_of_filling_to_fair_idea}", status: :moved_permanently
     end
   end
+
   def create
     @fair_part = FairParticipantRegistrationType.new params[:user]
     @fair_part.generate_confirmation_token

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "ckeditor_assets", force: true do |t|
+  create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
     t.integer  "data_file_size"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
-  create_table "club_participants", force: true do |t|
+  create_table "club_participants", force: :cascade do |t|
     t.text     "first_name"
     t.text     "last_name"
     t.text     "patronymic"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.datetime "updated_at"
   end
 
-  create_table "event_participants", force: true do |t|
+  create_table "event_participants", force: :cascade do |t|
     t.integer  "event_id"
     t.text     "first_name"
     t.text     "last_name"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.datetime "updated_at"
   end
 
-  create_table "event_social_participants", force: true do |t|
+  create_table "event_social_participants", force: :cascade do |t|
     t.text     "provider"
     t.text     "uid"
     t.text     "first_name"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.datetime "updated_at"
   end
 
-  create_table "events", force: true do |t|
+  create_table "events", force: :cascade do |t|
     t.text     "title"
     t.text     "description"
     t.datetime "begin_date"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.integer  "result_participant_count"
   end
 
-  create_table "news", force: true do |t|
+  create_table "news", force: :cascade do |t|
     t.text     "title"
     t.text     "body"
     t.datetime "published_at"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.text     "photo"
   end
 
-  create_table "pages", force: true do |t|
+  create_table "pages", force: :cascade do |t|
     t.text     "title"
     t.text     "body"
     t.text     "slug"
@@ -110,14 +110,14 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.text     "view"
   end
 
-  create_table "promocodes", force: true do |t|
+  create_table "promocodes", force: :cascade do |t|
     t.text     "code"
     t.text     "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
