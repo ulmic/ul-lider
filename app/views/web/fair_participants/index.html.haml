@@ -15,3 +15,8 @@
     = 'Резервный список'
   = render 'users_list', users: @reserve_users
 = render 'layouts/web/shared/social_buttons'
+%hr
+- if @declined_users.any?
+  %h2
+    Отклонённые заявки
+  = render 'users_list', users: @declined_users

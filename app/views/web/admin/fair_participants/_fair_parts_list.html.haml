@@ -23,6 +23,7 @@
           %br
           = link_to 'В список смены', admin_fair_participant_path(fair_part, user: { state: :confirmed_by_admin }), method: :patch, class: 'btn btn-warning btn-xs'
           = link_to 'В резерв', admin_fair_participant_path(fair_part, user: { state: :active }), method: :patch, class: 'btn btn-warning btn-xs'
+          = link_to 'Отклонить заявку', admin_fair_participant_path(fair_part, user: { state: :inactive }), method: :patch, class: 'btn btn-warning btn-xs'
         %td= fair_part.formated_birth_date
         %td= fair_part.place
         %td= fair_part.school_group

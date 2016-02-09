@@ -3,6 +3,7 @@ class Web::FairParticipantsController < Web::ApplicationController
     @second_stage_users = UserDecorator.decorate_collection User.contest_year(2016).where("state = 'on_second_stage' OR state = 'second_stage_approved'").where.not(role: :admin)
     @users = UserDecorator.decorate_collection User.contest_year(2016).where("state = 'confirmed_by_admin' OR state = 'fair_participant_approved'").where.not(role: :admin)
     @reserve_users = UserDecorator.decorate_collection User.contest_year(2016).where(state: :active).where.not(role: :admin).order('reserve_order_number asc')
+    @declined_users = UserDecorator.decorate_collection User.fair_participants.contest_year(2016).where(state: :inactive).where.not(role: :admin)
   end
 
   def new
