@@ -9,7 +9,6 @@ class FairParticipantEditByAdminType < User
   validates :school, presence: true
   validates :group, presence: true
   validates :locality, presence: true
-  validates :postcode, presence: true
   validates :accept_agreement, acceptance: true
   validates :life_goals, presence: true
   validates :fair_goals, presence: true
