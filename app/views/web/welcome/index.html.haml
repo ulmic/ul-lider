@@ -19,10 +19,7 @@
       - (0..13).each do |i|
         = render 'winner_cell', i: i, klass: ''
 %hr
-.row.with_request_button
-  .col-md-offset-2.col-md-8.send_request_button_row
-    = link_to new_fair_participant_path, class: 'btn btn-very-lg btn-branded' do
-      = t('.send_request_on_fair_idea')
+.row.for_news
 .row.plaha
   .col-md-6.text.left
     .title
