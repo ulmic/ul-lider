@@ -21,8 +21,8 @@
         %td
           = link_to fair_part.full_name, edit_admin_fair_participant_path(fair_part)
           %br
-          = link_to 'В список смены', fair_participants_path(fair_part, user: { state: :confirmed_by_admin }), class: 'btn btn-warning btn-xs'
-          = link_to 'В резерв', fair_participants_path(fair_part, user: { state: :active }), class: 'btn btn-warning btn-xs'
+          = link_to 'В список смены', admin_fair_participants_path(fair_part, user: { state: :confirmed_by_admin }), class: 'btn btn-warning btn-xs'
+          = link_to 'В резерв', admin_fair_participants_path(fair_part, user: { state: :active }), class: 'btn btn-warning btn-xs'
         %td= fair_part.formated_birth_date
         %td= fair_part.place
         %td= fair_part.school_group
