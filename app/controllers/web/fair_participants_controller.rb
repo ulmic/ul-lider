@@ -28,15 +28,22 @@ class Web::FairParticipantsController < Web::ApplicationController
     end
   end
   def update_status
-    @user = User.find_by_email params[:user][:email]
+    @user = User.where(email: params[:user][:email], contest_year: 2016).first
     if @user
       if @user.first_name == params[:user][:first_name] and @user.last_name == params[:user][:last_name]
         if params[:approve]
-          @user.fair_participant_approve
+          unless @user.update_attributes state: :fair_participant_approved
+            redirect_to fair_participants_path
+            f :error
+          end
         elsif params[:decline]
-          @user.fair_participant_decline
-          reserve_user = User.where(state: :active).where.not(role: :admin).order('reserve_order_number asc').first
-          reserve_user.admin_confirm
+          if @user.update_attributes state: :fair_participant_declined
+            reserve_user = User.where(state: :active).where.not(role: :admin).order('reserve_order_number asc').first
+            reserve_user.admin_confirm
+          else
+            redirect_to fair_participants_path
+            f :error
+          end
         end
         redirect_to fair_participants_path
       else
