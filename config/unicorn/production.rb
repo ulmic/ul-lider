@@ -1,4 +1,4 @@
-app_path = "/srv/lider_v2"
+app_path = "/srv/lider"
 working_directory = "#{app_path}/current"
 
 worker_processes 4
