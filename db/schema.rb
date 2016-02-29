@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125140943) do
+ActiveRecord::Schema.define(version: 20160229094341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "ckeditor_assets", force: :cascade do |t|
-    t.string   "data_file_name",               null: false
-    t.string   "data_content_type"
+    t.string   "data_file_name",    limit: 255, null: false
+    t.string   "data_content_type", limit: 255
     t.integer  "data_file_size"
     t.integer  "assetable_id"
     t.string   "assetable_type",    limit: 30
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.text     "jury"
     t.text     "tasks"
     t.integer  "result_participant_count"
+    t.integer  "contest_year"
   end
 
   create_table "news", force: :cascade do |t|
@@ -118,15 +119,15 @@ ActiveRecord::Schema.define(version: 20151125140943) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "avatar"
-    t.string   "password_digest"
-    t.string   "email"
+    t.string   "first_name",           limit: 255
+    t.string   "last_name",            limit: 255
+    t.string   "avatar",               limit: 255
+    t.string   "password_digest",      limit: 255
+    t.string   "email",                limit: 255
     t.datetime "birth_date"
-    t.string   "confirmation_token"
-    t.string   "reset_password_token"
-    t.string   "state",                default: "waiting_confirmation"
+    t.string   "confirmation_token",   limit: 255
+    t.string   "reset_password_token", limit: 255
+    t.string   "state",                limit: 255, default: "waiting_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "municipality"
@@ -138,12 +139,12 @@ ActiveRecord::Schema.define(version: 20151125140943) do
     t.text     "locality"
     t.text     "postcode"
     t.text     "role"
-    t.string   "creative_work"
+    t.string   "creative_work",        limit: 255
     t.text     "url_creative_work"
     t.text     "life_goals"
     t.text     "fair_goals"
-    t.text     "region",               default: "Ульяновская область"
-    t.string   "average"
+    t.text     "region",                           default: "Ульяновская область"
+    t.string   "average",              limit: 255
     t.integer  "reserve_order_number"
     t.integer  "contest_year"
   end

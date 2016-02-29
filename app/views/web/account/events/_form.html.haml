@@ -9,6 +9,7 @@
       = f.input :begin_date, as: :datetime_picker
       = f.input :end_date, as: :datetime_picker
       = f.input :participant_count, as: :string
+      = f.input :contest_year, as: :hidden, input_html: { value: configus.current_contest_year }
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id  }
       = f.button :submit, t('helpers.links.save')
       = link_to t('helpers.links.back'), account_root_path, class: "btn"
