@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   has_secure_password validations: false
 
-  has_one :event
+  has_many :event
 
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false, scope: :contest_year },
@@ -73,6 +73,10 @@ class User < ActiveRecord::Base
   enumerize :region, in: RussiaRegions.name_list
 
   include UserRepository
+
+  def current_event
+    Event.where(user_id: id, contest_year: configus.current_contest_year).first
+  end
 
   def guest?
     false
