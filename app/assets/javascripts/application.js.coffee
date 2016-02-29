@@ -11,6 +11,7 @@ $(document).ready ->
   $('.datepicker').datetimepicker({
     pickTime: false
   })
+  $('.datetimepicker').datetimepicker()
   $('.link').click ->
     href = $(this).data('href')
     location.href = href unless href == undefined
