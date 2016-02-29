@@ -1,12 +1,6 @@
 class Web::EventsController < Web::ApplicationController
   def index
-    users = User.on_third_stage
-    @events = []
-    users.each do |user|
-      if user.event.present?
-        @events << user.event.decorate
-      end
-    end
+    @events = User.on_third_stage.map(&:current_event).compact
   end
 
   def show

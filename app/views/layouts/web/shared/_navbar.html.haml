@@ -12,6 +12,8 @@
     %ul.nav.navbar-nav
       = menu_item '/pages/the_competition' do
         = t('contest.definition')
+      = menu_item events_path do
+        = t('.events')
     %ul.nav.navbar-nav.pull-right
       - if signed_as_admin?
         = menu_item admin_root_path do
