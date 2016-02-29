@@ -7,6 +7,7 @@ $(document).ready(function() {
   $('.datepicker').datetimepicker({
     pickTime: false
   });
+  $('.datetimepicker').datetimepicker();
   $('.link').click(function() {
     location.href = $(this).attr('data-href');
   });
