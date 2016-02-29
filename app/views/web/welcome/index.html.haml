@@ -17,10 +17,10 @@
       - @participants.each do |participant|
         = render 'participant_cell', participant: participant
 %hr
-.row.with_request_button
-  .col-md-offset-2.col-md-8.send_request_button_row
-    = link_to fair_participants_path, class: 'btn btn-very-lg btn-branded' do
-      СПИСОК УЧАСТНИКОВ ЯРМАРКИ ИДЕЙ
+.row
+  .auth_button_row
+    = link_to t('.i_am_participant'), account_root_path, class: 'btn btn-branded'
+    = link_to t('.events'), events_path, class: 'btn btn-branded'
 .row.for_news
 .row.plaha
   .col-md-6.text.left
