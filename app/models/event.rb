@@ -21,4 +21,6 @@ class Event < ActiveRecord::Base
   def has_report?
     type == 'Event::Report'
   end
+
+  include EventRepository
 end
