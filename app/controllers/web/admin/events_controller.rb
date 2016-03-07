@@ -1,6 +1,6 @@
 class Web::Admin::EventsController < Web::Admin::ApplicationController
   def index
-    @events = Event.all.decorate
+    @events = EventDecorator.decorate_collection Event.contest_year configus.current_contest_year
   end
 
   def new

@@ -7,6 +7,7 @@
     %tr
       %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:title)
+      %th= model_class.human_attribute_name(:author)
       %th= model_class.human_attribute_name(:goal)
       %th= model_class.human_attribute_name(:duration)
       %th= model_class.human_attribute_name(:created_at)
@@ -16,6 +17,7 @@
       %tr
         %td= link_to event.id, edit_admin_event_path(event)
         %td= link_to event.title, edit_admin_event_path(event)
+        %td= link_to event.user.short_name, edit_admin_user_path(event.user)
         %td= event.goal
         %td= event.duration
         %td
