@@ -17,10 +17,14 @@
       = f.input :can_change
       = f.input :work_with_command
       = f.input :resources
+      = f.input :quality
+      = f.input :idea
       = f.hint t('hints.event.report.new.file_size')
       = f.input :file, as: :file
       = f.input :photo, as: :string
       = f.input :video, as: :string
+      = f.input :mass_media, as: :string
+      = f.input :partners, as: :string
       = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
       %h4
         = t('activerecord.attributes.event.participants')
