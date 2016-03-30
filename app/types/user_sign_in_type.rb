@@ -12,7 +12,7 @@ class UserSignInType
   # validate :check_new_user, if: :email
 
   def user
-    ::User.find_by(email: email.mb_chars.downcase)
+    ::User.where(contest_year: current_contest_year, email: email.mb_chars.downcase)
   end
 
   private
