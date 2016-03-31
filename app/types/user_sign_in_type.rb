@@ -12,7 +12,8 @@ class UserSignInType
   # validate :check_new_user, if: :email
 
   def user
-    ::User.where(contest_year: current_contest_year, email: email.mb_chars.downcase)
+    ::User.where(contest_year: configus.current_contest_year, email: email.mb_chars.downcase).first ||
+      ::User.where(role: :admin, email: email.mb_chars.downcase).first
   end
 
   private
