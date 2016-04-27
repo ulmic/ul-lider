@@ -4,7 +4,6 @@ class Event::Report < Event
   has_many :participants, class_name: 'Event::Participant',
                           foreign_key: :event_id
 
-  accepts_nested_attributes_for :participants
 
-  validates :file, presence: true
+  accepts_nested_attributes_for :participants
 end
