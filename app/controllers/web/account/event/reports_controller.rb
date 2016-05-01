@@ -1,9 +1,10 @@
 class Web::Account::Event::ReportsController < Web::Account::Event::ApplicationController
   def new
-    @report = ::Event.find_by_user_id(current_user).becomes! Event::Report
-    unless @report.participants.any?
-      @report.participants.build
-    end
+    redirect_to account_root_path
+#    @report = ::Event.find_by_user_id(current_user).becomes! Event::Report
+#    unless @report.participants.any?
+#      @report.participants.build
+#    end
   end
 
   def create

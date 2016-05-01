@@ -24,6 +24,4 @@
 
 Удачи каждому! И помните, мечты созданы для того, чтобы сбываться. Не отступайте до самого конца!
 %br
-- if current_user.current_event.present?
   = link_to t('.view_my_event'), event_path(current_user.current_event), class: 'btn btn-branded'
-  = link_to t('.create_report'), new_account_event_report_path, class: 'btn btn-branded'
