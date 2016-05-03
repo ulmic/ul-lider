@@ -57,11 +57,6 @@
       = @report.result_participant_count
   %tr
     %td
-      = t('activerecord.attributes.event.results')
-    %td
-      = @report.results
-  %tr
-    %td
       = t('activerecord.attributes.event.file')
     %td
       = link_to t('helpers.download'), @report.file.url
@@ -100,6 +95,16 @@
       = t('activerecord.attributes.event.video')
     %td
       = link_to @report.video, @report.video
+  %tr
+    %td
+      = t('activerecord.attributes.event.partners')
+    %td
+      = @report.partners
+  %tr
+    %td
+      = t('activerecord.attributes.event.mass_media')
+    %td
+      = @report.mass_media
   %tr
     %td
       = t('activerecord.attributes.event.participants')

@@ -6,4 +6,6 @@ class Event::Report < Event
 
 
   accepts_nested_attributes_for :participants
+
+  include EventRepository
 end
