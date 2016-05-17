@@ -14,8 +14,9 @@
 .row.participants_row
   .col-md-12.participants_cols
     .participants_images
-      - @participants.each do |participant|
-        = render 'participant_cell', participant: participant
+      %div
+        - @participants.each do |participant|
+          = render 'participant_cell', participant: participant
 %hr
 .row
   .auth_button_row
