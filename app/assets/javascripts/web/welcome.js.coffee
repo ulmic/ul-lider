@@ -119,11 +119,17 @@ $(document).ready ->
     $('iframe').prop('height', $('iframe').first().width() * 9 / 16)
     if window.location.hash != ''
       open_popup()
-    $('.winner_avatar').tooltip({
-      html: true,
-      content: ->
-        return $(this).attr('data-original-title')
-    })
+#    $('.winner_avatar').tooltip({
+#      html: true,
+#      content: ->
+#        return $(this).attr('data-original-title')
+#    })
+    participant_cells_width = 0
+    $('.participant_cell').each ->
+      participant_cells_width += $(@).width()
+    participant_images_margin = ($('.participants_images').width() - participant_cells_width) / 2
+    $('.participants_images div').first().css 'margin-right', participant_images_margin
+    $('.participants_images div').first().css 'margin-left', participant_images_margin
   else
     count = $('.news').length
     $('.for_news').height(240 * count)
