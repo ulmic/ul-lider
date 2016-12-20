@@ -3,6 +3,7 @@ FactoryGirl.define do
     title "MyText"
 user_id 1
 value "MyText"
+value_type "MyText"
   end
 
 end

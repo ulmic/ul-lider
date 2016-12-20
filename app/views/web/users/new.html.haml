@@ -1,4 +1,5 @@
 = title_is
+- titles = ::User::Field.title.values
 = stylesheet_link_tag 'web/users'
 = javascript_include_tag 'web/filings'
 = javascript_include_tag 'web/users'
@@ -30,9 +31,18 @@
       = f.input :avatar
       = f.input :contest_year, as: :hidden, input_html: { value: configus.current_contest_year }
       = f.input :state, as: :hidden, input_html: { value: User.state_machines[:state].states.map(&:name).first }
-      .creative_work_fields
-        = f.input :creative_work, as: :file
+      = f.input :creative_work, as: :file
+      = f.simple_fields_for :fields do |ff|
+        = ff.input :title, as: :hidden
+        = ff.input :value_type, as: :hidden, input_html: { value: :text }
+        = label :value, "* #{t("enumerize.user/field.title.#{titles[ff.index]}")}"
+        = ff.input :value, as: :text, label: false
+      %b
         != t('hints.users.new.accept_agreement')
-      = f.input :accept_agreement, as: :boolean
-      = f.input :accept_personal_data_actions, as: :boolean
+      .boolean
+        = check_box_tag :accept_agreement
+      = f.label :accept_personal_data_actions
+      .boolean
+        = check_box_tag :accept_personal_data_actions
+      %br
       = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }

@@ -4,6 +4,7 @@ class CreateUserFields < ActiveRecord::Migration
       t.text :title
       t.integer :user_id
       t.text :value
+      t.text :value_type
 
       t.timestamps null: false
     end

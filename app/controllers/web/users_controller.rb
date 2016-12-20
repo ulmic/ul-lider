@@ -1,7 +1,8 @@
 class Web::UsersController < Web::ApplicationController
   def new
     if filling_is_during?
-      @user = UserRegistrationType.new
+      @user = ::UserForm.new_with_model
+      @user.build_values_for_request!
       @schools = Schools.list
     else
       redirect_to "/pages/#{:end_of_filling}", status: :moved_permanently
@@ -9,9 +10,9 @@ class Web::UsersController < Web::ApplicationController
   end
 
   def create
-    @user = UserRegistrationType.new params[:user]
+    @user = UserForm.new_with_model
     @user.generate_confirmation_token
-    if @user.save
+    if @user.submit params[:user]
       #UserMailer.delay.confirmation_instructions(@user)
       sign_in @user
       f(:success)
