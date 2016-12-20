@@ -16,9 +16,15 @@ class UserForm < ApplicationForm
   validates :home_phone, phone: true,
                          allow_blank: true
   validates :mobile_phone, phone: true
+  validates :creative_work, presence: true
+  validates :avatar, presence: true
 
   collection :fields, populate_if_empty: User::Field do
     properties :value, :user_id, :value_type, :title
+
+    validates :value, presence: true
+    validates :value_type, presence: true
+    validates :title, presence: true
   end
 
   def build_values_for_request!

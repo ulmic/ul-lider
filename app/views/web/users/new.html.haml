@@ -11,6 +11,8 @@
   .col-md-11
     = render 'hat'
 
+= render 'layouts/web/shared/errors', object: @user
+
 .row
   .col-md-6.col-md-offset-2
     = simple_form_for @user, url: users_path(params.extract(:from)), html: { class: 'form-horizontal' } do |f|
@@ -37,6 +39,8 @@
         = ff.input :value_type, as: :hidden, input_html: { value: :text }
         = label :value, "* #{t("enumerize.user/field.title.#{titles[ff.index]}")}"
         = ff.input :value, as: :text, label: false
+        - if @user.id.present?
+          = ff.input :user_id, as: :hidden, input_html: { value: @user.id }
       %b
         != t('hints.users.new.accept_agreement')
       .boolean
