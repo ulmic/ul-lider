@@ -20,8 +20,12 @@
 %hr
 .row
   .auth_button_row
-    = link_to t('.i_am_participant'), account_root_path, class: 'btn btn-branded'
-    = link_to t('.events'), events_path, class: 'btn btn-branded'
+    - if filling_time?
+      = link_to t('.send_request'), new_user_path, class: 'btn btn-branded'
+    - else
+      = link_to t('.i_am_participant'), account_root_path, class: 'btn btn-branded'
+      = link_to t('.events'), events_path, class: 'btn btn-branded'
+      = link_to t('.auth'), '/auth/ulmic', class: 'btn btn-branded'
 .row.for_news
 .row.plaha
   .col-md-6.text.left
@@ -47,7 +51,8 @@
   .col-md-6.text.left
     .title
       Главный приз
-    Победитель финального этапа становится кандидатом на получение президентской стипендии по поддержке талантливой молодёжи в рамках нацпроекта "Образование" в размере 30 000 рублей.
+    Победитель финального этапа становится кандидатом на получение президентской стипендии по поддержке талантливой молодёжи в рамках нацпроекта "Образование" в размере 30 000 
+    = fa_icon :ruble
   .col-md-6.image.right
     - if mobile_device?
       = image_tag 'main/mobile/3.jpg'

@@ -1,9 +1,15 @@
 development:
   vk_client_id: VK_CLIENT_ID
   vk_client_secret: VK_CLIENT_SECRET
+  ulmic_client_id: ULMIC_CLIENT_ID
+  ulmic_client_secret: ULMIC_CLIENT_SECRET
 test:
   vk_client_id: VK_CLIENT_ID
   vk_client_secret: VK_CLIENT_SECRET
+  ulmic_client_id: ULMIC_CLIENT_ID
+  ulmic_client_secret: ULMIC_CLIENT_SECRET
 production:
   vk_client_id: VK_CLIENT_ID
   vk_client_secret: VK_CLIENT_SECRET
+  ulmic_client_id: ULMIC_CLIENT_ID
+  ulmic_client_secret: ULMIC_CLIENT_SECRET

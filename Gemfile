@@ -65,6 +65,7 @@ gem 'russian_sex'
 gem 'auto_html'
 gem 'youtube_addy'
 gem 'omniauth-vkontakte'
+gem 'omniauth-ulmic', path: '/home/pavel/projects/omniauth-ulmic', branch: :develop
 gem 'responders', '~> 2.0'
 
 group :assets do

@@ -10,10 +10,10 @@
         = t('application.attributes.name')
   .navbar-collapse.collapse
     %ul.nav.navbar-nav
+      - if filling_time?
+        = menu_item t('.send_request'), new_user_path
       = menu_item '/pages/the_competition' do
         = t('contest.definition')
-      = menu_item events_path do
-        = t('.events')
     %ul.nav.navbar-nav.pull-right
       - if signed_as_admin?
         = menu_item admin_root_path do
