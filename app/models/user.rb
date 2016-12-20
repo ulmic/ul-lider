@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_secure_password validations: false
 
   has_many :event
+  has_many :fields, class_name: 'User::Field'
 
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false, scope: :contest_year },
