@@ -19,6 +19,7 @@ class Web::UsersController < Web::ApplicationController
       redirect_to root_path
     else
       f(:error, now: true)
+      @schools = Schools.list
       render :new
     end
   end
