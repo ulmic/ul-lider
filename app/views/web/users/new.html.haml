@@ -23,7 +23,7 @@
       = f.input :birth_date, as: :date_picker
       = f.input :municipality
       = f.input :locality, as: :string, placeholder: t('placeholders.user.locality')
-      = f.input :school, as: :string, placeholder: t('placeholders.user.school')
+      = f.input :school, as: :select, placeholder: t('placeholders.user.school'), collection: @schools
       = f.input :group, as: :string
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone')
@@ -32,23 +32,7 @@
       = f.input :state, as: :hidden, input_html: { value: User.state_machines[:state].states.map(&:name).first }
       .creative_work_fields
         = f.input :creative_work, as: :file
-        = f.hint t('hints.users.new.creative_work_size')
-        = f.input :url_creative_work, as: :string, placeholder: t('placeholders.user.url_creative_work')
         != t('hints.users.new.accept_agreement')
       = f.input :accept_agreement, as: :boolean
       = f.input :accept_personal_data_actions, as: :boolean
       = f.button :submit, t('.send_request'), id: 'send_request', data: { disabled: { info: t('.you_should_enter_one_of_creative_works_inputs') } }
-  .col-md-3
-    .promocode{ style: 'margin-top: 1000px' }
-      %span Если у вас есть код с мероприятия "Кто лидер?", вы можете ввести его здесь.
-      = form_tag api_promocodes_path, method: :patch, remote: true, id: 'check_code' do
-        = label 'promocode', 'code' do
-          = t('activerecord.attributes.promocode.code')
-        = text_field 'promocode', 'code'
-        = hidden_field 'promocode', 'email'
-        .pull-right
-          = submit_tag t('helpers.check'), class: 'btn btn-branded', id: 'submit_check_code'
-      .hidden.success
-        = t('.you_code_is_right')
-      .hidden.error
-        = t('.you_code_is_not_right')
