@@ -1,0 +1,5 @@
+- if object.errors.any?
+  %h4= t('.some_errors_was_found')
+  %ul
+    - object.errors.full_messages.each do |message|
+      %li= message

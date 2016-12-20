@@ -6,6 +6,11 @@ ru:
 
     errors:
       models:
+        user:
+          attributes:
+            mobile_phone:
+              phone:
+                имеет неверный формат
         user_password_remind_type:
           attributes:
             email:

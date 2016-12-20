@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+#
+# USE bin/prod get_db server_user_name database_name
+
+require 'colorize'
+
+if ARGV[0] == 'get_db'
+  if ARGV[1].nil?
+    puts "You should add username on server".red
+  end
+  if ARGV[2].nil?
+    puts "You should add database name on server".red
+    exit
+  end
+  restore_to = ARGV[3] || :ul_lider_development
+  at = Time.now.strftime("%Y-%m-%d--%H-%M")
+  dump = "lider--#{at}.dump"
+  puts "Dumping #{ARGV[2]} database".green
+  system "ssh -t #{ARGV[1]}@ulmic.ru 'pg_dump -Fc --no-acl --no-owner -v #{ARGV[2]} > #{dump}'"
+  puts "Downloading...".green
+  system "scp #{ARGV[1]}@ulmic.ru:#{dump} /tmp/"
+  system "ssh -t #{ARGV[1]}@ulmic.ru 'rm -f #{dump}'"
+  puts "Restoring #{restore_to} database".green
+  system "dropdb ul_lider_development --if-exists && createdb ul_lider_development && pg_restore -d #{restore_to} /tmp/#{dump}"
+end
+
+if ARGV[0] == 'get_credentials'
+  if ARGV[1].nil?
+    puts "You should add username on server".red
+  end
+  system "scp #{ARGV[1]}@ulmic.ru:/srv/lider/shared/config/oauth.yml config/oauth.yml"
+  puts "Credentials getting done!".green
+end

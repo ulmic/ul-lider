@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.7.1'
 gem 'rake', '11.1.2'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -19,6 +19,7 @@ gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 gem 'state_machine', git: "https://github.com/seuros/state_machine.git"
 gem 'i18n-js', git: 'https://github.com/fnando/i18n-js'
+gem 'reform'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 2.0'
@@ -65,6 +66,7 @@ gem 'russian_sex'
 gem 'auto_html'
 gem 'youtube_addy'
 gem 'omniauth-vkontakte'
+gem 'omniauth-ulmic', path: '/home/pavel/projects/omniauth-ulmic', branch: :develop
 gem 'responders', '~> 2.0'
 
 group :assets do
