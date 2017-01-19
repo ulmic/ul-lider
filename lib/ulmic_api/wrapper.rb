@@ -16,7 +16,7 @@ class UlmicApi::Wrapper
   attribute :body, String, default: ''
 
   def call
-    uri = URI.join(ULMIC_API_BASE_URL, "api/#{endpoint}")
+    uri = URI.join("https://ulmic.ru", "api/#{endpoint}")
     encoded_query = CGI.unescape params.to_query
     uri.query = encoded_query if encoded_query.present?
     http = Net::HTTP.new(uri.host, uri.port)
