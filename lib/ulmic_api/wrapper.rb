@@ -8,7 +8,8 @@ class UlmicApi::Wrapper
 
   # url is master stage of ULMIC
   ULMIC_API_BASE_URL = ENV['API_BASE_URL'] || 'http://localhost:3000'
-  ULMIC_API_TOKEN    = ENV['API_TOKEN'] || 'secret'
+  #ULMIC_API_TOKEN    = ENV['API_TOKEN'] || 'secret'
+  ULMIC_API_TOKEN    = 'jsD7Ie7WlIlTXMIA00PsymgQUocI4tUJb7mbTSJ78bF0dCaSV2cqnJoW8GPmhaB0b0dlQcfYSy24gbPOCdM6vf7V5SZJNDlYwdX'
 
   attribute :endpoint, String
   attribute :params, Hash, default: {}
