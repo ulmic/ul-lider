@@ -7,11 +7,7 @@ class UlmicApi::Wrapper
   end
 
   # url is master stage of ULMIC
-  ULMIC_API_BASE_URL = if Rails.env.production?
-                         'https://ulmic.ru'
-                       else
-                         'http://localhost:3000'
-                       end
+  ULMIC_API_BASE_URL = ENV['API_BASE_URL'] || 'http://localhost:3000'
   ULMIC_API_TOKEN    = ENV['API_TOKEN'] || 'secret'
 
   attribute :endpoint, String
@@ -21,7 +17,6 @@ class UlmicApi::Wrapper
 
   def call
     uri = URI.join(ULMIC_API_BASE_URL, "api/#{endpoint}")
-    Rails.logger.debug uri
     encoded_query = CGI.unescape params.to_query
     uri.query = encoded_query if encoded_query.present?
     http = Net::HTTP.new(uri.host, uri.port)
