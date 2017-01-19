@@ -191,6 +191,8 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     foreman (0.77.0)
@@ -464,6 +466,7 @@ DEPENDENCIES
   enumerize
   factory_girl_rails
   faker
+  figaro
   font-awesome-rails
   foreman
   haml-rails
