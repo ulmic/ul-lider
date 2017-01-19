@@ -68,6 +68,7 @@ gem 'omniauth-vkontakte'
 #gem 'omniauth-ulmic', path: '/home/pavel/projects/omniauth-ulmic', branch: :develop
 gem 'responders', '~> 2.0'
 gem 'dotenv-rails'
+gem 'pry-rails'
 
 group :assets do
   gem 'coffee-rails'
@@ -91,7 +92,6 @@ group :development, :test do
   # gem 'database_cleaner'
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'pry-rails'
   gem 'pry-byebug'
 end
 
