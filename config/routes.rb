@@ -1,8 +1,4 @@
-require 'sidekiq/web'
-
 Rails.application.routes.draw do
-  mount Sidekiq::Web => '/sidekiq', constraints: SidekiqConstraint.new
-
   mount Ckeditor::Engine => '/ckeditor'
 
   get '/auth/vkontakte/callback' => 'web/event_social_participants#callback'
