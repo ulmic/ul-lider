@@ -13,9 +13,17 @@ class Web::UsersController < Web::ApplicationController
     @user = UserForm.new_with_model
     @user.generate_confirmation_token
     if @user.submit params[:user]
-      #UserMailer.delay.confirmation_instructions(@user)
       sign_in @user
       f(:success)
+      user_attributes = @user.attributes
+      [ 'created_at', 'updated_at', 'birth_date' ].each do |time_obj|
+        user_attributes[time_obj] = user_attributes[time_obj].to_i
+      end
+      user_attributes['fields'] = {}
+      @user.model.fields.each_with_index do |field, index|
+        user_attributes['fields'][index.to_s] = field.attributes.except('created_at', 'updated_at')
+      end
+      UlmicUserJob.perform_later user_attributes
       redirect_to root_path
     else
       f(:error, now: true)

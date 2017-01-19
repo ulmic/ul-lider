@@ -27,6 +27,8 @@ config/initializers/secret_token.rb
 *~
 config/secrets.yml
 config/database.yml
+config/ulmic.yml
 
 /vendor/bundle
 /config/oauth.yml
+.env

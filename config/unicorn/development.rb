@@ -3,11 +3,6 @@ working_directory "#{app_path}"
 
 worker_processes 1
 
-listen "127.0.0.1:3000"
-
-timeout 15
-# preload_app true
-
 # FIXME
 pid "#{app_path}/tmp/pids/unicorn.pid"
 

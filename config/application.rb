@@ -33,6 +33,5 @@ module UlLider
       g.helper false
       g.decorator false
     end
-
   end
 end

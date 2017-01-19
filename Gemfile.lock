@@ -176,6 +176,8 @@ GEM
       uber
     docile (1.1.5)
     dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     draper (1.4.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -476,6 +478,7 @@ DEPENDENCIES
   configus
   coveralls
   datetimepicker-rails!
+  dotenv-rails
   draper
   enumerize
   factory_girl_rails
