@@ -13,9 +13,9 @@ class Web::UsersController < Web::ApplicationController
     @user = UserForm.new_with_model
     @user.generate_confirmation_token
     if @user.submit params[:user]
-      #UserMailer.delay.confirmation_instructions(@user)
       sign_in @user
       f(:success)
+      UlmicUserJob.perform_now @user
       redirect_to root_path
     else
       f(:error, now: true)
