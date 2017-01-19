@@ -2,7 +2,7 @@ set :application, 'lider_v2'
 set :repo_url, 'git@github.com:ulmic/ul-lider.git'
 
 set :rvm_type, :system
-set :rvm_ruby_version, 'ruby-2.1.1'
+set :rvm_ruby_version, 'ruby-2.3.0'
 set :use_sudo, false
 #set :sidekiq_service_name, "sidekiq"
 
