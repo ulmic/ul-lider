@@ -51,7 +51,6 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:stop'
     invoke 'unicorn:start'
-    invoke 'sidekiq:restart'
   end
 
   after :publishing, :restart
