@@ -71,6 +71,7 @@ gem 'omniauth-vkontakte'
 gem 'responders', '~> 2.0'
 gem 'dotenv-rails'
 gem 'pry-rails'
+gem 'figaro'
 
 group :assets do
   gem 'coffee-rails'
