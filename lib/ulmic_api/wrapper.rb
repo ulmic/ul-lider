@@ -17,7 +17,7 @@ class UlmicApi::Wrapper
 
   def call
     uri = URI.join(ULMIC_API_BASE_URL, "api/#{endpoint}")
-    Rails.logger.info uri
+    Rails.logger.debug uri
     encoded_query = CGI.unescape params.to_query
     uri.query = encoded_query if encoded_query.present?
     http = Net::HTTP.new(uri.host, uri.port)
