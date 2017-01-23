@@ -22,8 +22,12 @@ class UlmicApi::Wrapper
     uri.query = encoded_query if encoded_query.present?
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    http.read_timeout = 1000
     headers = { "Authorization" => "Token token=#{ULMIC_API_TOKEN}" }
     request = "Net::HTTP::#{method.to_s.camelize}".constantize.new "#{uri.path}?#{uri.query}", headers
+    request['Content-Type'] = 'application/json'
+    request.body = body.to_json
     http.request request
   end
 end
