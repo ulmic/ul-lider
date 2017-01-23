@@ -21,7 +21,7 @@ class UlmicApi::Wrapper
     encoded_query = CGI.unescape params.to_query
     uri.query = encoded_query if encoded_query.present?
     http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = (uri.scheme == 'https')
+    http.use_ssl = true
     headers = { "Authorization" => "Token token=#{ULMIC_API_TOKEN}" }
     request = "Net::HTTP::#{method.to_s.camelize}".constantize.new "#{uri.path}?#{uri.query}", headers
     http.request request
