@@ -21,8 +21,10 @@ class Web::UsersController < Web::ApplicationController
       end
       user_attributes['fields'] = {}
       @user.model.fields.each_with_index do |field, index|
-        user_attributes['fields'][index.to_s] = field.attributes.except('created_at', 'updated_at')
+        user_attributes['fields'][index.to_s] = field.attributes.except('created_at', 'updated_at').merge field_type: 'text'
       end
+      last_index = @user.model.fields.count - 1
+      user_attributes['fields'][last_index.to_s] = { title: 'esse', user_id: @user.id, value: @user.model.creative_work.url, field_type: 'file' }
       UlmicUserJob.perform_later user_attributes
       redirect_to root_path
     else
