@@ -6,6 +6,7 @@ ru:
     links:
       edit: Изменить
       destroy: Удалить
+      select_image: Выберите изображение
       new: Добавить
       enter: Войти
       send: Отправить
