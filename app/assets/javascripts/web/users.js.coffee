@@ -1,5 +1,8 @@
 #= require jquery
 #= require i18n_setup
+#= require jasny-bootstrap
+#= require jasny_file_uploader
+
 enable_submit = ->
   #if ($('#user_creative_work').val() != '' || $('#user_url_creative_work').val() != '') && $('#user_accept_agreement').prop('checked') == true && $('#user_accept_personal_data_actions').prop('checked') == true
   $('#send_request').prop('disabled', false)

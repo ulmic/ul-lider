@@ -6,6 +6,7 @@
 #= require bootstrap-datetimepicker
 #= require pickers
 #= require moment/ru
+#= jasny_file_uploader
 
 $(document).ready ->
   $('.datepicker').datetimepicker({

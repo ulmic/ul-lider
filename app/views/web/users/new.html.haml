@@ -30,11 +30,7 @@
       = f.input :group, as: :string, required: true
       = f.input :home_phone, as: :string, placeholder: t('placeholders.user.home_phone')
       = f.input :mobile_phone, as: :string, placeholder: t('placeholders.user.mobile_phone'), required: true
-      = f.label :avatar
-      .preview
-        = image_tag @user.model.avatar if @user.model.avatar.present?
-      = f.input :avatar, as: :file, label: false, input_html: { style: 'display: none' }
-      = f.input :avatar, label: false, as: :jasny_file_preview_upload
+      = f.input :avatar, as: :file, required: true
       = f.input :contest_year, as: :hidden, input_html: { value: configus.current_contest_year }
       = f.input :state, as: :hidden, input_html: { value: User.state_machines[:state].states.map(&:name).first }
       = f.input :creative_work, as: :file, required: true

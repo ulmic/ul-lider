@@ -72,6 +72,7 @@ gem 'responders', '~> 2.0'
 gem 'dotenv-rails'
 gem 'pry-rails'
 gem 'figaro'
+gem 'jasny_bootstrap_extension_rails'
 
 group :assets do
   gem 'coffee-rails'
