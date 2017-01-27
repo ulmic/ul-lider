@@ -2,6 +2,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-datetimepicker
+//= jasny_file_uploader
 
 $(document).ready(function() {
   $('.datepicker').datetimepicker({
