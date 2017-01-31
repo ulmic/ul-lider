@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :event_social_participants, only: :create
     resources :pages, only: [] do
       collection do
+        get :provision
         get "/:slug" => "pages#show"
       end
     end

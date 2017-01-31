@@ -85,7 +85,7 @@ news_template = (news) ->
 
 download_news_from_ulmicru = ->
   $.ajax {
-    url: 'http://ulmic.ru/api/news'
+    url: 'https://ulmic.ru/api/news'
     data: {
       count: 3
       tag: {
