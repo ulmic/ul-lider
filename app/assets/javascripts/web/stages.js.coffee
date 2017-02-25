@@ -20,8 +20,7 @@ template = (obj) ->
 $ ->
   stage = window.location.pathname[8]
   $.ajax {
-    #url: "https://ulmic.ru/api/activity_lines/lider/ya_lider/participants?scope=active"
-    url: "http://localhost:3000/api/activity_lines/lider/ya_lider/participants?stage=#{stage}"
+    url: "https://ulmic.ru/api/activity_lines/lider/ya_lider/participants?stage=#{stage}"
     dataType: 'JSON'
     crossDomain: true
     success: (data) ->
