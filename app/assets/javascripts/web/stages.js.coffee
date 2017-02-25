@@ -28,4 +28,6 @@ $ ->
       $(data).each ->
         obj = JSON.parse this
         $('table#participants tbody tr:last').after template obj
+    error: ->
+      alert('Ошибка. Пожалуйста, обратитесь к администраторам конкурса по телефону 8 (8422) 96-43-37')
   }
