@@ -20,12 +20,13 @@
 %hr
 .row
   .auth_button_row
-    - if filling_time?
+    -# if filling_time?
       = link_to t('.send_request'), new_user_path, class: 'btn btn-branded'
-    - else
+    -# else
       = link_to t('.i_am_participant'), account_root_path, class: 'btn btn-branded'
       = link_to t('.events'), events_path, class: 'btn btn-branded'
       = link_to t('.auth'), '/auth/ulmic', class: 'btn btn-branded'
+    = link_to t('.participants'), stage_path(1), class: 'btn btn-branded'
 .row.for_news
 .row.plaha
   .col-md-6.text.left
