@@ -37,6 +37,7 @@ Rails.application.routes.draw do
         patch :update_status
       end
     end
+    resources :stages, only: :show
 
     namespace :account do
       root 'welcome#index'
