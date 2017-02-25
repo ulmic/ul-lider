@@ -3,7 +3,7 @@
 template = (obj) ->
   "<tr>
     <td>
-      <img src='#{obj.small_avatar_url}' />
+      <img src='https://ulmic.ru/#{obj.small_avatar_url}' />
     </td>
     <td>
       <span>
